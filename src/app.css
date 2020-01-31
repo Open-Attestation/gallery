@@ -1,0 +1,23 @@
+/* header */
+.header-main {
+  background-color: #2c3549;
+}
+
+.header-right-section {
+  width: 12rem;
+}
+
+.upload-button {
+  width: 6.5rem;
+  background-color: #f75d20;
+  padding: 0.3rem;
+  padding-left: 0.45rem;
+  padding-right: 0.45rem;
+  border: 1px solid #f75d20;
+  border-radius: 0.45rem;
+  justify-content: space-evenly;
+}
+
+.test {
+  border: 2px solid red;
+}
