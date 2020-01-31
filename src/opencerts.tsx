@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./common/Header/Header";
+import Navbar from "./common/Navbar/Navbar";
 // const wait = (timeout: number): Promise<number> => {
 //   return new Promise(resolve => {
 //     setTimeout(() => resolve(timeout), timeout);
@@ -14,7 +14,7 @@ import Header from "./common/Header/Header";
 export const OpencertsGallery: React.FunctionComponent = () => {
   return (
     <div>
-      <Header />
+      <Navbar />
     </div>
   );
 };
