@@ -151,7 +151,7 @@
       "array-callback-return": "error",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "error",
-      "no-default-export": true,
+      "no-default-export": true
     },
     "overrides": [
       {
