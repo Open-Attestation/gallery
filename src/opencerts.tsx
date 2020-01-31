@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import Header from "./common/Header/Header/Header";
-const wait = (timeout: number): Promise<number> => {
-  return new Promise(resolve => {
-    setTimeout(() => resolve(timeout), timeout);
-  });
-};
+import React from "react";
+import Header from "./common/Header/Header";
+// const wait = (timeout: number): Promise<number> => {
+//   return new Promise(resolve => {
+//     setTimeout(() => resolve(timeout), timeout);
+//   });
+// };
 
 // interface Step {
 //   name: string;
