@@ -12,7 +12,8 @@
     "node-fetch": "^2.6.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-hot-loader": "^4.12.18"
+    "react-hot-loader": "^4.12.18",
+    "react-icons": "^3.9.0"
   },
   "scripts": {
     "build": "npm run check-types && cross-env NODE_ENV=production webpack --progress --mode production",
@@ -47,18 +48,21 @@
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
     "autoprefixer": "^9.7.4",
+    "babel-eslint": "^10.0.3",
     "babel-jest": "24.9.0",
     "babel-loader": "8.0.6",
     "brotli-webpack-plugin": "1.1.0",
     "compression-webpack-plugin": "3.0.0",
     "cross-env": "^6.0.3",
     "css-loader": "^3.4.2",
-    "eslint": "^6.6.0",
+    "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jest": "^23.0.4",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-mdx": "^1.6.3",
     "eslint-plugin-prettier": "3.1.1",
-    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "file-loader": "4.2.0",
     "html-webpack-plugin": "3.2.0",
@@ -118,7 +122,8 @@
       "prettier/react"
     ],
     "plugins": [
-      "react-hooks"
+      "react-hooks",
+      "import"
     ],
     "parserOptions": {
       "ecmaVersion": 2018,
@@ -145,7 +150,8 @@
       "react/self-closing-comp": "error",
       "array-callback-return": "error",
       "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "error"
+      "react-hooks/exhaustive-deps": "error",
+      "import/no-default-export": "error"
     },
     "overrides": [
       {
