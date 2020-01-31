@@ -1,15 +1,6 @@
 import React from "react";
-import Navbar from "./common/Navbar/Navbar";
-// const wait = (timeout: number): Promise<number> => {
-//   return new Promise(resolve => {
-//     setTimeout(() => resolve(timeout), timeout);
-//   });
-// };
-
-// interface Step {
-//   name: string;
-//   status: "PENDING" | "DONE";
-// }
+import { Navbar } from "./common/navbar/navbar";
+// import { HeaderPicture } from "./components/headerPicture";
 
 export const OpencertsGallery: React.FunctionComponent = () => {
   return (
