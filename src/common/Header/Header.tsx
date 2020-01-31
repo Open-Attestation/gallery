@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import UploadButton from "./UploadButton";
-import "../../../app.css";
+import "../../app.css";
 
 const Header: FunctionComponent = () => {
   const handleUpload = (): void => {
