@@ -19,7 +19,7 @@ const ImgContainer = styled.img`
 
 export const HeaderPicture: React.FunctionComponent = () => {
   return (
-    <div className="flex flex-row justify-between px-56">
+    <section className="flex flex-row justify-between px-56">
       <div className="mt-12">
         <HeaderTextOne className="font-semibold text-6xl">Gallery</HeaderTextOne>
         <HeaderTextTwo className="font-light text-2xl mt-4">
@@ -31,6 +31,6 @@ export const HeaderPicture: React.FunctionComponent = () => {
       <div>
         <ImgContainer className="mr-4 -mb-3" src={ClipArt} alt="Uploading" />
       </div>
-    </div>
+    </section>
   );
 };
