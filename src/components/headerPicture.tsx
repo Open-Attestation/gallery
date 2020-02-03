@@ -1,44 +1,36 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Clipart from "../resources/clip-uploading.svg";
+import ClipArt from "../resources/clip-uploading.png";
 
-const HeaderPictureContainer = styled.div`
-  height: 19.5rem;
-`;
-
-const HeaderTextOne = styled.p`
-  font-style: normal;
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 77px;
+const HeaderTextOne = styled.div`
+  line-height: 5.5rem;
   letter-spacing: -0.02em;
   color: #2c3549;
 `;
 
-const HeaderTextTwo = styled.p`
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 30px;
+const HeaderTextTwo = styled.div`
+  line-height: 1.75rem;
 `;
 
 const ImgContainer = styled.img`
-  padding-left: 14rem;
-  height: 310px;
+  width: 400px;
   object-fit: cover;
 `;
 
 export const HeaderPicture: React.FunctionComponent = () => {
   return (
-    <HeaderPictureContainer className="flex flex-row justify-between px-56">
-      <div className="mt-16">
-        <HeaderTextOne>Gallery</HeaderTextOne>
-        <HeaderTextTwo>Explore OpenAttestation documents</HeaderTextTwo>
-        <HeaderTextTwo>and create yours today</HeaderTextTwo>
+    <div className="flex flex-row justify-between px-56">
+      <div className="mt-12">
+        <HeaderTextOne className="font-semibold text-6xl">Gallery</HeaderTextOne>
+        <HeaderTextTwo className="font-light text-2xl">
+          Explore OpenAttestation documents
+          <br />
+          and create yours today
+        </HeaderTextTwo>
       </div>
       <div>
-        <ImgContainer src={Clipart} alt="Uploading" />
+        <ImgContainer className="mr-4 -mb-3" src={ClipArt} alt="Uploading" />
       </div>
-    </HeaderPictureContainer>
+    </div>
   );
 };
