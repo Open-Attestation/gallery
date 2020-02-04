@@ -17,7 +17,7 @@ const ImgContainer = styled.img`
   object-fit: cover;
 `;
 
-export const HeaderPicture: React.FunctionComponent = () => {
+export const HeaderPicture: React.FC = () => {
   return (
     <section className="flex flex-row justify-between px-56">
       <div className="mt-12">

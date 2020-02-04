@@ -28,7 +28,7 @@ const SearchBar = styled.div`
   box-sizing: border-box;
 `;
 
-export const MenuBar: React.FunctionComponent = () => {
+export const MenuBar: React.FC = () => {
   const [search, setSearch] = useState<string>("");
   const submitFormHandler = (): void => {
     console.log("Form submitted!");

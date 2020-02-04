@@ -5,8 +5,6 @@ import { QrCode } from "./qrCode";
 const CardContainer = styled.div`
   background: #ffffff;
   padding: 30px;
-  width: 328px;
-  height: 328px;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 4px 8px rgba(0, 0, 0, 0.04);
 `;
 
@@ -24,7 +22,7 @@ const DocumentDetails = styled.div`
 
 interface DocumentCardProps {
   className?: string;
-  documentDetails: string;
+  title: string;
 }
 
 export const DocumentCard: React.FC<DocumentCardProps> = props => {
@@ -36,7 +34,7 @@ export const DocumentCard: React.FC<DocumentCardProps> = props => {
           <QrCode />
         </div>
 
-        <DocumentDetails className="mt-5 font-medium text-base">{props.documentDetails}</DocumentDetails>
+        <DocumentDetails className="mt-5 font-medium text-base">{props.title}</DocumentDetails>
       </div>
     </CardContainer>
   );
