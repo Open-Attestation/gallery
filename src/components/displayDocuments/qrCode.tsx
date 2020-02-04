@@ -13,7 +13,7 @@ interface QrCodeProps {
   className?: string;
 }
 
-export const QrCode: React.FC<QrCodeProps> = () => {
+export const QrCode: React.FunctionComponent<QrCodeProps> = () => {
   return (
     <QrContainer className="absolute bottom-0 right-0 flex justify-center">
       <AiOutlineQrcode size={20} className="self-center" />

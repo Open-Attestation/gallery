@@ -25,7 +25,7 @@ interface DocumentCardProps {
   title: string;
 }
 
-export const DocumentCard: React.FC<DocumentCardProps> = props => {
+export const DocumentCard: React.FunctionComponent<DocumentCardProps> = props => {
   return (
     <CardContainer className="flex justify-center rounded">
       <div className="flex-column">

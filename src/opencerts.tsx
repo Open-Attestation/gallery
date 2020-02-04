@@ -4,7 +4,7 @@ import { HeaderPicture } from "./components/headerPicture";
 import { MenuBar } from "./components/menuBar";
 import { DisplayDocuments } from "./components/displayDocuments/displayDocuments";
 
-export const OpencertsGallery: React.FC = () => {
+export const OpencertsGallery: React.FunctionComponent = () => {
   return (
     <div>
       <Navbar />

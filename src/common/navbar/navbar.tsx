@@ -6,7 +6,7 @@ const NavbarContainer = styled.div`
   background-color: #2c3549;
 `;
 
-export const Navbar: React.FC = () => {
+export const Navbar: React.FunctionComponent = () => {
   const handleUpload = (): void => {
     console.log("uploaded");
   };

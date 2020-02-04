@@ -10,7 +10,7 @@ const SectionContainer = styled.section`
   grid-gap: 24px;
 `;
 
-export const DisplayDocuments: React.FC = () => {
+export const DisplayDocuments: React.FunctionComponent = () => {
   return (
     <div className="flex flex-row justify-center">
       <SectionContainer>

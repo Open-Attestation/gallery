@@ -8,7 +8,7 @@ const Button = styled.button`
   justify-content: space-evenly;
 `;
 
-export const UploadButton: React.FC<ButtonHTMLAttributes<any>> = ({ onClick, children, ...rest }) => {
+export const UploadButton: React.FunctionComponent<ButtonHTMLAttributes<any>> = ({ onClick, children, ...rest }) => {
   return (
     <Button onClick={onClick} {...rest} className="p-1 pr-2 pl-2 font-bold flex flex-row rounded-lg	">
       <FiUpload className="self-center pr-1" />
