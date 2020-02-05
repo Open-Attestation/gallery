@@ -11,11 +11,12 @@ const QrContainer = styled.div`
 
 interface QrCodeProps {
   className?: string;
+  handleClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
-export const QrCode: React.FunctionComponent<QrCodeProps> = () => {
+export const QrCodeButton: React.FunctionComponent<QrCodeProps> = props => {
   return (
-    <QrContainer className="absolute bottom-0 right-0 flex justify-center">
+    <QrContainer onClick={props.handleClick} className="absolute bottom-0 right-0 flex justify-center">
       <AiOutlineQrcode size={20} className="self-center" />
     </QrContainer>
   );
