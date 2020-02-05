@@ -28,11 +28,8 @@ interface DocumentCardProps {
 }
 
 export const DocumentCard: React.FunctionComponent<DocumentCardProps> = props => {
-  const handleClick = (): void => {
-    window.location.replace(props.url);
-  };
   return (
-    <button onClick={handleClick}>
+    <a href={props.url}>
       <CardContainer className="flex justify-center rounded">
         <div className="flex-column">
           <div className="relative">
@@ -42,6 +39,6 @@ export const DocumentCard: React.FunctionComponent<DocumentCardProps> = props =>
           <DocumentDetails className="mt-5 font-medium text-base">{props.title}</DocumentDetails>
         </div>
       </CardContainer>
-    </button>
+    </a>
   );
 };
