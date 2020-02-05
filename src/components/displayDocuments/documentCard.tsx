@@ -8,7 +8,7 @@ const CardContainer = styled.div`
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 4px 8px rgba(0, 0, 0, 0.04);
 `;
 
-const DocumentContainer = styled.div`
+const DocumentContainer = styled.img`
   background: #f9f9f9;
   width: 280px;
   height: 224px;
@@ -23,19 +23,25 @@ const DocumentDetails = styled.div`
 interface DocumentCardProps {
   className?: string;
   title: string;
+  url: string;
+  image?: string | undefined;
 }
 
 export const DocumentCard: React.FunctionComponent<DocumentCardProps> = props => {
+  const handleClick = (): void => {
+    window.location.replace(props.url);
+  };
   return (
-    <CardContainer className="flex justify-center rounded">
-      <div className="flex-column">
-        <div className="relative">
-          <DocumentContainer className="rounded" />
-          <QrCode />
+    <button onClick={handleClick}>
+      <CardContainer className="flex justify-center rounded">
+        <div className="flex-column">
+          <div className="relative">
+            <DocumentContainer className="rounded" src={props.image} alt="document" />
+            <QrCode />
+          </div>
+          <DocumentDetails className="mt-5 font-medium text-base">{props.title}</DocumentDetails>
         </div>
-
-        <DocumentDetails className="mt-5 font-medium text-base">{props.title}</DocumentDetails>
-      </div>
-    </CardContainer>
+      </CardContainer>
+    </button>
   );
 };
