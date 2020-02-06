@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { QrCodeButton } from "./qrCodeButton";
 import { RenderQrCode } from "./renderQrCode";
+import { BackButton } from "./backButton";
 
 const CardContainer = styled.div`
   background: #ffffff;
@@ -28,28 +29,34 @@ interface DocumentCardProps {
   image?: string | undefined;
 }
 
-export const DocumentCard: React.FunctionComponent<DocumentCardProps> = props => {
+export const DocumentCard: React.FunctionComponent<DocumentCardProps> = ({ image, url, title }) => {
   const [qr, setQr] = useState(false);
 
   return (
-    <a href={props.url}>
+    <a href={url}>
       <CardContainer className="flex justify-center rounded">
         <div className="flex-column">
           <div className="relative">
+            {!qr ? <DocumentContainer className="rounded" src={image} alt="document" /> : <RenderQrCode url={url} />}
             {!qr ? (
-              <DocumentContainer className="rounded" src={props.image} alt="document" />
+              <QrCodeButton
+                handleClick={event => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  setQr(!qr);
+                }}
+              />
             ) : (
-              <RenderQrCode url={props.url} />
+              <BackButton
+                handleClick={event => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  setQr(!qr);
+                }}
+              />
             )}
-            <QrCodeButton
-              handleClick={event => {
-                event.preventDefault();
-                event.stopPropagation();
-                setQr(!qr);
-              }}
-            />
           </div>
-          <DocumentDetails className="mt-5 font-medium text-base">{props.title}</DocumentDetails>
+          <DocumentDetails className="mt-5 font-medium text-base">{title}</DocumentDetails>
         </div>
       </CardContainer>
     </a>

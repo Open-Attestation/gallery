@@ -1,20 +1,14 @@
 import React from "react";
-import styled from "@emotion/styled";
 import QRCode from "qrcode.react";
-
-const QrContainer = styled.div`
-  width: 280px;
-  height: 224px;
-`;
 
 interface RenderQrCodeProps {
   url: string;
 }
 
-export const RenderQrCode: React.FunctionComponent<RenderQrCodeProps> = props => {
+export const RenderQrCode: React.FunctionComponent<RenderQrCodeProps> = ({ url }) => {
   return (
-    <QrContainer>
-      <QRCode value={props.url} size={224} level={"H"} />
-    </QrContainer>
+    <div className="flex justify-center">
+      <QRCode value={url} size={224} level={"H"} />
+    </div>
   );
 };
