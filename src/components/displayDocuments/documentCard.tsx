@@ -1,13 +1,32 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
+import QRCode from "qrcode.react";
+import { MdDescription } from "react-icons/md";
 import { QrCodeButton } from "./qrCodeButton";
-import { RenderQrCode } from "./renderQrCode";
-import { BackButton } from "./backButton";
+
+const BackButton = styled.div`
+  transition: transform 0.3s ease-in;
+  background: #feeee7;
+  border-radius: 12px 0px 4px;
+  width: 48px;
+  height: 48px;
+  transform: translateX(100%) translateY(100%);
+`;
 
 const CardContainer = styled.div`
+  transition: box-shadow 0.4s ease-out;
   background: #ffffff;
   padding: 30px;
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 4px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.04);
+
+  &:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+
+    ${BackButton} {
+      transition: transform 0.3s ease-out;
+      transform: translateX(0) translateY(0);
+    }
+  }
 `;
 
 const DocumentContainer = styled.img`
@@ -36,8 +55,12 @@ export const DocumentCard: React.FunctionComponent<DocumentCardProps> = ({ image
     <a href={url}>
       <CardContainer className="flex justify-center rounded">
         <div className="flex-column">
-          <div className="relative">
-            {!qr ? <DocumentContainer className="rounded" src={image} alt="document" /> : <RenderQrCode url={url} />}
+          <div className="relative overflow-hidden">
+            {!qr ? (
+              <DocumentContainer className="rounded" src={image} alt="document" />
+            ) : (
+              <QRCode className="ml-auto mr-auto" value={url} size={224} level={"H"} />
+            )}
             {!qr ? (
               <QrCodeButton
                 handleClick={event => {
@@ -48,12 +71,15 @@ export const DocumentCard: React.FunctionComponent<DocumentCardProps> = ({ image
               />
             ) : (
               <BackButton
-                handleClick={event => {
+                onClick={event => {
                   event.preventDefault();
                   event.stopPropagation();
                   setQr(!qr);
                 }}
-              />
+                className="absolute bottom-0 right-0 flex justify-center"
+              >
+                <MdDescription size={20} className="self-center" />
+              </BackButton>
             )}
           </div>
           <DocumentDetails className="mt-5 font-medium text-base">{title}</DocumentDetails>
