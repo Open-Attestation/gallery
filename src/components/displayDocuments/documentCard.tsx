@@ -5,23 +5,26 @@ import { MdDescription } from "react-icons/md";
 import { QrCodeButton } from "./qrCodeButton";
 
 const BackButton = styled.div`
-  transition: transform 0.3s ease-in;
-  background: #feeee7;
-  border-radius: 12px 0px 4px;
   width: 48px;
   height: 48px;
+  background: #feeee7;
+  border-radius: 12px 0px 4px;
+  transition: transform 0.3s ease-in;
   transform: translateX(100%) translateY(100%);
 `;
 
 const CardContainer = styled.div`
-  transition: box-shadow 0.4s ease-out;
-  background: #ffffff;
   padding: 30px;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.4s ease-out;
 
   &:hover {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  }
+`;
 
+const HoverContainer = styled.div`
+  &:hover {
     ${BackButton} {
       transition: transform 0.3s ease-out;
       transform: translateX(0) translateY(0);
@@ -53,11 +56,11 @@ export const DocumentCard: React.FunctionComponent<DocumentCardProps> = ({ image
 
   return (
     <a href={url}>
-      <CardContainer className="flex justify-center rounded">
-        <div className="flex-column">
+      <CardContainer className="flex justify-center rounded bg-white">
+        <HoverContainer className="flex-column">
           <div className="relative overflow-hidden">
             {!qr ? (
-              <DocumentContainer className="rounded" src={image} alt="document" />
+              <DocumentContainer className="rounded object-contain" src={image} alt="document" />
             ) : (
               <QRCode className="ml-auto mr-auto" value={url} size={224} level={"H"} />
             )}
@@ -83,7 +86,7 @@ export const DocumentCard: React.FunctionComponent<DocumentCardProps> = ({ image
             )}
           </div>
           <DocumentDetails className="mt-5 font-medium text-base">{title}</DocumentDetails>
-        </div>
+        </HoverContainer>
       </CardContainer>
     </a>
   );
