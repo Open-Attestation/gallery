@@ -2,6 +2,21 @@ import React from "react";
 import styled from "@emotion/styled";
 import ClipArt from "../resources/clip-uploading.png";
 
+const HeaderPictureContainer = styled.section`
+  /* min-width: 800px; */
+  border: 1px red solid;
+`;
+
+const InnerContainer = styled.div`
+  /* min-width: 500px; */
+  border: 1px blue solid;
+`;
+
+const InnerText = styled.div`
+  flex: 0 0 370px;
+  border: 1px green solid;
+`;
+
 const HeaderTextOne = styled.div`
   line-height: 4.8rem;
   letter-spacing: -0.02em;
@@ -15,22 +30,23 @@ const HeaderTextTwo = styled.div`
 const ImgContainer = styled.img`
   width: 400px;
   object-fit: cover;
+  min-width: 360px;
 `;
 
 export const HeaderPicture: React.FunctionComponent = () => {
   return (
-    <section className="flex flex-row justify-between px-56">
-      <div className="mt-12">
+    <HeaderPictureContainer className="flex flex-row justify-between mx-56">
+      <InnerText className="py-12">
         <HeaderTextOne className="font-semibold text-6xl">Gallery</HeaderTextOne>
         <HeaderTextTwo className="font-light text-2xl mt-4">
           Explore OpenAttestation documents
           <br />
           and create yours today
         </HeaderTextTwo>
-      </div>
+      </InnerText>
       <div>
-        <ImgContainer className="mr-4 -mb-3" src={ClipArt} alt="Uploading" />
+        <ImgContainer className="-mb-3 flex-grow flex-shrink " src={ClipArt} alt="Uploading" />
       </div>
-    </section>
+    </HeaderPictureContainer>
   );
 };
