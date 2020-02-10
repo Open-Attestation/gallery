@@ -14,7 +14,7 @@ const BackButton = styled.div`
 `;
 
 const CardContainer = styled.div`
-  padding: 30px;
+  padding: 24px;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.4s ease-out;
 
