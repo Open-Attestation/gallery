@@ -6,10 +6,6 @@ const HeaderPictureContainer = styled.section`
   border: 1px red solid;
 `;
 
-const InnerContainer = styled.div`
-  border: 1px blue solid;
-`;
-
 const InnerText = styled.div`
   border: 1px green solid;
 `;
