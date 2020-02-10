@@ -9,7 +9,7 @@ export const OpencertsGallery: React.FunctionComponent = () => {
     <div>
       <Navbar />
       <HeaderPicture />
-      /* <MenuBar />
+      <MenuBar />
       <DisplayDocuments />
     </div>
   );
