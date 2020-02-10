@@ -5,9 +5,6 @@ import { documents } from "./documents";
 
 const SectionContainer = styled.section`
   background-color: #e5e5e5;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 24px;
 `;
 
 export const DisplayDocuments: React.FunctionComponent = () => {
