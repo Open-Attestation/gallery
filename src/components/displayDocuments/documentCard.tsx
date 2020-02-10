@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import QRCode from "qrcode.react";
 import { MdDescription } from "react-icons/md";
 import { QrCodeButton } from "./qrCodeButton";
+import { Document } from "./documents";
 
 const BackButton = styled.div`
   width: 48px;
@@ -44,14 +45,7 @@ const DocumentDetails = styled.div`
   line-height: 19px;
 `;
 
-interface DocumentCardProps {
-  className?: string;
-  title: string;
-  url: string;
-  imageName?: string;
-}
-
-export const DocumentCard: React.FunctionComponent<DocumentCardProps> = ({ imageName, url, title }) => {
+export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url, title }) => {
   const [qr, setQr] = useState(false);
 
   return (

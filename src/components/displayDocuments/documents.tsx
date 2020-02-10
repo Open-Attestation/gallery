@@ -1,10 +1,10 @@
-interface Documents {
+export interface Document {
   title: string;
   url: string;
   imageName: string;
 }
 
-export const documents: Documents[] = [
+export const documents: Document[] = [
   {
     title: "OpenCerts Demo",
     url:
