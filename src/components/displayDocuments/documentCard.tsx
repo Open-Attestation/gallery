@@ -48,10 +48,10 @@ interface DocumentCardProps {
   className?: string;
   title: string;
   url: string;
-  image?: string | undefined;
+  imageName?: string;
 }
 
-export const DocumentCard: React.FunctionComponent<DocumentCardProps> = ({ image, url, title }) => {
+export const DocumentCard: React.FunctionComponent<DocumentCardProps> = ({ imageName, url, title }) => {
   const [qr, setQr] = useState(false);
 
   return (
@@ -60,7 +60,11 @@ export const DocumentCard: React.FunctionComponent<DocumentCardProps> = ({ image
         <HoverContainer className="flex-column">
           <div className="relative overflow-hidden">
             {!qr ? (
-              <DocumentContainer className="rounded object-contain" src={image} alt="document" />
+              <DocumentContainer
+                className="rounded object-contain"
+                src={require(`../../resources/documentThumbnails/${imageName}.jpg`)}
+                alt="document"
+              />
             ) : (
               <QRCode className="ml-auto mr-auto" value={url} size={224} level={"H"} />
             )}
