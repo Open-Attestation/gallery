@@ -15,7 +15,7 @@ export const DisplayDocuments: React.FunctionComponent = () => {
   };
 
   return (
-    <SectionContainer className="py-16">
+    <SectionContainer className="py-16 md:py-10">
       <div className="container mx-auto px-2">
         <div className="flex flex-wrap">{displayCards()}</div>
       </div>
