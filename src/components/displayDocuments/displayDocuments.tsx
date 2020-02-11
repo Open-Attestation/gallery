@@ -1,13 +1,11 @@
 import React from "react";
+import { containerMain } from "../../constants";
 import styled from "@emotion/styled";
 import { DocumentCard } from "./documentCard";
 import { documents } from "./documents";
 
 const SectionContainer = styled.section`
   background-color: #e5e5e5;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 24px;
 `;
 
 export const DisplayDocuments: React.FunctionComponent = () => {
@@ -18,8 +16,10 @@ export const DisplayDocuments: React.FunctionComponent = () => {
   };
 
   return (
-    <div className="flex flex-row justify-center">
-      <SectionContainer>{displayCards()}</SectionContainer>
-    </div>
+    <SectionContainer className="py-16 md:py-10">
+      <div className={`${containerMain} md:px-00`}>
+        <div className="flex flex-wrap">{displayCards()}</div>
+      </div>
+    </SectionContainer>
   );
 };
