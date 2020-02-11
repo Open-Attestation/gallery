@@ -14,7 +14,7 @@ export const Navbar: React.FunctionComponent = () => {
 
   return (
     <NavbarTop className="py-3 text-white">
-      <div className={`container mx-auto px-6 md:px-2`}>
+      <div className={`${containerMain}`}>
         <div className="flex flex-row flex-grow flex-shrink justify-between">
           <div className="flex self-center">
             Open
