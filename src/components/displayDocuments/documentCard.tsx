@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import QRCode from "qrcode.react";
 import { MdDescription } from "react-icons/md";
 import { QrCodeButton } from "./qrCodeButton";
+import { Document } from "./documents";
 
 const BackButton = styled.div`
   width: 48px;
@@ -44,14 +45,7 @@ const DocumentDetails = styled.div`
   line-height: 19px;
 `;
 
-interface DocumentCardProps {
-  className?: string;
-  title: string;
-  url: string;
-  image?: string | undefined;
-}
-
-export const DocumentCard: React.FunctionComponent<DocumentCardProps> = ({ image, url, title }) => {
+export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url, title }) => {
   const [qr, setQr] = useState(false);
 
   return (
@@ -60,7 +54,11 @@ export const DocumentCard: React.FunctionComponent<DocumentCardProps> = ({ image
         <HoverContainer className="flex-column">
           <div className="relative overflow-hidden">
             {!qr ? (
-              <DocumentContainer className="rounded object-contain" src={image} alt="document" />
+              <DocumentContainer
+                className="rounded object-contain"
+                src={require(`../../resources/documentThumbnails/${imageName}.jpg`)}
+                alt="document"
+              />
             ) : (
               <QRCode className="ml-auto mr-auto" value={url} size={224} level={"H"} />
             )}
