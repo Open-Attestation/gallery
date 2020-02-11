@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { containerMain } from "./../constants";
 import styled from "@emotion/styled";
 import { FiSearch } from "react-icons/fi";
 
@@ -41,7 +42,7 @@ export const MenuBar: React.FunctionComponent = () => {
   };
 
   return (
-    <MenuBarContainer className="absolute left-0 right-0 container mx-auto px-2">
+    <MenuBarContainer className={`${containerMain} absolute left-0 right-0`}>
       <MenuBarContent className="rounded-lg bg-white py-2">
         <div className="flex flex-wrap px-5 items-center">
           <div className="w-full md:w-auto mb-4 md:mb-0">

@@ -49,7 +49,7 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url
   const [qr, setQr] = useState(false);
 
   return (
-    <a className="w-full md:w-1/2 lg:w-1/3 p-2" href={url}>
+    <a className="w-full md:w-1/2 lg:w-1/3 px-0 py-4 md:px-2 md:py-2" href={url}>
       <CardContainer className="flex justify-center rounded bg-white">
         <HoverContainer className="flex-column">
           <div className="relative overflow-hidden">

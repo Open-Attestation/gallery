@@ -1,4 +1,5 @@
 import React from "react";
+import { containerMain } from "./../constants";
 import styled from "@emotion/styled";
 import ClipArt from "../resources/clip-uploading.png";
 
@@ -19,7 +20,7 @@ const ImgContainer = styled.img`
 export const HeaderPicture: React.FunctionComponent = () => {
   return (
     <section>
-      <div className="container mx-auto px-2 py-8">
+      <div className={`${containerMain} py-8`}>
         <div className="flex flex-wrap items-center">
           <div className="w-2/3">
             <div className="py-12">

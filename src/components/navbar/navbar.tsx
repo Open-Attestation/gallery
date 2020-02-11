@@ -1,8 +1,9 @@
 import React from "react";
+import { containerMain } from "../../constants";
 import { UploadButton } from "./uploadButton";
 import styled from "@emotion/styled";
 
-const NavbarContainer = styled.nav`
+const NavbarTop = styled.nav`
   background-color: #2c3549;
 `;
 
@@ -12,8 +13,8 @@ export const Navbar: React.FunctionComponent = () => {
   };
 
   return (
-    <NavbarContainer className="py-3 text-white">
-      <div className="container mx-auto px-2">
+    <NavbarTop className="py-3 text-white">
+      <div className={`${containerMain} py-3 text-white`}>
         <div className="flex flex-row flex-grow flex-shrink justify-between">
           <div className="flex self-center">
             Open
@@ -27,6 +28,6 @@ export const Navbar: React.FunctionComponent = () => {
           </div>
         </div>
       </div>
-    </NavbarContainer>
+    </NavbarTop>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { containerMain } from "../../constants";
 import styled from "@emotion/styled";
 import { DocumentCard } from "./documentCard";
 import { documents } from "./documents";
@@ -16,7 +17,7 @@ export const DisplayDocuments: React.FunctionComponent = () => {
 
   return (
     <SectionContainer className="py-16 md:py-10">
-      <div className="container mx-auto px-2">
+      <div className={`${containerMain} md:px-00`}>
         <div className="flex flex-wrap">{displayCards()}</div>
       </div>
     </SectionContainer>

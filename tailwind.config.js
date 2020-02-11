@@ -4,7 +4,7 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    function ({ addComponents }) {
+    function ({ addComponents, addUtilities }) {
       addComponents({
         '.container': {
           maxWidth: '100%',
@@ -22,6 +22,13 @@ module.exports = {
           },
         }
       })
+
+      addUtilities({
+        '.px-00': {
+          paddingLeft: 0,
+          paddingRight: 0,
+        }
+      }, ['responsive'])
     }
   ]
 }
