@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { containerMain } from "./../constants";
 import styled from "@emotion/styled";
 import { FiSearch } from "react-icons/fi";
+import { containerMain } from "./../constants";
 
 const MenuBarContainer = styled.nav`
   transform: translateY(-50%);
