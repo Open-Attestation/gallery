@@ -4,7 +4,6 @@ import { DocumentCard } from "./documentCard";
 import { documents } from "./documents";
 
 const SectionContainer = styled.section`
-  padding: 71px 204px;
   background-color: #e5e5e5;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
