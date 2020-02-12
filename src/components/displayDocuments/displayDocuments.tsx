@@ -11,7 +11,7 @@ const SectionContainer = styled.section`
 export const DisplayDocuments: React.FunctionComponent = () => {
   const displayCards = (): JSX.Element[] => {
     return documents.map(data => (
-      <DocumentCard title={data.title} url={data.url} imageName={data.imageName} key={data.url} />
+      <DocumentCard title={data.title} url={data.url} imageName={data.imageName} tags={data.tags} key={data.url} />
     ));
   };
 
