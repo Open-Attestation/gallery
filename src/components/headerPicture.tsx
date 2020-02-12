@@ -1,6 +1,6 @@
 import React from "react";
-import { containerMain } from "./../constants";
 import styled from "@emotion/styled";
+import { containerMain } from "./../constants";
 import ClipArt from "../resources/clip-uploading.png";
 
 const HeaderTextOne = styled.div`
@@ -11,10 +11,6 @@ const HeaderTextOne = styled.div`
 
 const HeaderTextTwo = styled.div`
   line-height: 1.8rem;
-`;
-
-const ImgContainer = styled.img`
-  max-width: 100%;
 `;
 
 export const HeaderPicture: React.FunctionComponent = () => {
@@ -32,9 +28,7 @@ export const HeaderPicture: React.FunctionComponent = () => {
               </HeaderTextTwo>
             </div>
           </div>
-          <div className="w-1/3">
-            <ImgContainer src={ClipArt} alt="Uploading" />
-          </div>
+          <img className="w-1/3" src={ClipArt} alt="Uploading" />
         </div>
       </div>
     </section>
