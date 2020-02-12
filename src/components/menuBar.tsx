@@ -48,7 +48,7 @@ export const MenuBar: React.FunctionComponent = () => {
     setSelectedButton(name);
   };
 
-  const renderButton = (buttonName: string) => {
+  const renderButton = (buttonName: string): JSX.Element => {
     return selectedButton === buttonName ? (
       <SelectedButtonContainer className="font-semibold rounded-lg">{buttonName}</SelectedButtonContainer>
     ) : (
