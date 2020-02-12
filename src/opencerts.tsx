@@ -3,6 +3,7 @@ import { Navbar } from "./components/navbar/navbar";
 import { HeaderPicture } from "./components/headerPicture";
 import { MenuBar } from "./components/menuBar";
 import { DisplayDocuments } from "./components/displayDocuments/displayDocuments";
+import { Footer } from "./components/footer";
 
 export const OpencertsGallery: React.FunctionComponent = () => {
   return (
@@ -11,6 +12,7 @@ export const OpencertsGallery: React.FunctionComponent = () => {
       <HeaderPicture />
       <MenuBar />
       <DisplayDocuments />
+      <Footer />
     </div>
   );
 };
