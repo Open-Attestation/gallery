@@ -19,7 +19,7 @@ const SearchBar = styled.div`
 
 export const MenuBar: React.FunctionComponent = () => {
   const [search, setSearch] = useState<string>("");
-  const [selectedButton, setSelectedButton] = useState<string>("All");
+  const [selectedButton, setSelectedButton] = useState<string | null>(null);
 
   const submitFormHandler = (): void => {
     console.log("Form submitted!");
