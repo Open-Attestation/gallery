@@ -1,11 +1,6 @@
 import React from "react";
-import { containerMain } from "../../constants";
+import { cssContainerWrapper } from "../../constants";
 import { UploadButton } from "./uploadButton";
-import styled from "@emotion/styled";
-
-const NavbarTop = styled.nav`
-  background-color: #2c3549;
-`;
 
 export const Navbar: React.FunctionComponent = () => {
   const handleUpload = (): void => {
@@ -13,21 +8,22 @@ export const Navbar: React.FunctionComponent = () => {
   };
 
   return (
-    <NavbarTop className="py-3 text-white">
-      <div className={`${containerMain}`}>
+    <nav className="py-3 text-white bg-secondary">
+      <div className={`${cssContainerWrapper}`}>
         <div className="flex flex-row flex-grow flex-shrink justify-between">
           <div className="flex self-center">
-            Open
-            <span className="font-bold">Attestation</span>
+            <a href="./">
+              Open<span className="font-bold">Attestation</span>
+            </a>
           </div>
           <div className="flex flex-row justify-between items-center">
-            <a href="#" className="mr-5">
+            <a href="#" className="transition-colors duration-300 ease-out hover:text-gray-400 mr-5">
               About
             </a>
             <UploadButton onClick={handleUpload}>Upload</UploadButton>
           </div>
         </div>
       </div>
-    </NavbarTop>
+    </nav>
   );
 };
