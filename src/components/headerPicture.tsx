@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { containerMain } from "./../constants";
+import { cssContainerWrapper } from "./../constants";
 import ClipArt from "../resources/clip-uploading.png";
 
 const HeaderTextOne = styled.div`
@@ -16,7 +16,7 @@ const HeaderTextTwo = styled.div`
 export const HeaderPicture: React.FunctionComponent = () => {
   return (
     <section>
-      <div className={`${containerMain} py-8`}>
+      <div className={`${cssContainerWrapper} py-8`}>
         <div className="flex flex-wrap items-center">
           <div className="w-2/3">
             <div className="py-12">

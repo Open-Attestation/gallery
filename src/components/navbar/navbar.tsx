@@ -1,5 +1,5 @@
 import React from "react";
-import { containerMain } from "../../constants";
+import { cssContainerWrapper } from "../../constants";
 import { UploadButton } from "./uploadButton";
 
 export const Navbar: React.FunctionComponent = () => {
@@ -9,7 +9,7 @@ export const Navbar: React.FunctionComponent = () => {
 
   return (
     <nav className="py-3 text-white bg-secondary">
-      <div className={`${containerMain}`}>
+      <div className={`${cssContainerWrapper}`}>
         <div className="flex flex-row flex-grow flex-shrink justify-between">
           <div className="flex self-center">
             <a href="./">

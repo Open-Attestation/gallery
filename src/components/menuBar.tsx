@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { FiSearch } from "react-icons/fi";
-import { containerMain } from "./../constants";
+import { cssContainerWrapper } from "./../constants";
 
 const MenuBarContainer = styled.nav`
   transform: translateY(-50%);
@@ -34,7 +34,7 @@ export const MenuBar: React.FunctionComponent = () => {
   };
 
   return (
-    <MenuBarContainer className={`${containerMain} absolute left-0 right-0`}>
+    <MenuBarContainer className={`${cssContainerWrapper} absolute left-0 right-0`}>
       <MenuBarContent className="rounded-lg bg-white py-3">
         <div className="flex flex-wrap px-5 items-center">
           <div className="w-full md:w-auto mb-3 md:mb-0">
