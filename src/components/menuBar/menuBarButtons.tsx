@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SetStateAction, Dispatch } from "react";
 import styled from "@emotion/styled";
 import { Tag } from "../displayDocuments/documents";
 
@@ -19,11 +19,11 @@ const Button = (props: { title: string; selected: boolean }): JSX.Element => {
 };
 
 interface MenuBarButtonsProps {
-  setSelectedButton: (name: Tag | null) => () => void;
-  selectedButton: Tag;
+  selectedButton: Tag | null;
+  setSelectedButton: Dispatch<SetStateAction<Tag | null>>;
 }
 
-export const MenuBarButtons: React.FunctionComponent = (props: MenuBarButtonsProps) => {
+export const MenuBarButtons = (props: MenuBarButtonsProps): JSX.Element => {
   const onSelectFilter = (name: Tag | null) => () => {
     props.setSelectedButton(name);
   };

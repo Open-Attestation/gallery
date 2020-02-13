@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { FiSearch } from "react-icons/fi";
 import { cssContainerWrapper } from "../../constants";
 import { MenuBarButtons } from "./menuBarButtons";
+import { Tag } from "../displayDocuments/documents";
 
 const MenuBarContainer = styled.nav`
   transform: translateY(-50%);
@@ -19,7 +20,7 @@ const SearchBar = styled.div`
 
 export const MenuBar: React.FunctionComponent = () => {
   const [search, setSearch] = useState<string>("");
-  const [selectedButton, setSelectedButton] = useState<string | null>(null);
+  const [selectedButton, setSelectedButton] = useState<Tag | null>(null);
 
   const submitFormHandler = (): void => {
     console.log("Form submitted!");
