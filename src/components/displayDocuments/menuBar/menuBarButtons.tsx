@@ -1,6 +1,7 @@
-import React, { SetStateAction, Dispatch } from "react";
+import React from "react";
 import styled from "@emotion/styled";
-import { Tag } from "../displayDocuments/documents";
+import { Tag } from "../documents";
+import { MenuBarButtonsProps } from "./menuBar";
 
 const Button: React.FunctionComponent<{ title: string; selected: boolean }> = ({
   title,
@@ -23,11 +24,6 @@ const Button: React.FunctionComponent<{ title: string; selected: boolean }> = ({
   return <ButtonContainer className={className}>{title}</ButtonContainer>;
 };
 
-interface MenuBarButtonsProps {
-  selectedButton?: Tag;
-  setSelectedButton: Dispatch<SetStateAction<Tag | undefined>>;
-}
-
 export const MenuBarButtons: React.FunctionComponent<MenuBarButtonsProps> = ({
   selectedButton,
   setSelectedButton
@@ -45,7 +41,7 @@ export const MenuBarButtons: React.FunctionComponent<MenuBarButtonsProps> = ({
         <Button title="TradeTrust" selected={selectedButton === Tag.TRADETRUST} />
       </div>
       <div onClick={onSelectFilter(Tag.OPENCERTS)}>
-        <Button title="Opencerts" selected={selectedButton === Tag.OPENCERTS} />
+        <Button title="OpenCerts" selected={selectedButton === Tag.OPENCERTS} />
       </div>
       <div onClick={onSelectFilter(Tag.LICENCE)}>
         <Button title="Licence" selected={selectedButton === Tag.LICENCE} />

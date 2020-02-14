@@ -6,7 +6,7 @@ export interface Document {
 }
 
 export enum Tag {
-  TRADETRUST = "Tradetrust",
+  TRADETRUST = "TradeTrust",
   OPENCERTS = "OpenCerts",
   LICENCE = "Licence"
 }
