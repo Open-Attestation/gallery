@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { cssContainerWrapper } from "../../constants";
 import styled from "@emotion/styled";
 import { DocumentCard } from "./documentCard";
@@ -9,9 +9,9 @@ const SectionContainer = styled.section`
 `;
 
 export const DisplayDocuments: React.FunctionComponent = () => {
-  const displayCards = (): JSX.Element[] => {
+  const displayCards = (): ReactElement[] => {
     return documents.map(data => (
-      <DocumentCard title={data.title} url={data.url} imageName={data.imageName} key={data.url} />
+      <DocumentCard title={data.title} url={data.url} imageName={data.imageName} tags={data.tags} key={data.url} />
     ));
   };
 
