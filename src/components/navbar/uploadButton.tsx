@@ -1,7 +1,11 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React, { ReactElement, ButtonHTMLAttributes } from "react";
 import { FiUpload } from "react-icons/fi";
 
-export const UploadButton: React.FunctionComponent<ButtonHTMLAttributes<any>> = ({ onClick, children, ...rest }) => {
+export const UploadButton: React.FunctionComponent<ButtonHTMLAttributes<any>> = ({
+  onClick,
+  children,
+  ...rest
+}): ReactElement => {
   return (
     <button
       onClick={onClick}

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { cssContainerWrapper } from "../../constants";
 import { UploadButton } from "./uploadButton";
 
-export const Navbar: React.FunctionComponent = () => {
+export const Navbar: React.FunctionComponent = (): ReactElement => {
   const handleUpload = (): void => {
     console.log("uploaded");
   };

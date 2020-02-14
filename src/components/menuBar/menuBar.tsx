@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, ReactElement } from "react";
 import styled from "@emotion/styled";
 import { FiSearch } from "react-icons/fi";
 import { cssContainerWrapper } from "../../constants";
@@ -18,9 +18,9 @@ const SearchBar = styled.div`
   box-sizing: border-box;
 `;
 
-export const MenuBar: React.FunctionComponent = () => {
+export const MenuBar: React.FunctionComponent = (): ReactElement => {
   const [search, setSearch] = useState<string>("");
-  const [selectedButton, setSelectedButton] = useState<Tag | null>(null);
+  const [selectedButton, setSelectedButton] = useState<Tag | undefined>();
 
   const submitFormHandler = (): void => {
     console.log("Form submitted!");

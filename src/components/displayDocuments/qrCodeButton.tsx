@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "@emotion/styled";
 import { AiOutlineQrcode } from "react-icons/ai";
 
@@ -12,7 +12,7 @@ interface QrCodeProps {
   handleClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
-export const QrCodeButton: React.FunctionComponent<QrCodeProps> = ({ handleClick }) => {
+export const QrCodeButton: React.FunctionComponent<QrCodeProps> = ({ handleClick }): ReactElement => {
   return (
     <QrCodeButtonContainer
       onClick={handleClick}

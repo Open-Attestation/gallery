@@ -1,9 +1,8 @@
-import React, { SetStateAction, Dispatch } from "react";
+import React, { ReactElement, SetStateAction, Dispatch } from "react";
 import styled from "@emotion/styled";
 import { Tag } from "../displayDocuments/documents";
 
-const Button = (props: { title: string; selected: boolean }): JSX.Element => {
-  const { title, selected } = props;
+const Button = ({ title, selected }: { title: string; selected: boolean }): ReactElement => {
   const ButtonContainer = styled.button`
     line-height: 17px;
     letter-spacing: -0.02em;
@@ -19,28 +18,28 @@ const Button = (props: { title: string; selected: boolean }): JSX.Element => {
 };
 
 interface MenuBarButtonsProps {
-  selectedButton: Tag | null;
-  setSelectedButton: Dispatch<SetStateAction<Tag | null>>;
+  selectedButton: Tag | undefined;
+  setSelectedButton: Dispatch<SetStateAction<Tag | undefined>>;
 }
 
-export const MenuBarButtons = (props: MenuBarButtonsProps): JSX.Element => {
-  const onSelectFilter = (name: Tag | null) => () => {
-    props.setSelectedButton(name);
+export const MenuBarButtons = ({ selectedButton, setSelectedButton }: MenuBarButtonsProps): ReactElement => {
+  const onSelectFilter = (name: Tag | undefined) => () => {
+    setSelectedButton(name);
   };
 
   return (
     <div className="flex flex-wrap">
-      <div onClick={onSelectFilter(null)}>
-        <Button title="All" selected={props.selectedButton === null} />
+      <div onClick={onSelectFilter(undefined)}>
+        <Button title="All" selected={!selectedButton} />
       </div>
       <div onClick={onSelectFilter(Tag.TRADETRUST)}>
-        <Button title="TradeTrust" selected={props.selectedButton === Tag.TRADETRUST} />
+        <Button title="TradeTrust" selected={selectedButton === Tag.TRADETRUST} />
       </div>
       <div onClick={onSelectFilter(Tag.OPENCERTS)}>
-        <Button title="Opencerts" selected={props.selectedButton === Tag.OPENCERTS} />
+        <Button title="Opencerts" selected={selectedButton === Tag.OPENCERTS} />
       </div>
       <div onClick={onSelectFilter(Tag.LICENCE)}>
-        <Button title="Licence" selected={props.selectedButton === Tag.LICENCE} />
+        <Button title="Licence" selected={selectedButton === Tag.LICENCE} />
       </div>
     </div>
   );
