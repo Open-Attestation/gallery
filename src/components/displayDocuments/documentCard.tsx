@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import QRCode from "qrcode.react";
 import { MdDescription } from "react-icons/md";
@@ -45,7 +45,7 @@ const DocumentDetails = styled.div`
   line-height: 19px;
 `;
 
-export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url, title }): ReactElement => {
+export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url, title }) => {
   const [qr, setQr] = useState(false);
 
   return (

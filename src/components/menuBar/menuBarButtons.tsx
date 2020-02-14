@@ -1,8 +1,14 @@
-import React, { ReactElement, SetStateAction, Dispatch } from "react";
+import React, { SetStateAction, Dispatch } from "react";
 import styled from "@emotion/styled";
 import { Tag } from "../displayDocuments/documents";
 
-const Button = ({ title, selected }: { title: string; selected: boolean }): ReactElement => {
+const Button: React.FunctionComponent<{ title: string; selected: boolean }> = ({
+  title,
+  selected
+}: {
+  title: string;
+  selected: boolean;
+}) => {
   const ButtonContainer = styled.button`
     line-height: 17px;
     letter-spacing: -0.02em;
@@ -18,12 +24,15 @@ const Button = ({ title, selected }: { title: string; selected: boolean }): Reac
 };
 
 interface MenuBarButtonsProps {
-  selectedButton: Tag | undefined;
+  selectedButton?: Tag;
   setSelectedButton: Dispatch<SetStateAction<Tag | undefined>>;
 }
 
-export const MenuBarButtons = ({ selectedButton, setSelectedButton }: MenuBarButtonsProps): ReactElement => {
-  const onSelectFilter = (name: Tag | undefined) => () => {
+export const MenuBarButtons: React.FunctionComponent<MenuBarButtonsProps> = ({
+  selectedButton,
+  setSelectedButton
+}: MenuBarButtonsProps) => {
+  const onSelectFilter = (name?: Tag) => () => {
     setSelectedButton(name);
   };
 

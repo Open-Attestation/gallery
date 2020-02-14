@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import styled from "@emotion/styled";
 import { cssContainerWrapper } from "./../constants";
 import ClipArt from "../resources/clip-uploading.png";
@@ -13,7 +13,7 @@ const HeaderTextTwo = styled.div`
   line-height: 1.8rem;
 `;
 
-export const HeaderPicture: React.FunctionComponent = (): ReactElement => {
+export const HeaderPicture: React.FunctionComponent = () => {
   return (
     <section>
       <div className={`${cssContainerWrapper} py-8`}>

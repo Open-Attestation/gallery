@@ -1,7 +1,7 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import { cssContainerWrapper } from "./../constants";
 
-export const Footer: React.FunctionComponent = (): ReactElement => {
+export const Footer: React.FunctionComponent = () => {
   return (
     <footer className="py-6 text-white bg-secondary">
       <div className={`${cssContainerWrapper}`}>

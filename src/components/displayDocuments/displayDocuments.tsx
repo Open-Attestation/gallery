@@ -8,7 +8,7 @@ const SectionContainer = styled.section`
   background-color: #e5e5e5;
 `;
 
-export const DisplayDocuments: React.FunctionComponent = (): ReactElement => {
+export const DisplayDocuments: React.FunctionComponent = () => {
   const displayCards = (): ReactElement[] => {
     return documents.map(data => (
       <DocumentCard title={data.title} url={data.url} imageName={data.imageName} tags={data.tags} key={data.url} />
