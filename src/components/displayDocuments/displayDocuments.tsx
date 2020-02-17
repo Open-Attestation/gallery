@@ -32,13 +32,13 @@ export const DisplayDocuments: React.FunctionComponent<DisplayDocumentsProps> = 
   };
 
   return (
-    <div>
+    <>
       <MenuBar setSelectedButton={setSelectedButton} selectedButton={selectedButton} />
       <SectionContainer className="py-16">
         <div className={`${cssContainerWrapper} md:px-00`}>
           <div className="flex flex-wrap">{displayCards(documents)}</div>
         </div>
       </SectionContainer>
-    </div>
+    </>
   );
 };

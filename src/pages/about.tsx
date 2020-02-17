@@ -1,12 +1,10 @@
 import React from "react";
-import { Navbar } from "./../components/navbar";
 import { HeaderPicture } from "./../components/headerPicture";
 
 export const About: React.FunctionComponent = () => {
   return (
-    <div>
-      <Navbar />
+    <main className="flex-1">
       <HeaderPicture title="About" description="Learn more about how you can contribute!" />
-    </div>
+    </main>
   );
 };
