@@ -8,19 +8,19 @@ const sampleDocuments: Document[] = [
     title: "test1",
     url: "test1",
     imageName: "",
-    tags: [Tag.OPENCERTS]
+    tags: [Tag.TRADETRUST]
   },
   {
     title: "test2",
     url: "test2",
     imageName: "",
-    tags: [Tag.TRADETRUST]
+    tags: [Tag.OPENCERTS]
   },
   {
     title: "test3",
     url: "test3",
     imageName: "",
-    tags: [Tag.TRADETRUST]
+    tags: [Tag.OPENCERTS]
   },
   {
     title: "test4",
@@ -50,5 +50,32 @@ describe("displayDocuments", () => {
     fireEvent.click(allButton);
     const displayCard = getAllByTestId("display-card");
     expect(displayCard).toHaveLength(sampleDocuments.length);
+  });
+
+  it("should show only TradeTrust documents, when 'TradeTrust' button is pressed", () => {
+    expect.assertions(1);
+    const { getByText, getAllByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
+    const tradeTrustButton = getByText("TradeTrust");
+    fireEvent.click(tradeTrustButton);
+    const displayCard = getAllByTestId("display-card");
+    expect(displayCard).toHaveLength(1);
+  });
+
+  it("should show OpenCerts documents, when 'OpenCerts' button is pressed", () => {
+    expect.assertions(1);
+    const { getByText, getAllByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
+    const openCertsButton = getByText("OpenCerts");
+    fireEvent.click(openCertsButton);
+    const displayCard = getAllByTestId("display-card");
+    expect(displayCard).toHaveLength(2);
+  });
+
+  it("should show Licence documents, when 'Licence' button is pressed", () => {
+    expect.assertions(1);
+    const { getByText, getAllByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
+    const licenceButton = getByText("Licence");
+    fireEvent.click(licenceButton);
+    const displayCard = getAllByTestId("display-card");
+    expect(displayCard).toHaveLength(3);
   });
 });
