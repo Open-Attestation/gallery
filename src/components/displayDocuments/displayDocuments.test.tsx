@@ -46,11 +46,11 @@ import { App } from "../../app";
 
 describe("displayDocuments", () => {
   it("should show all documents, when 'All' button is pressed", () => {
-    const { getByText, getByTestId } = render(<App />);
+    expect.assertions(1);
+    const { getByText, getAllByTestId } = render(<App />);
     const allButton = getByText("All");
     fireEvent.click(allButton);
-
-    const displayCard = getByTestId("display-card");
-    expect(displayCard).toBe(6);
+    const displayCard = getAllByTestId("display-card");
+    expect(displayCard).toHaveLength(6);
   });
 });

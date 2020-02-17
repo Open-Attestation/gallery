@@ -21,14 +21,7 @@ export const DisplayDocuments: React.FunctionComponent = () => {
     }
 
     return filteredDocuments.map((doc, index) => (
-      <DocumentCard
-        data-testid="display-card"
-        title={doc.title}
-        url={doc.url}
-        imageName={doc.imageName}
-        tags={doc.tags}
-        key={index}
-      />
+      <DocumentCard title={doc.title} url={doc.url} imageName={doc.imageName} tags={doc.tags} key={index} />
     ));
   };
 
