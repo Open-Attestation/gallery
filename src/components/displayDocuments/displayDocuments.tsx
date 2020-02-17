@@ -30,7 +30,9 @@ export const DisplayDocuments: React.FunctionComponent = () => {
       <MenuBar setSelectedButton={setSelectedButton} selectedButton={selectedButton} />
       <SectionContainer className="py-16">
         <div className={`${cssContainerWrapper} md:px-00`}>
-          <div className="flex flex-wrap">{displayCards()}</div>
+          <div className="flex flex-wrap" data-testid="display-cards">
+            {displayCards()}
+          </div>
         </div>
       </SectionContainer>
     </div>
