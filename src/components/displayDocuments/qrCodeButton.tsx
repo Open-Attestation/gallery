@@ -16,7 +16,7 @@ export const QrCodeButton: React.FunctionComponent<QrCodeProps> = ({ handleClick
   return (
     <QrCodeButtonContainer
       onClick={handleClick}
-      className="bg-primary-light absolute bottom-0 right-0 flex justify-center"
+      className="bg-primary-light hover:bg-secondary absolute bottom-0 right-0 flex justify-center transition-colors duration-300 ease-out hover:text-white"
     >
       <AiOutlineQrcode size={20} className="self-center" />
     </QrCodeButtonContainer>
