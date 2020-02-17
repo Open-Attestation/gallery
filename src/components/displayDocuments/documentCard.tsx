@@ -77,7 +77,7 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url
                   event.stopPropagation();
                   setQr(!qr);
                 }}
-                className="absolute bottom-0 right-0 flex justify-center"
+                className="absolute bottom-0 right-0 flex justify-center transition-colors duration-300 ease-out hover:bg-secondary hover:text-white"
               >
                 <MdDescription size={20} className="self-center" />
               </BackButton>
