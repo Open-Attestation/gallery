@@ -35,7 +35,7 @@ export const MenuBarButtons: React.FunctionComponent<MenuBarButtonsProps> = ({
   return (
     <div className="flex flex-wrap">
       <div onClick={onSelectFilter(undefined)}>
-        <Button title="All" selected={!selectedButton} data-testid="all-button" />
+        <Button title="All" selected={!selectedButton} />
       </div>
       <div onClick={onSelectFilter(Tag.TRADETRUST)}>
         <Button title="TradeTrust" selected={selectedButton === Tag.TRADETRUST} />

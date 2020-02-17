@@ -21,7 +21,14 @@ export const DisplayDocuments: React.FunctionComponent = () => {
     }
 
     return filteredDocuments.map((doc, index) => (
-      <DocumentCard title={doc.title} url={doc.url} imageName={doc.imageName} tags={doc.tags} key={index} />
+      <DocumentCard
+        data-testid="display-card"
+        title={doc.title}
+        url={doc.url}
+        imageName={doc.imageName}
+        tags={doc.tags}
+        key={index}
+      />
     ));
   };
 
@@ -30,9 +37,7 @@ export const DisplayDocuments: React.FunctionComponent = () => {
       <MenuBar setSelectedButton={setSelectedButton} selectedButton={selectedButton} />
       <SectionContainer className="py-16">
         <div className={`${cssContainerWrapper} md:px-00`}>
-          <div className="flex flex-wrap" data-testid="display-cards">
-            {displayCards()}
-          </div>
+          <div className="flex flex-wrap">{displayCards()}</div>
         </div>
       </SectionContainer>
     </div>

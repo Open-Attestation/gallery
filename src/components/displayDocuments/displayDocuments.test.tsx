@@ -2,8 +2,8 @@ import React from "react";
 import { render, fireEvent, cleanup } from "@testing-library/react";
 
 import { Document, Tag } from "./documents";
-// import { DisplayDocuments } from "./displayDocuments";
-import { MenuBarButtons } from "./menuBar/menuBarButtons";
+import { documents } from "./documents";
+import { App } from "../../app";
 
 // const sampleDocuments: Document[] = [
 //   {
@@ -44,15 +44,13 @@ import { MenuBarButtons } from "./menuBar/menuBarButtons";
 //   }
 // ];
 
-afterEach(cleanup)
-
 describe("displayDocuments", () => {
   it("should show all documents, when 'All' button is pressed", () => {
-    const { getByTestId } = render(<MenuBarButtons setSelectedButton={()=>()} />);
-    const allButton = getByTestId(`all-button`);
+    const { getByText, getByTestId } = render(<App />);
+    const allButton = getByText("All");
     fireEvent.click(allButton);
 
-    const displayCards = getByTestId(`display-cards`);
-    expect(displayCards.innerHTML).toBe(6)
+    const displayCard = getByTestId("display-card");
+    expect(displayCard).toBe(6);
   });
 });
