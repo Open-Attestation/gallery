@@ -46,14 +46,14 @@ const DocumentDetails = styled.div`
 `;
 
 export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url, title }) => {
-  const [qr, setQr] = useState(false);
+  const [showQrView, setShowQrView] = useState(false);
 
   return (
     <a data-testid="display-card" className="w-full md:w-1/2 lg:w-1/3 px-0 md:px-2 py-4 md:py-2" href={url}>
       <CardContainer className="flex justify-center rounded bg-white">
         <HoverContainer className="flex-column">
           <div className="relative overflow-hidden">
-            {!qr ? (
+            {!showQrView ? (
               <DocumentContainer
                 className="rounded object-contain"
                 src={require(`../../resources/documentThumbnails/${imageName}.jpg`)}
@@ -62,12 +62,12 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url
             ) : (
               <QRCode className="mx-auto" value={url} size={224} level={"H"} />
             )}
-            {!qr ? (
+            {!showQrView ? (
               <QrCodeButton
                 handleClick={event => {
                   event.preventDefault();
                   event.stopPropagation();
-                  setQr(!qr);
+                  setShowQrView(!showQrView);
                 }}
               />
             ) : (
@@ -75,7 +75,7 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url
                 onClick={event => {
                   event.preventDefault();
                   event.stopPropagation();
-                  setQr(!qr);
+                  setShowQrView(!showQrView);
                 }}
                 className="absolute bottom-0 right-0 flex justify-center transition-colors duration-300 ease-out hover:bg-secondary hover:text-white"
               >
