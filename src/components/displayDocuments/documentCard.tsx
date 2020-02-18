@@ -5,7 +5,7 @@ import { MdDescription } from "react-icons/md";
 import { QrCodeButton } from "./qrCodeButton";
 import { Document } from "./documents";
 
-const BackButton = styled.div`
+const ShowDocumentButton = styled.div`
   width: 48px;
   height: 48px;
   background: #feeee7;
@@ -26,7 +26,7 @@ const CardContainer = styled.div`
 
 const HoverContainer = styled.div`
   &:hover {
-    ${BackButton} {
+    ${ShowDocumentButton} {
       transition: transform 0.3s ease-out;
       transform: translateX(0) translateY(0);
     }
@@ -51,16 +51,17 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url
   return (
     <a data-testid="display-card" className="w-full md:w-1/2 lg:w-1/3 px-0 md:px-2 py-4 md:py-2" href={url}>
       <CardContainer className="flex justify-center rounded bg-white">
-        <HoverContainer className="flex-column">
+        <HoverContainer data-testid="hover-container" className="flex-column">
           <div className="relative overflow-hidden">
             {!qr ? (
               <DocumentContainer
+                data-testid="document-container"
                 className="rounded object-contain"
                 src={require(`../../resources/documentThumbnails/${imageName}.jpg`)}
                 alt="document"
               />
             ) : (
-              <QRCode className="mx-auto" value={url} size={224} level={"H"} />
+              <QRCode data-testid="qr-code" className="mx-auto" value={url} size={224} level={"H"} />
             )}
             {!qr ? (
               <QrCodeButton
@@ -71,7 +72,8 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url
                 }}
               />
             ) : (
-              <BackButton
+              <ShowDocumentButton
+                data-testid="show-document-button"
                 onClick={event => {
                   event.preventDefault();
                   event.stopPropagation();
@@ -80,7 +82,7 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url
                 className="absolute bottom-0 right-0 flex justify-center transition-colors duration-300 ease-out hover:bg-secondary hover:text-white"
               >
                 <MdDescription size={20} className="self-center" />
-              </BackButton>
+              </ShowDocumentButton>
             )}
           </div>
           <DocumentDetails className="mt-5 font-medium text-base">{title}</DocumentDetails>

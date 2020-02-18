@@ -13,11 +13,36 @@ const sampleDocuments: Document[] = [
 ];
 
 describe("displayDocuments", () => {
-  it("should hide QrCodeButton, when QrCodeButton button is pressed", () => {
+  it("should show Document, before QrCodeButton button is pressed", () => {
+    expect.assertions(1);
+    const { queryByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
+    expect(queryByTestId("document-container")).not.toBeNull();
+  });
+
+  it("should not show document, after QrCodeButton button is pressed", () => {
     expect.assertions(1);
     const { queryByTestId, getByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
     const QrCodeButton = getByTestId("qr-button");
     fireEvent.click(QrCodeButton);
+    expect(queryByTestId("document-container")).toBeNull();
+  });
+
+  it("should hide QrCodeButton and show QrCode, when QrCodeButton button is pressed", () => {
+    expect.assertions(2);
+    const { queryByTestId, getByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
+    const QrCodeButton = getByTestId("qr-button");
+    fireEvent.click(QrCodeButton);
     expect(queryByTestId("qr-button")).toBeNull();
+    expect(queryByTestId("qr-code")).not.toBeNull();
+  });
+
+  it("should display ShowDocumentButton, when hovering over HoverContainer", () => {
+    expect.assertions(1);
+    const { queryByTestId, getByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
+    const QrCodeButton = getByTestId("qr-button");
+    fireEvent.click(QrCodeButton);
+    const HoverContainer = getByTestId("hover-container");
+    fireEvent.mouseOver(HoverContainer);
+    expect(queryByTestId("show-document-button")).not.toBeNull();
   });
 });
