@@ -30,7 +30,9 @@ export const DisplayDocuments: React.FunctionComponent<DisplayDocumentsProps> = 
     }
 
     if (search != "") {
-      filteredDocumentsBySearch = filteredDocumentsByButton.filter(document => document.title.toLowerCase() === search);
+      filteredDocumentsBySearch = filteredDocumentsByButton.filter(document =>
+        document.title.toLowerCase().startsWith(search)
+      );
     } else {
       filteredDocumentsBySearch = filteredDocumentsByButton;
     }

@@ -31,8 +31,8 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({
   search,
   setSearch
 }: MenuBarProps) => {
-  const submitFormHandler = (): void => {
-    console.log("Form submitted!");
+  const submitFormHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    e.preventDefault();
   };
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -50,8 +50,14 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({
             <SearchBar>
               <div className="flex flex-row items-center rounded">
                 <FiSearch className="text-gray-500 m-3" />
-                <form className="w-full mr-2" onSubmit={submitFormHandler}>
-                  <input className="w-full" type="search" name="search" value={search} onChange={handleSearch} />
+                <form className="w-full mr-2 border-red border-solid" onSubmit={submitFormHandler}>
+                  <input
+                    className="w-full focus:outline-none"
+                    type="search"
+                    name="search"
+                    value={search}
+                    onChange={handleSearch}
+                  />
                 </form>
               </div>
             </SearchBar>
