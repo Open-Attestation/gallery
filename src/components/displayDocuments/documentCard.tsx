@@ -69,6 +69,7 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url
                   event.stopPropagation();
                   setQr(!qr);
                 }}
+                data-testid="qr-button"
               />
             ) : (
               <BackButton
