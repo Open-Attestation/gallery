@@ -1,4 +1,4 @@
-import React, { useState, SetStateAction, Dispatch } from "react";
+import React, { SetStateAction, Dispatch } from "react";
 import styled from "@emotion/styled";
 import { FiSearch } from "react-icons/fi";
 import { cssContainerWrapper } from "../../../constants";
@@ -18,17 +18,19 @@ const SearchBar = styled.div`
   box-sizing: border-box;
 `;
 
-export interface MenuBarButtonsProps {
+interface MenuBarProps {
   selectedButton?: Tag;
   setSelectedButton: Dispatch<SetStateAction<Tag | undefined>>;
+  search: string;
+  setSearch: Dispatch<SetStateAction<string>>;
 }
 
-export const MenuBar: React.FunctionComponent<MenuBarButtonsProps> = ({
+export const MenuBar: React.FunctionComponent<MenuBarProps> = ({
   setSelectedButton,
-  selectedButton
-}: MenuBarButtonsProps) => {
-  const [search, setSearch] = useState<string>("");
-
+  selectedButton,
+  search,
+  setSearch
+}: MenuBarProps) => {
   const submitFormHandler = (): void => {
     console.log("Form submitted!");
   };

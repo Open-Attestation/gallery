@@ -1,7 +1,6 @@
-import React from "react";
+import React, { SetStateAction, Dispatch } from "react";
 import styled from "@emotion/styled";
 import { Tag } from "../documents";
-import { MenuBarButtonsProps } from "./menuBar";
 
 const Button: React.FunctionComponent<{ title: string; selected: boolean }> = ({
   title,
@@ -23,6 +22,11 @@ const Button: React.FunctionComponent<{ title: string; selected: boolean }> = ({
 
   return <ButtonContainer className={className}>{title}</ButtonContainer>;
 };
+
+interface MenuBarButtonsProps {
+  selectedButton?: Tag;
+  setSelectedButton: Dispatch<SetStateAction<Tag | undefined>>;
+}
 
 export const MenuBarButtons: React.FunctionComponent<MenuBarButtonsProps> = ({
   selectedButton,
