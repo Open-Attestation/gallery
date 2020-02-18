@@ -13,18 +13,21 @@ const HeaderTextTwo = styled.div`
   line-height: 1.8rem;
 `;
 
-export const HeaderPicture: React.FunctionComponent = () => {
+interface HeaderPictureProps {
+  title: string;
+  description: string;
+}
+
+export const HeaderPicture: React.FunctionComponent<HeaderPictureProps> = ({ title, description }) => {
   return (
     <section>
       <div className={`${cssContainerWrapper} py-8`}>
         <div className="flex flex-wrap items-center">
           <div className="w-2/3">
             <div className="py-12">
-              <HeaderTextOne className="font-semibold text-6xl">Gallery</HeaderTextOne>
-              <HeaderTextTwo className="font-light text-2xl mt-4">
-                Explore OpenAttestation documents
-                <br />
-                and create yours today
+              <HeaderTextOne className="font-semibold text-6xl">{title}</HeaderTextOne>
+              <HeaderTextTwo className="font-light text-2xl mt-4 w-full md:w-9/12 lg:w-7/12">
+                {description}
               </HeaderTextTwo>
             </div>
           </div>
