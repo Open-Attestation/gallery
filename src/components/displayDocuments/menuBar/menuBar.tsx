@@ -31,7 +31,7 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({
   search,
   setSearch
 }: MenuBarProps) => {
-  const submitFormHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const submitFormHandler = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
   };
 
