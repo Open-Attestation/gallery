@@ -20,26 +20,12 @@ export const DisplayDocuments: React.FunctionComponent<DisplayDocumentsProps> = 
   const [search, setSearch] = useState<string>("");
 
   const displayCards = (documents: Document[]): ReactElement[] => {
-    let filteredDocumentsByButton;
-    let filteredDocumentsBySearch;
-
-    if (selectedButton) {
-      filteredDocumentsByButton = documents.filter(document => document.tags.includes(selectedButton));
-    } else {
-      filteredDocumentsByButton = documents;
-    }
-
-    if (search != "") {
-      filteredDocumentsBySearch = filteredDocumentsByButton.filter(document =>
-        document.title.toLowerCase().startsWith(search)
-      );
-    } else {
-      filteredDocumentsBySearch = filteredDocumentsByButton;
-    }
-
-    return filteredDocumentsBySearch.map((doc, index) => (
-      <DocumentCard title={doc.title} url={doc.url} imageName={doc.imageName} tags={doc.tags} key={index} />
-    ));
+    return documents
+      .filter(document => !selectedButton || document.tags.includes(selectedButton))
+      .filter(document => !search || document.title.toLowerCase().startsWith(search))
+      .map((doc, index) => (
+        <DocumentCard title={doc.title} url={doc.url} imageName={doc.imageName} tags={doc.tags} key={index} />
+      ));
   };
 
   return (
