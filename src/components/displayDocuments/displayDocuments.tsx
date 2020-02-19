@@ -20,7 +20,7 @@ export const DisplayDocuments: React.FunctionComponent<DisplayDocumentsProps> = 
   const [selectedButton, setSelectedButton] = useState<Tag | undefined>();
   const [searchValue, setSearchValue] = useState<string>("");
 
-  const { result, search: fuzzySearch } = useFuzzy<Document[]>(documents, {
+  const { result, search: fuzzySearch } = useFuzzy<Document>(documents, {
     keys: ["title"]
   });
 
