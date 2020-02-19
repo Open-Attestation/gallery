@@ -1,4 +1,4 @@
-import React, { useState, SetStateAction, Dispatch } from "react";
+import React, { SetStateAction, Dispatch } from "react";
 import styled from "@emotion/styled";
 import { FiSearch } from "react-icons/fi";
 import { cssContainerWrapper } from "../../../constants";
@@ -18,19 +18,21 @@ const SearchBar = styled.div`
   box-sizing: border-box;
 `;
 
-export interface MenuBarButtonsProps {
+interface MenuBarProps {
   selectedButton?: Tag;
   setSelectedButton: Dispatch<SetStateAction<Tag | undefined>>;
+  search: string;
+  setSearch: Dispatch<SetStateAction<string>>;
 }
 
-export const MenuBar: React.FunctionComponent<MenuBarButtonsProps> = ({
+export const MenuBar: React.FunctionComponent<MenuBarProps> = ({
   setSelectedButton,
-  selectedButton
-}: MenuBarButtonsProps) => {
-  const [search, setSearch] = useState<string>("");
-
-  const submitFormHandler = (): void => {
-    console.log("Form submitted!");
+  selectedButton,
+  search,
+  setSearch
+}: MenuBarProps) => {
+  const submitFormHandler = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
   };
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -48,8 +50,14 @@ export const MenuBar: React.FunctionComponent<MenuBarButtonsProps> = ({
             <SearchBar>
               <div className="flex flex-row items-center rounded">
                 <FiSearch className="text-gray-500 m-3" />
-                <form className="w-full mr-2" onSubmit={submitFormHandler}>
-                  <input className="w-full" type="search" name="search" value={search} onChange={handleSearch} />
+                <form className="w-full mr-2 border-red border-solid" onSubmit={submitFormHandler}>
+                  <input
+                    className="w-full focus:outline-none"
+                    type="search"
+                    name="search"
+                    value={search}
+                    onChange={handleSearch}
+                  />
                 </form>
               </div>
             </SearchBar>
