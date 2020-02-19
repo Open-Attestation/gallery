@@ -11,3 +11,8 @@ declare module "*.svg" {
   const value: any;
   export default value;
 }
+
+declare module "react-use-fuzzy" {
+  const value: any[];
+  export default value;
+}

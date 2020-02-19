@@ -21,22 +21,25 @@ const SearchBar = styled.div`
 interface MenuBarProps {
   selectedButton?: Tag;
   setSelectedButton: Dispatch<SetStateAction<Tag | undefined>>;
-  search: string;
-  setSearch: Dispatch<SetStateAction<string>>;
+  searchValue: string;
+  setSearchValue: Dispatch<SetStateAction<string>>;
+  fuzzySearch: any;
 }
 
 export const MenuBar: React.FunctionComponent<MenuBarProps> = ({
   setSelectedButton,
   selectedButton,
-  search,
-  setSearch
+  searchValue,
+  setSearchValue,
+  fuzzySearch
 }: MenuBarProps) => {
   const submitFormHandler = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
   };
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    setSearch(e.target.value);
+    setSearchValue(e.target.value);
+    fuzzySearch(e.target.value);
   };
 
   return (
@@ -55,7 +58,7 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({
                     className="w-full focus:outline-none"
                     type="search"
                     name="search"
-                    value={search}
+                    value={searchValue}
                     onChange={handleSearch}
                   />
                 </form>
