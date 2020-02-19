@@ -45,11 +45,11 @@ const DocumentDetails = styled.div`
   line-height: 19px;
 `;
 
-export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url, title }) => {
+export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, uri, title }) => {
   const [showQrView, setShowQrView] = useState(false);
 
   return (
-    <a data-testid="display-card" className="w-full md:w-1/2 lg:w-1/3 px-0 md:px-2 py-4 md:py-2" href={url}>
+    <a data-testid="display-card" className="w-full md:w-1/2 lg:w-1/3 px-0 md:px-2 py-4 md:py-2" href={uri}>
       <CardContainer className="flex justify-center rounded bg-white">
         <HoverContainer data-testid="hover-container" className="flex-column">
           <div className="relative overflow-hidden">
@@ -61,7 +61,7 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, url
                 alt="document"
               />
             ) : (
-              <QRCode data-testid="qr-code" className="mx-auto" value={url} size={224} level={"H"} />
+              <QRCode data-testid="qr-code" className="mx-auto" value={uri} size={224} level={"H"} />
             )}
             {!showQrView ? (
               <QrCodeButton

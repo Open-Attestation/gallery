@@ -32,7 +32,7 @@ export const DisplayDocuments: React.FunctionComponent<DisplayDocumentsProps> = 
       .filter(document => !selectedButton || document.tags.includes(selectedButton))
       .filter(document => !searchValue || result.includes(document))
       .map((doc, index) => (
-        <DocumentCard title={doc.title} url={doc.url} imageName={doc.imageName} tags={doc.tags} key={index} />
+        <DocumentCard title={doc.title} uri={doc.uri} imageName={doc.imageName} tags={doc.tags} key={index} />
       ));
   };
 

@@ -6,37 +6,37 @@ import { DisplayDocuments } from "../displayDocuments/displayDocuments";
 const sampleDocuments: Document[] = [
   {
     title: "test1",
-    url: "test1",
+    uri: "test1",
     imageName: "",
     tags: [Tag.TRADETRUST]
   },
   {
     title: "test2",
-    url: "test2",
+    uri: "test2",
     imageName: "",
     tags: [Tag.OPENCERTS]
   },
   {
     title: "test3",
-    url: "test3",
+    uri: "test3",
     imageName: "",
     tags: [Tag.OPENCERTS]
   },
   {
     title: "test4",
-    url: "test4",
+    uri: "test4",
     imageName: "",
     tags: [Tag.LICENCE]
   },
   {
     title: "MPA Certificate of Competency",
-    url: "test5",
+    uri: "test5",
     imageName: "test5",
     tags: [Tag.LICENCE]
   },
   {
     title: "test6",
-    url: "test6",
+    uri: "test6",
     imageName: "",
     tags: [Tag.LICENCE]
   }
