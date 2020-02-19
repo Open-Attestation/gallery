@@ -6,7 +6,7 @@ import { DisplayDocuments } from "../displayDocuments/displayDocuments";
 const sampleDocuments: Document[] = [
   {
     title: "test1",
-    url: "test1",
+    uri: "test1",
     imageName: "",
     tags: [Tag.TRADETRUST]
   }
