@@ -19,20 +19,13 @@ describe("displayDocuments", () => {
     expect(queryByTestId("document-container")).not.toBeNull();
   });
 
-  it("should not show document, after QrCodeButton button is pressed", () => {
-    expect.assertions(1);
-    const { queryByTestId, getByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
-    const QrCodeButton = getByTestId("qr-button");
-    fireEvent.click(QrCodeButton);
-    expect(queryByTestId("document-container")).toBeNull();
-  });
-
-  it("should hide QrCodeButton and show QrCode, when QrCodeButton button is pressed", () => {
-    expect.assertions(2);
+  it("should hide QrCodeButton and document, and show QrCode, when QrCodeButton button is pressed", () => {
+    expect.assertions(3);
     const { queryByTestId, getByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
     const QrCodeButton = getByTestId("qr-button");
     fireEvent.click(QrCodeButton);
     expect(queryByTestId("qr-button")).toBeNull();
+    expect(queryByTestId("document-container")).toBeNull();
     expect(queryByTestId("qr-code")).not.toBeNull();
   });
 
