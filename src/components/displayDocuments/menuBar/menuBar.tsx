@@ -23,15 +23,13 @@ interface MenuBarProps {
   setSelectedButton: Dispatch<SetStateAction<Tag | undefined>>;
   searchValue: string;
   setSearchValue: Dispatch<SetStateAction<string>>;
-  fuzzySearch: any;
 }
 
 export const MenuBar: React.FunctionComponent<MenuBarProps> = ({
   setSelectedButton,
   selectedButton,
   searchValue,
-  setSearchValue,
-  fuzzySearch
+  setSearchValue
 }: MenuBarProps) => {
   const submitFormHandler = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -39,7 +37,6 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchValue(e.target.value);
-    fuzzySearch(e.target.value);
   };
 
   return (
