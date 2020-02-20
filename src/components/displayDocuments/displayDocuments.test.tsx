@@ -2,6 +2,7 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { Document, Tag } from "./documents";
 import { DisplayDocuments } from "../displayDocuments/displayDocuments";
+import userEvent from "@testing-library/user-event";
 
 const sampleDocuments: Document[] = [
   {
@@ -86,5 +87,16 @@ describe("displayDocuments", () => {
     fireEvent.click(storableButton);
     const displayCard = getAllByTestId("display-card");
     expect(displayCard).toHaveLength(2);
+  });
+
+  it("should show OpenCerts Demo, when 'certs' is typed in searchbar", () => {
+    expect.assertions(2);
+    const { queryAllByTestId, getByTestId, queryByText } = render(<DisplayDocuments documents={sampleDocuments} />);
+    const searchBarInput = getByTestId("search-bar-input");
+    userEvent.type(searchBarInput, "certs");
+    const documentsRendered = queryAllByTestId("document-name");
+    expect(documentsRendered).toHaveLength(1);
+    const demoCert = queryByText("OpenCerts Demo");
+    expect(demoCert).not.toBeNull();
   });
 });

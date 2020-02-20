@@ -85,7 +85,9 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageSrc, uri,
               </ShowDocumentButton>
             )}
           </div>
-          <DocumentDetails className="mt-5 font-medium text-base">{title}</DocumentDetails>
+          <DocumentDetails data-testid="document-name" className="mt-5 font-medium text-base">
+            {title}
+          </DocumentDetails>
         </HoverContainer>
       </CardContainer>
     </a>
