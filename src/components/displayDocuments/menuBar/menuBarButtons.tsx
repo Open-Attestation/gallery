@@ -1,6 +1,6 @@
-import React, { SetStateAction, Dispatch } from "react";
+import React, { SetStateAction, Dispatch, ReactElement } from "react";
 import styled from "@emotion/styled";
-import { Tag } from "../documents";
+import { Tag, TagType } from "../documents";
 
 const Button: React.FunctionComponent<{ title: string; selected: boolean }> = ({
   title,
@@ -28,6 +28,21 @@ interface MenuBarButtonsProps {
   setSelectedButton: Dispatch<SetStateAction<Tag | undefined>>;
 }
 
+const RenderTagButtons: React.FunctionComponent<{
+  onSelectFilter: (name?: Tag) => () => void;
+  selectedButton?: Tag;
+}> = ({ onSelectFilter, selectedButton }: { onSelectFilter: (name?: Tag) => () => void; selectedButton?: Tag }) => {
+  return Object.keys(Tag).map(tag => {
+    const currentTag: Tag = Tag[tag as TagType];
+
+    return (
+      <div key={currentTag} onClick={onSelectFilter(currentTag)}>
+        <Button title={currentTag} selected={selectedButton === currentTag} />
+      </div>
+    );
+  });
+};
+
 export const MenuBarButtons: React.FunctionComponent<MenuBarButtonsProps> = ({
   selectedButton,
   setSelectedButton
@@ -41,15 +56,7 @@ export const MenuBarButtons: React.FunctionComponent<MenuBarButtonsProps> = ({
       <div onClick={onSelectFilter(undefined)}>
         <Button title="All" selected={!selectedButton} />
       </div>
-      <div onClick={onSelectFilter(Tag.TRADETRUST)}>
-        <Button title="TradeTrust" selected={selectedButton === Tag.TRADETRUST} />
-      </div>
-      <div onClick={onSelectFilter(Tag.OPENCERTS)}>
-        <Button title="OpenCerts" selected={selectedButton === Tag.OPENCERTS} />
-      </div>
-      <div onClick={onSelectFilter(Tag.LICENCE)}>
-        <Button title="Licence" selected={selectedButton === Tag.LICENCE} />
-      </div>
+      <RenderTagButtons onSelectFilter={onSelectFilter} selectedButton={selectedButton} />
     </div>
   );
 };
