@@ -1,4 +1,4 @@
-import React, { SetStateAction, Dispatch, ReactElement } from "react";
+import React, { SetStateAction, Dispatch } from "react";
 import styled from "@emotion/styled";
 import { Tag, TagType } from "../documents";
 
