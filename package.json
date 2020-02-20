@@ -74,7 +74,7 @@
     "eslint-plugin-react-hooks": "^2.3.0",
     "file-loader": "4.2.0",
     "html-webpack-plugin": "3.2.0",
-    "jest": "25.1.0",
+    "jest": "^25.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "postcss": "^7.0.26",
     "postcss-cli": "^7.1.0",
