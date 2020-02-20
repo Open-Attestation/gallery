@@ -50,31 +50,31 @@ export const documents: Document[] = [
   {
     title: "Degree Certificate with Transcript",
     uri: "",
-    imageSrc: "/opencerts-demo.jpg",
+    imageSrc: "/static/img/opencerts-demo.jpg",
     tags: [Tag.TRADETRUST]
   },
   {
     title: "Certificate of Non-manipulation",
     uri: "",
-    imageSrc: "/opencerts-demo.jpg",
+    imageSrc: "/static/img/opencerts-demo.jpg",
     tags: [Tag.TRADETRUST]
   },
   {
     title: "Ngee Ann Polytechnic",
     uri: "",
-    imageSrc: "/opencerts-demo.jpg",
+    imageSrc: "/static/img/opencerts-demo.jpg",
     tags: [Tag.TRADETRUST]
   },
   {
     title: "MPA Certificate of Competency",
     uri: "",
-    imageSrc: "/opencerts-demo.jpg",
+    imageSrc: "/static/img/opencerts-demo.jpg",
     tags: [Tag.TRADETRUST]
   },
   {
     title: "ACRA BizFile+",
     uri: "",
-    imageSrc: "/opencerts-demo.jpg",
+    imageSrc: "/static/img/opencerts-demo.jpg",
     tags: [Tag.TRADETRUST]
   }
 ];
