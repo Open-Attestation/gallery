@@ -57,7 +57,7 @@ module.exports = {
     ...(IS_PROD
       ? [new CompressionPlugin({ test: /\.(js|css|html|svg)$/ }), new BrotliPlugin({ test: /\.(js|css|html|svg)$/ })]
       : []),
-    new CopyWebpackPlugin([{ from: "static/images", to: "static/images" }])
+    new CopyWebpackPlugin([{ from: "static", to: "static", ignore: ["index.html"] }])
   ],
   optimization: {
     splitChunks: {
