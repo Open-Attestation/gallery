@@ -44,7 +44,7 @@ export const documents: Document[] = [
       permittedActions: `["STORE"]`,
       redirect: "https://dev.opencerts.io"
     }),
-    imageSrc: "/opencerts-demo.jpg",
+    imageSrc: "/static/img/opencerts-demo.jpg",
     tags: [Tag.OPENCERTS]
   },
   {

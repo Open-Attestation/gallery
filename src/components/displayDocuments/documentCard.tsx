@@ -57,7 +57,7 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageSrc, uri,
               <DocumentContainer
                 data-testid="document-container"
                 className="rounded object-contain"
-                src={require(`img/${imageSrc}`)}
+                src={imageSrc}
                 alt="document"
               />
             ) : (
