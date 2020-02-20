@@ -1,6 +1,6 @@
 import React, { SetStateAction, Dispatch } from "react";
 import styled from "@emotion/styled";
-import { Tag } from "../documents";
+import { Tag, TagType } from "../documents";
 
 const Button: React.FunctionComponent<{ title: string; selected: boolean }> = ({
   title,
@@ -41,15 +41,14 @@ export const MenuBarButtons: React.FunctionComponent<MenuBarButtonsProps> = ({
       <div onClick={onSelectFilter(undefined)}>
         <Button title="All" selected={!selectedButton} />
       </div>
-      <div onClick={onSelectFilter(Tag.TRADETRUST)}>
-        <Button title="TradeTrust" selected={selectedButton === Tag.TRADETRUST} />
-      </div>
-      <div onClick={onSelectFilter(Tag.OPENCERTS)}>
-        <Button title="OpenCerts" selected={selectedButton === Tag.OPENCERTS} />
-      </div>
-      <div onClick={onSelectFilter(Tag.LICENCE)}>
-        <Button title="Licence" selected={selectedButton === Tag.LICENCE} />
-      </div>
+      {Object.keys(Tag).map(tag => {
+        const currentTag: Tag = Tag[tag as TagType];
+        return (
+          <div key={currentTag} onClick={onSelectFilter(currentTag)}>
+            <Button title={currentTag} selected={selectedButton === currentTag} />
+          </div>
+        );
+      })}
     </div>
   );
 };

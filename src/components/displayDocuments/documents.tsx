@@ -32,8 +32,10 @@ const uriToAction = ({ uri, key, permittedActions, redirect }: Action): string =
 export enum Tag {
   TRADETRUST = "TradeTrust",
   OPENCERTS = "OpenCerts",
-  LICENCE = "Licence"
+  LICENCE = "Licence",
+  STORABLE = "Storable"
 }
+export type TagType = keyof typeof Tag;
 
 export const documents: Document[] = [
   {
@@ -57,13 +59,13 @@ export const documents: Document[] = [
     title: "Certificate of Non-manipulation",
     uri: "",
     imageSrc: "/static/img/opencerts-demo.jpg",
-    tags: [Tag.TRADETRUST]
+    tags: [Tag.TRADETRUST, Tag.STORABLE]
   },
   {
     title: "Ngee Ann Polytechnic",
     uri: "",
     imageSrc: "/static/img/opencerts-demo.jpg",
-    tags: [Tag.TRADETRUST]
+    tags: [Tag.TRADETRUST, Tag.STORABLE]
   },
   {
     title: "MPA Certificate of Competency",
