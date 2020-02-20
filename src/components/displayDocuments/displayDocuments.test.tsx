@@ -7,37 +7,37 @@ const sampleDocuments: Document[] = [
   {
     title: "test1",
     uri: "test1",
-    imageName: "",
+    imageSrc: "",
     tags: [Tag.TRADETRUST]
   },
   {
     title: "test2",
     uri: "test2",
-    imageName: "",
+    imageSrc: "",
     tags: [Tag.OPENCERTS]
   },
   {
     title: "test3",
     uri: "test3",
-    imageName: "",
+    imageSrc: "",
     tags: [Tag.OPENCERTS]
   },
   {
     title: "test4",
     uri: "test4",
-    imageName: "",
+    imageSrc: "",
     tags: [Tag.LICENCE]
   },
   {
     title: "MPA Certificate of Competency",
     uri: "test5",
-    imageName: "test5",
+    imageSrc: "test5",
     tags: [Tag.LICENCE]
   },
   {
     title: "test6",
     uri: "test6",
-    imageName: "",
+    imageSrc: "",
     tags: [Tag.LICENCE]
   }
 ];

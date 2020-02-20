@@ -7,7 +7,7 @@ const sampleDocuments: Document[] = [
   {
     title: "test1",
     uri: "test1",
-    imageName: "",
+    imageSrc: "",
     tags: [Tag.TRADETRUST]
   }
 ];
