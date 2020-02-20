@@ -35,7 +35,7 @@ export enum Tag {
   LICENCE = "Licence",
   STORABLE = "Storable"
 }
-export declare type TagType = keyof typeof Tag;
+export type TagType = keyof typeof Tag;
 
 export const documents: Document[] = [
   {

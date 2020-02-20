@@ -28,21 +28,6 @@ interface MenuBarButtonsProps {
   setSelectedButton: Dispatch<SetStateAction<Tag | undefined>>;
 }
 
-const RenderTagButtons: React.FunctionComponent<{
-  onSelectFilter: (name?: Tag) => () => void;
-  selectedButton?: Tag;
-}> = ({ onSelectFilter, selectedButton }: { onSelectFilter: (name?: Tag) => () => void; selectedButton?: Tag }) => {
-  return Object.keys(Tag).map(tag => {
-    const currentTag: Tag = Tag[tag as TagType];
-
-    return (
-      <div key={currentTag} onClick={onSelectFilter(currentTag)}>
-        <Button title={currentTag} selected={selectedButton === currentTag} />
-      </div>
-    );
-  });
-};
-
 export const MenuBarButtons: React.FunctionComponent<MenuBarButtonsProps> = ({
   selectedButton,
   setSelectedButton
@@ -56,7 +41,14 @@ export const MenuBarButtons: React.FunctionComponent<MenuBarButtonsProps> = ({
       <div onClick={onSelectFilter(undefined)}>
         <Button title="All" selected={!selectedButton} />
       </div>
-      <RenderTagButtons onSelectFilter={onSelectFilter} selectedButton={selectedButton} />
+      {Object.keys(Tag).map(tag => {
+        const currentTag: Tag = Tag[tag as TagType];
+        return (
+          <div key={currentTag} onClick={onSelectFilter(currentTag)}>
+            <Button title={currentTag} selected={selectedButton === currentTag} />
+          </div>
+        );
+      })}
     </div>
   );
 };
