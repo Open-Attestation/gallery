@@ -1,7 +1,7 @@
 export interface Document {
   title: string;
   uri: string;
-  imageName: string;
+  imageSrc: string;
   tags: Tag[];
 }
 
@@ -44,37 +44,37 @@ export const documents: Document[] = [
       permittedActions: `["STORE"]`,
       redirect: "https://dev.opencerts.io"
     }),
-    imageName: "opencerts-demo",
+    imageSrc: "/opencerts-demo.jpg",
     tags: [Tag.OPENCERTS]
   },
   {
     title: "Degree Certificate with Transcript",
     uri: "",
-    imageName: "opencerts-demo",
+    imageSrc: "/opencerts-demo.jpg",
     tags: [Tag.TRADETRUST]
   },
   {
     title: "Certificate of Non-manipulation",
     uri: "",
-    imageName: "opencerts-demo",
+    imageSrc: "/opencerts-demo.jpg",
     tags: [Tag.TRADETRUST]
   },
   {
     title: "Ngee Ann Polytechnic",
     uri: "",
-    imageName: "opencerts-demo",
+    imageSrc: "/opencerts-demo.jpg",
     tags: [Tag.TRADETRUST]
   },
   {
     title: "MPA Certificate of Competency",
     uri: "",
-    imageName: "opencerts-demo",
+    imageSrc: "/opencerts-demo.jpg",
     tags: [Tag.TRADETRUST]
   },
   {
     title: "ACRA BizFile+",
     uri: "",
-    imageName: "opencerts-demo",
+    imageSrc: "/opencerts-demo.jpg",
     tags: [Tag.TRADETRUST]
   }
 ];

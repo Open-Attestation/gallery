@@ -45,7 +45,7 @@ const DocumentDetails = styled.div`
   line-height: 19px;
 `;
 
-export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, uri, title }) => {
+export const DocumentCard: React.FunctionComponent<Document> = ({ imageSrc, uri, title }) => {
   const [showQrView, setShowQrView] = useState(false);
 
   return (
@@ -57,7 +57,7 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageName, uri
               <DocumentContainer
                 data-testid="document-container"
                 className="rounded object-contain"
-                src={require(`../../resources/documentThumbnails/${imageName}.jpg`)}
+                src={require(`img/${imageSrc}`)}
                 alt="document"
               />
             ) : (
