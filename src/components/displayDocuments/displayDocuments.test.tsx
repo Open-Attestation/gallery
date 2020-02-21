@@ -91,12 +91,12 @@ describe("displayDocuments", () => {
 
   it("should show OpenCerts Demo, when 'certs' is typed in searchbar", () => {
     expect.assertions(2);
-    const { queryAllByTestId, getByTestId, queryByText } = render(<DisplayDocuments documents={sampleDocuments} />);
+    const { queryAllByTestId, getByTestId, findByText } = render(<DisplayDocuments documents={sampleDocuments} />);
     const searchBarInput = getByTestId("search-bar-input");
     userEvent.type(searchBarInput, "certs");
     const documentsRendered = queryAllByTestId("document-name");
     expect(documentsRendered).toHaveLength(1);
-    const demoCert = queryByText("OpenCerts Demo");
+    const demoCert = findByText("OpenCerts Demo");
     expect(demoCert).not.toBeNull();
   });
 });
