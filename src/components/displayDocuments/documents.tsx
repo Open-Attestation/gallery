@@ -7,12 +7,28 @@ export interface Document {
 
 interface Action {
   uri: string;
-  key: string;
+  key?: string;
   permittedActions: string;
   redirect: string;
 }
 
 const uriToAction = ({ uri, key, permittedActions, redirect }: Action): string => {
+  if (!key) {
+    return (
+      "https://action.openattestation.com/?q=" +
+      window.encodeURI(
+        JSON.stringify({
+          type: "DOCUMENT",
+          payload: {
+            uri,
+            permittedActions,
+            redirect
+          }
+        })
+      )
+    );
+  }
+
   return (
     "https://action.openattestation.com/?q=" +
     window.encodeURI(
@@ -47,36 +63,66 @@ export const documents: Document[] = [
       redirect: "https://dev.opencerts.io"
     }),
     imageSrc: "/static/img/opencerts-demo.jpg",
-    tags: [Tag.OPENCERTS]
+    tags: [Tag.OPENCERTS, Tag.STORABLE]
   },
   {
     title: "Degree Certificate with Transcript",
     uri: "",
-    imageSrc: "/static/img/opencerts-demo.jpg",
+    imageSrc: "",
     tags: [Tag.TRADETRUST]
   },
   {
     title: "Certificate of Non-manipulation",
     uri: "",
-    imageSrc: "/static/img/opencerts-demo.jpg",
+    imageSrc: "",
     tags: [Tag.TRADETRUST, Tag.STORABLE]
   },
   {
     title: "Ngee Ann Polytechnic",
     uri: "",
-    imageSrc: "/static/img/opencerts-demo.jpg",
+    imageSrc: "",
     tags: [Tag.TRADETRUST, Tag.STORABLE]
   },
   {
     title: "MPA Certificate of Competency",
     uri: "",
-    imageSrc: "/static/img/opencerts-demo.jpg",
+    imageSrc: "",
     tags: [Tag.TRADETRUST]
   },
   {
     title: "ACRA BizFile+",
     uri: "",
-    imageSrc: "/static/img/opencerts-demo.jpg",
+    imageSrc: "",
     tags: [Tag.TRADETRUST]
+  },
+  {
+    title: "TradeTrust eBL",
+    uri: uriToAction({
+      uri: "https://api.myjson.com/bins/kv1de",
+      permittedActions: `["VIEW","STORE"]`,
+      redirect: "http://dev.tradetrust.io"
+    }),
+    imageSrc: "",
+    tags: [Tag.TRADETRUST]
+  },
+  {
+    title: "CAAS UAPL",
+    uri: uriToAction({
+      uri: "https://api.myjson.com/bins/95dti",
+      permittedActions: `["VIEW","STORE"]`,
+      redirect: "https://dev.opencerts.io"
+    }),
+    imageSrc: "",
+    tags: [Tag.OPENCERTS, Tag.STORABLE]
+  },
+  {
+    title: "MPA COC",
+    uri: uriToAction({
+      uri: "https://api.myjson.com/bins/oofo2",
+      permittedActions: `["STORE"]`,
+      redirect: "http://dev.tradetrust.io"
+    }),
+    imageSrc: "",
+    tags: [Tag.TRADETRUST, Tag.STORABLE]
   }
 ];
