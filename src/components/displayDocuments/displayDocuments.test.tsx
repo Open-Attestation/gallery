@@ -8,7 +8,7 @@ const sampleDocuments: Document[] = [
     title: "test1",
     uri: "test1",
     imageSrc: "",
-    tags: [Tag.TRADETRUST]
+    tags: [Tag.TRADETRUST, Tag.STORABLE]
   },
   {
     title: "test2",
@@ -38,7 +38,7 @@ const sampleDocuments: Document[] = [
     title: "test6",
     uri: "test6",
     imageSrc: "",
-    tags: [Tag.LICENCE]
+    tags: [Tag.LICENCE, Tag.STORABLE]
   }
 ];
 
@@ -77,5 +77,14 @@ describe("displayDocuments", () => {
     fireEvent.click(licenceButton);
     const displayCard = getAllByTestId("display-card");
     expect(displayCard).toHaveLength(3);
+  });
+
+  it("should show Storable documents, when 'Storable' button is pressed", () => {
+    expect.assertions(1);
+    const { getByText, getAllByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
+    const storableButton = getByText("Storable");
+    fireEvent.click(storableButton);
+    const displayCard = getAllByTestId("display-card");
+    expect(displayCard).toHaveLength(2);
   });
 });
