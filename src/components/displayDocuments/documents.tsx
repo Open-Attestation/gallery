@@ -13,22 +13,6 @@ interface Action {
 }
 
 const uriToAction = ({ uri, key, permittedActions, redirect }: Action): string => {
-  if (!key) {
-    return (
-      "https://action.openattestation.com/?q=" +
-      window.encodeURI(
-        JSON.stringify({
-          type: "DOCUMENT",
-          payload: {
-            uri,
-            permittedActions,
-            redirect
-          }
-        })
-      )
-    );
-  }
-
   return (
     "https://action.openattestation.com/?q=" +
     window.encodeURI(
