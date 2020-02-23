@@ -52,6 +52,7 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({
                 <FiSearch className="text-gray-500 m-3" />
                 <form className="w-full mr-2 border-red border-solid" onSubmit={submitFormHandler}>
                   <input
+                    data-testid="search-bar-input"
                     className="w-full focus:outline-none"
                     type="search"
                     name="search"
