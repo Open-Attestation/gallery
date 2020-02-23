@@ -50,41 +50,11 @@ export const documents: Document[] = [
     tags: [Tag.OPENCERTS, Tag.STORABLE]
   },
   {
-    title: "Degree Certificate with Transcript",
-    uri: "",
-    imageSrc: "",
-    tags: [Tag.TRADETRUST]
-  },
-  {
-    title: "Certificate of Non-manipulation",
-    uri: "",
-    imageSrc: "",
-    tags: [Tag.TRADETRUST, Tag.STORABLE]
-  },
-  {
-    title: "Ngee Ann Polytechnic",
-    uri: "",
-    imageSrc: "",
-    tags: [Tag.TRADETRUST, Tag.STORABLE]
-  },
-  {
-    title: "MPA Certificate of Competency",
-    uri: "",
-    imageSrc: "",
-    tags: [Tag.TRADETRUST]
-  },
-  {
-    title: "ACRA BizFile+",
-    uri: "",
-    imageSrc: "",
-    tags: [Tag.TRADETRUST]
-  },
-  {
     title: "TradeTrust eBL",
     uri: uriToAction({
       uri: "https://api.myjson.com/bins/kv1de",
       permittedActions: `["VIEW","STORE"]`,
-      redirect: "http://dev.tradetrust.io"
+      redirect: "https://dev.opencerts.io" //cannot get certificate
     }),
     imageSrc: "",
     tags: [Tag.TRADETRUST]
@@ -96,17 +66,7 @@ export const documents: Document[] = [
       permittedActions: `["VIEW","STORE"]`,
       redirect: "https://dev.opencerts.io"
     }),
-    imageSrc: "",
+    imageSrc: "/static/img/cass-uapl.png",
     tags: [Tag.OPENCERTS, Tag.STORABLE]
-  },
-  {
-    title: "MPA COC",
-    uri: uriToAction({
-      uri: "https://api.myjson.com/bins/oofo2",
-      permittedActions: `["STORE"]`,
-      redirect: "http://dev.tradetrust.io"
-    }),
-    imageSrc: "",
-    tags: [Tag.TRADETRUST, Tag.STORABLE]
   }
 ];
