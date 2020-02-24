@@ -56,7 +56,7 @@ export const documents: Document[] = [
       permittedActions: `["VIEW","STORE"]`,
       redirect: "https://dev.tradetrust.io"
     }),
-    imageSrc: "",
+    imageSrc: "/static/img/tradetrust-ebl.png",
     tags: [Tag.TRADETRUST]
   },
   {
