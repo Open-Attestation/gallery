@@ -54,7 +54,7 @@ export const documents: Document[] = [
     uri: uriToAction({
       uri: "https://api.myjson.com/bins/kv1de",
       permittedActions: `["VIEW","STORE"]`,
-      redirect: "https://dev.opencerts.io" //cannot get certificate
+      redirect: "https://dev.tradetrust.io"
     }),
     imageSrc: "",
     tags: [Tag.TRADETRUST]
