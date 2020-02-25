@@ -67,6 +67,6 @@ export const documents: Document[] = [
       redirect: "https://dev.opencerts.io"
     }),
     imageSrc: "/static/img/cass-uapl.png",
-    tags: [Tag.OPENCERTS, Tag.STORABLE]
+    tags: [Tag.LICENCE, Tag.STORABLE]
   }
 ];
