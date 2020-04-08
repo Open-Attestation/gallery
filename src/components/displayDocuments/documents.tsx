@@ -42,8 +42,8 @@ export const documents: Document[] = [
     title: "OpenCerts Demo",
     uri: uriToAction({
       uri:
-        "https://gist.githubusercontent.com/benjaminlim00/f8abc21d3f258a17e5876f866fd64dcc/raw/a993c19afa7b1ae350c2fa033bc1a3908ee22abe/demo-opencerts.json",
-      key: "1b8c334a38f9ff96108303a4ba0cc592f1559eb24f5b48b70c9300c60a34d5e9",
+        "https://gist.githubusercontent.com/benjaminlim00/f8abc21d3f258a17e5876f866fd64dcc/raw/c6602cadf9ca5d9b030fcf3e614060920400b378/demo-opencerts.json",
+      key: "a2b07af37ddc6b954708c8e018e28668cf1eea24ae0bec9cc556c9f19f879294",
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
     }),
@@ -64,7 +64,8 @@ export const documents: Document[] = [
   {
     title: "CAAS UAPL",
     uri: uriToAction({
-      uri: "https://api.myjson.com/bins/95dti",
+      uri:
+        "https://gist.githubusercontent.com/benjaminlim00/cb4022177ad28418379285499c8d2203/raw/94bb01480df3b502434c7453ebef278ed7187c85/caas.json",
       permittedActions: ["VIEW", "STORE"],
       redirect: "https://dev.opencerts.io"
     }),
