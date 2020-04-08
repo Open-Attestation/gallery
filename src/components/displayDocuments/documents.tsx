@@ -41,7 +41,8 @@ export const documents: Document[] = [
   {
     title: "OpenCerts Demo",
     uri: uriToAction({
-      uri: "https://api.myjson.com/bins/1a9acm",
+      uri:
+        "https://gist.githubusercontent.com/benjaminlim00/f8abc21d3f258a17e5876f866fd64dcc/raw/a993c19afa7b1ae350c2fa033bc1a3908ee22abe/demo-opencerts.json",
       key: "1b8c334a38f9ff96108303a4ba0cc592f1559eb24f5b48b70c9300c60a34d5e9",
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
@@ -52,7 +53,8 @@ export const documents: Document[] = [
   {
     title: "TradeTrust eBL",
     uri: uriToAction({
-      uri: "https://api.myjson.com/bins/kv1de",
+      uri:
+        "https://gist.githubusercontent.com/simboonlong/64242ae4e0472bc91f98dfefb4a83f22/raw/2dbe17a28f9b26072e560babd6f40bde6ff7de69/ebl.tt",
       permittedActions: ["VIEW", "STORE"],
       redirect: "https://dev.tradetrust.io"
     }),
