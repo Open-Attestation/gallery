@@ -42,8 +42,7 @@ export const documents: Document[] = [
     title: "OpenCerts Demo",
     uri: uriToAction({
       uri:
-        "https://gist.githubusercontent.com/benjaminlim00/f8abc21d3f258a17e5876f866fd64dcc/raw/e25153b33750b44d41a7160a0ad722806abf21be/demo-ecrypted-oc.json",
-      key: "a2b07af37ddc6b954708c8e018e28668cf1eea24ae0bec9cc556c9f19f879294",
+        "https://dev.opencerts.io/static/demo/ropsten.opencert",
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
     }),
