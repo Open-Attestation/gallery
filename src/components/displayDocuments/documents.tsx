@@ -41,8 +41,7 @@ export const documents: Document[] = [
   {
     title: "OpenCerts Demo",
     uri: uriToAction({
-      uri:
-        "https://dev.opencerts.io/static/demo/ropsten.opencert",
+      uri: "https://dev.opencerts.io/static/demo/ropsten.opencert",
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
     }),
