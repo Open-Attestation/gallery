@@ -41,7 +41,7 @@ export const documents: Document[] = [
   {
     title: "OpenCerts Demo",
     uri: uriToAction({
-      uri: "https://raw.githubusercontent.com/gjj/opencerts-certificates/master/ropsten-encrypted.opencert",
+      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery-documents/main/ropsten-encrypted.opencert",
       key: "5b433c297f3b35690461b9ee08d77f3e8ee47ec86e5b8b1322b056da6f0b86c4",
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
@@ -50,10 +50,20 @@ export const documents: Document[] = [
     tags: [Tag.OPENCERTS, Tag.STORABLE]
   },
   {
-    title: "TradeTrust eBL",
+    title: "GovTech Internship Certificate",
     uri: uriToAction({
       uri:
-        "https://gist.githubusercontent.com/simboonlong/64242ae4e0472bc91f98dfefb4a83f22/raw/2dbe17a28f9b26072e560babd6f40bde6ff7de69/ebl.tt",
+        "https://raw.githubusercontent.com/Open-Attestation/gallery-documents/main/govtech-intern-cert-sample.opencert",
+      permittedActions: ["STORE"],
+      redirect: "https://dev.opencerts.io"
+    }),
+    imageSrc: "/static/img/govtech-intern-cert-sample.png",
+    tags: [Tag.OPENCERTS, Tag.STORABLE]
+  },
+  {
+    title: "TradeTrust eBL",
+    uri: uriToAction({
+      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery-documents/main/ebl.tt",
       permittedActions: ["VIEW", "STORE"],
       redirect: "https://dev.tradetrust.io"
     }),
@@ -63,8 +73,7 @@ export const documents: Document[] = [
   {
     title: "CAAS UAPL",
     uri: uriToAction({
-      uri:
-        "https://gist.githubusercontent.com/benjaminlim00/cb4022177ad28418379285499c8d2203/raw/94bb01480df3b502434c7453ebef278ed7187c85/caas.json",
+      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery-documents/main/caas.json",
       permittedActions: ["VIEW", "STORE"],
       redirect: "https://dev.opencerts.io"
     }),
