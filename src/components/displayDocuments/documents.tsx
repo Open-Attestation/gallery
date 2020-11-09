@@ -79,5 +79,15 @@ export const documents: Document[] = [
     }),
     imageSrc: "/static/img/cass-uapl.png",
     tags: [Tag.LICENCE, Tag.STORABLE]
+  },
+  {
+    title: "TradeTrust Invoice",
+    uri: uriToAction({
+      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery-documents/main/invoice.json",
+      permittedActions: ["VIEW"],
+      redirect: "https://dev.tradetrust.io"
+    }),
+    imageSrc: "/static/img/invoice.png",
+    tags: [Tag.TRADETRUST]
   }
 ];
