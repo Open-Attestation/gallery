@@ -83,7 +83,8 @@ export const documents: Document[] = [
   {
     title: "TradeTrust Invoice",
     uri: uriToAction({
-      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery-documents/main/invoice.json",
+      uri:
+        "https://gist.githubusercontent.com/simboonlong/490214895ef93d57ac8ecc42fa7a82ea/raw/84b7afa076aa309dc8838bb907318a11ff0b06ad/invoice.json",
       permittedActions: ["VIEW"],
       redirect: "https://dev.tradetrust.io"
     }),
