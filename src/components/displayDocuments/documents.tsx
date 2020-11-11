@@ -95,7 +95,7 @@ export const documents: Document[] = [
   {
     title: "HealthCert Memo",
     uri: uriToAction({
-      uri: window.location.href + "/static/documents/healthcerts-memo-notarised",
+      uri: window.location.href + "static/documents/healthcerts-memo-notarised.json",
       permittedActions: ["VIEW"],
       redirect: "https://dev.opencerts.io"
     }),
