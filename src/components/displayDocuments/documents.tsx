@@ -41,7 +41,8 @@ export const documents: Document[] = [
   {
     title: "OpenCerts Demo",
     uri: uriToAction({
-      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery-documents/main/ropsten-encrypted.opencert",
+      uri:
+        "https://raw.githubusercontent.com/Open-Attestation/gallery/master/static/documents/ropsten-encrypted.opencert",
       key: "5b433c297f3b35690461b9ee08d77f3e8ee47ec86e5b8b1322b056da6f0b86c4",
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
@@ -53,7 +54,7 @@ export const documents: Document[] = [
     title: "GovTech Internship Certificate",
     uri: uriToAction({
       uri:
-        "https://raw.githubusercontent.com/Open-Attestation/gallery-documents/main/govtech-intern-cert-sample.opencert",
+        "https://raw.githubusercontent.com/Open-Attestation/gallery/master/static/documents/govtech-intern-cert-sample.opencert",
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
     }),
@@ -63,7 +64,7 @@ export const documents: Document[] = [
   {
     title: "TradeTrust eBL",
     uri: uriToAction({
-      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery-documents/main/ebl.tt",
+      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery/master/static/documents/ebl.tt",
       permittedActions: ["VIEW", "STORE"],
       redirect: "https://dev.tradetrust.io"
     }),
@@ -73,7 +74,7 @@ export const documents: Document[] = [
   {
     title: "CAAS UAPL",
     uri: uriToAction({
-      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery-documents/main/caas.json",
+      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery/master/static/documents/caas.json",
       permittedActions: ["VIEW", "STORE"],
       redirect: "https://dev.opencerts.io"
     }),
@@ -83,8 +84,7 @@ export const documents: Document[] = [
   {
     title: "TradeTrust Invoice",
     uri: uriToAction({
-      uri:
-        "https://gist.githubusercontent.com/simboonlong/490214895ef93d57ac8ecc42fa7a82ea/raw/84b7afa076aa309dc8838bb907318a11ff0b06ad/invoice.json",
+      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery/master/static/documents/invoice-ropsten.json",
       permittedActions: ["VIEW"],
       redirect: "https://dev.tradetrust.io"
     }),
