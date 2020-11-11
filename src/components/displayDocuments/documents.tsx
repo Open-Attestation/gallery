@@ -32,6 +32,7 @@ const uriToAction = ({ uri, key, permittedActions, redirect }: Action): string =
 export enum Tag {
   TRADETRUST = "TradeTrust",
   OPENCERTS = "OpenCerts",
+  HEALTHCERTS = "HealthCerts",
   LICENCE = "Licence",
   STORABLE = "Storable"
 }
@@ -90,5 +91,15 @@ export const documents: Document[] = [
     }),
     imageSrc: "/static/img/invoice.png",
     tags: [Tag.TRADETRUST]
+  },
+  {
+    title: "HealthCert Memo",
+    uri: uriToAction({
+      uri: window.location.href + "/static/documents/healthcerts-memo-notarised",
+      permittedActions: ["VIEW"],
+      redirect: "https://dev.opencerts.io"
+    }),
+    imageSrc: "/static/img/healthcerts-memo-notarised.png",
+    tags: [Tag.HEALTHCERTS]
   }
 ];
