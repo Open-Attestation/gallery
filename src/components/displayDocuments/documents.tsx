@@ -42,8 +42,7 @@ export const documents: Document[] = [
   {
     title: "OpenCerts Demo",
     uri: uriToAction({
-      uri:
-        "https://raw.githubusercontent.com/Open-Attestation/gallery/master/static/documents/ropsten-encrypted.opencert",
+      uri: window.location.href + "static/documents/ropsten-encrypted.opencert",
       key: "5b433c297f3b35690461b9ee08d77f3e8ee47ec86e5b8b1322b056da6f0b86c4",
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
@@ -54,8 +53,7 @@ export const documents: Document[] = [
   {
     title: "GovTech Internship Certificate",
     uri: uriToAction({
-      uri:
-        "https://raw.githubusercontent.com/Open-Attestation/gallery/master/static/documents/govtech-intern-cert-sample.opencert",
+      uri: window.location.href + "static/documents/govtech-intern-cert-sample.opencert",
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
     }),
@@ -65,7 +63,7 @@ export const documents: Document[] = [
   {
     title: "TradeTrust eBL",
     uri: uriToAction({
-      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery/master/static/documents/ebl.tt",
+      uri: window.location.href + "static/documents/ebl.tt",
       permittedActions: ["VIEW", "STORE"],
       redirect: "https://dev.tradetrust.io"
     }),
@@ -75,7 +73,7 @@ export const documents: Document[] = [
   {
     title: "CAAS UAPL",
     uri: uriToAction({
-      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery/master/static/documents/caas.json",
+      uri: window.location.href + "static/documents/caas.json",
       permittedActions: ["VIEW", "STORE"],
       redirect: "https://dev.opencerts.io"
     }),
@@ -85,7 +83,7 @@ export const documents: Document[] = [
   {
     title: "TradeTrust Invoice",
     uri: uriToAction({
-      uri: "https://raw.githubusercontent.com/Open-Attestation/gallery/master/static/documents/invoice-ropsten.json",
+      uri: window.location.href + "static/documents/invoice-ropsten.json",
       permittedActions: ["VIEW"],
       redirect: "https://dev.tradetrust.io"
     }),
