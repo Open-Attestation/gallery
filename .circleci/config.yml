@@ -2,12 +2,12 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: "circleci/node:latest-browsers"
+      - image: "circleci/node:12.14.0-browsers"
     steps:
       - checkout
       - run:
           name: install
-          command: npm install
+          command: npm ci
       - run:
           name: lint
           command: npm run lint
