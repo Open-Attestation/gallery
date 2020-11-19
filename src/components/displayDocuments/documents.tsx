@@ -99,5 +99,15 @@ export const documents: Document[] = [
     }),
     imageSrc: "/static/img/healthcerts-memo-notarised.png",
     tags: [Tag.HEALTHCERTS]
+  },
+  {
+    title: "Geekout Cert",
+    uri: uriToAction({
+      uri: window.location.href + "static/documents/geekout-cert.json",
+      permittedActions: ["VIEW"],
+      redirect: "https://dev.opencerts.io"
+    }),
+    imageSrc: "/static/img/geekout-cert.png",
+    tags: [Tag.OPENCERTS]
   }
 ];
