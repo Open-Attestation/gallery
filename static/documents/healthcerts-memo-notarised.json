@@ -1,6 +1,11 @@
 {
   "version": "https://schema.openattestation.com/2.0/schema.json",
   "data": {
+    "$template": {
+      "name": "51273429-4231-4d2f-9439-c7e04ee1bfb9:string:HEALTH_CERT",
+      "type": "6f574150-2402-4662-94f1-bdcb6f95c7b6:string:EMBEDDED_RENDERER",
+      "url": "f1c5a7d6-6a5e-4dfb-8043-715a4c30e6c9:string:https://healthcert.renderer.moh.gov.sg/"
+    },
     "id": "a7fa9ef8-807a-4ca0-9541-661e70d95ed8:string:TEST001",
     "name": "376ccc44-40bf-47d4-b56a-6110f315a645:string:HealthCert",
     "validFrom": "06367225-1d36-4de1-887a-8247d6535664:string:2020-11-20",
@@ -14,7 +19,9 @@
           "extension": [
             {
               "url": "8be3a3a1-4227-4ded-8758-b7f781d823df:string:http://hl7.org/fhir/StructureDefinition/patient-nationality",
-              "code": { "text": "c383144f-8dfd-4089-8af5-96396db657c6:string:SG" }
+              "code": {
+                "text": "c383144f-8dfd-4089-8af5-96396db657c6:string:SG"
+              }
             }
           ],
           "identifier": [
@@ -23,11 +30,17 @@
               "value": "0b4aa860-ea5b-4109-860f-70e2cebdbb1b:string:E7831177G"
             },
             {
-              "type": { "text": "c0bb401c-3eb1-4bef-ad8b-fefdee0ae717:string:NRIC" },
+              "type": {
+                "text": "c0bb401c-3eb1-4bef-ad8b-fefdee0ae717:string:NRIC"
+              },
               "value": "0c898cd0-e43e-4009-bbf0-240f39135ed3:string:S9098989Z"
             }
           ],
-          "name": [{ "text": "8298f08a-37a5-4c3f-8c21-bb120b7ea715:string:Tan Chen Chen" }],
+          "name": [
+            {
+              "text": "8298f08a-37a5-4c3f-8c21-bb120b7ea715:string:Tan Chen Chen"
+            }
+          ],
           "gender": "c893c03d-fc5c-4805-bb8d-9cb6970a400d:string:female",
           "birthDate": "e652d7e7-5057-4512-b988-3ae04b93028f:string:1990-01-15"
         },
@@ -42,7 +55,9 @@
               }
             ]
           },
-          "collection": { "collectedDateTime": "2189e066-d212-450f-a8b7-61ffcb0a8446:string:2020-09-27T06:15:00Z" }
+          "collection": {
+            "collectedDateTime": "2189e066-d212-450f-a8b7-61ffcb0a8446:string:2020-09-27T06:15:00Z"
+          }
         },
         {
           "resourceType": "0890f895-cd51-418b-a144-a6a115adf441:string:Observation",
@@ -72,7 +87,13 @@
           },
           "effectiveDateTime": "bee51310-6bee-428c-b42a-d2be476d3616:string:2020-09-28T06:15:00Z",
           "status": "0b809115-fa54-4fcf-b0e7-87df3b9e85da:string:final",
-          "performer": { "name": [{ "text": "1c4e6212-60eb-4c3a-9468-1efe6d71907f:string:Dr Michael Lim" }] },
+          "performer": {
+            "name": [
+              {
+                "text": "1c4e6212-60eb-4c3a-9468-1efe6d71907f:string:Dr Michael Lim"
+              }
+            ]
+          },
           "qualification": [
             {
               "identifier": "741e4c1c-7fa0-4260-aa11-075310ee00f7:string:MCR 123214",
@@ -84,7 +105,9 @@
           "resourceType": "b6036bee-e16e-4ea3-aa25-133cee339755:string:Organization",
           "name": "be2d5d59-4aad-41ee-b1a7-61af587a11e3:string:MacRitchie Medical Clinic",
           "type": "91da263a-fa19-42ad-a119-09817f3e825d:string:Licensed Healthcare Provider",
-          "endpoint": { "address": "2b4d2639-9613-4a8a-a187-3db14521af07:string:https://www.macritchieclinic.com.sg" },
+          "endpoint": {
+            "address": "2b4d2639-9613-4a8a-a187-3db14521af07:string:https://www.macritchieclinic.com.sg"
+          },
           "contact": {
             "telecom": [
               {
@@ -129,11 +152,6 @@
         }
       }
     ],
-    "$template": {
-      "name": "51273429-4231-4d2f-9439-c7e04ee1bfb9:string:HEALTH_CERT",
-      "type": "6f574150-2402-4662-94f1-bdcb6f95c7b6:string:EMBEDDED_RENDERER",
-      "url": "f1c5a7d6-6a5e-4dfb-8043-715a4c30e6c9:string:https://healthcert.renderer.moh.gov.sg/"
-    },
     "notarisationMetadata": {
       "reference": "65acfbe4-8225-4d0e-8ec0-6e524f6f56b8:string:JESAPPELLEGROOT",
       "notarisedOn": "945e1446-8e4a-4ead-b9d0-40f52105d6a4:string:2020-09-27T06:15:00Z",
