@@ -47,7 +47,7 @@ export const documents: Document[] = [
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
     }),
-    imageSrc: "/static/img/opencerts-demo.jpg",
+    imageSrc: "/static/img/preview/opencerts-demo.jpg",
     tags: [Tag.OPENCERTS, Tag.STORABLE]
   },
   {
@@ -57,7 +57,7 @@ export const documents: Document[] = [
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
     }),
-    imageSrc: "/static/img/govtech-intern-cert-sample.png",
+    imageSrc: "/static/img/preview/govtech-intern-cert-sample.png",
     tags: [Tag.OPENCERTS, Tag.STORABLE]
   },
   {
@@ -67,7 +67,7 @@ export const documents: Document[] = [
       permittedActions: ["VIEW", "STORE"],
       redirect: "https://dev.tradetrust.io"
     }),
-    imageSrc: "/static/img/tradetrust-ebl.png",
+    imageSrc: "/static/img/preview/tradetrust-ebl.png",
     tags: [Tag.TRADETRUST]
   },
   {
@@ -77,7 +77,7 @@ export const documents: Document[] = [
       permittedActions: ["VIEW", "STORE"],
       redirect: "https://dev.opencerts.io"
     }),
-    imageSrc: "/static/img/cass-uapl.png",
+    imageSrc: "/static/img/preview/cass-uapl.png",
     tags: [Tag.LICENCE, Tag.STORABLE]
   },
   {
@@ -87,7 +87,7 @@ export const documents: Document[] = [
       permittedActions: ["VIEW"],
       redirect: "https://dev.tradetrust.io"
     }),
-    imageSrc: "/static/img/invoice.png",
+    imageSrc: "/static/img/preview/invoice.png",
     tags: [Tag.TRADETRUST]
   },
   {
@@ -97,7 +97,7 @@ export const documents: Document[] = [
       permittedActions: ["VIEW"],
       redirect: "https://dev.opencerts.io"
     }),
-    imageSrc: "/static/img/healthcerts-memo-notarised.png",
+    imageSrc: "/static/img/preview/healthcerts-memo-notarised.png",
     tags: [Tag.HEALTHCERTS]
   },
   {
@@ -107,7 +107,27 @@ export const documents: Document[] = [
       permittedActions: ["VIEW"],
       redirect: "https://dev.opencerts.io"
     }),
-    imageSrc: "/static/img/geekout-cert.png",
+    imageSrc: "/static/img/preview/geekout-cert.png",
     tags: [Tag.OPENCERTS]
+  },
+  {
+    title: "Covering Letter (DBS)",
+    uri: uriToAction({
+      uri: window.location.href + "static/documents/covering-letter-dbs-ropsten.json",
+      permittedActions: ["VIEW"],
+      redirect: "https://dev.tradetrust.io"
+    }),
+    imageSrc: "/static/img/preview/covering-letter-dbs.jpg",
+    tags: [Tag.TRADETRUST]
+  },
+  {
+    title: "Chafta Certificate of Origin",
+    uri: uriToAction({
+      uri: window.location.href + "static/documents/chafta-coo-ropsten.json",
+      permittedActions: ["VIEW"],
+      redirect: "https://dev.tradetrust.io"
+    }),
+    imageSrc: "/static/img/preview/chafta-coo.jpg",
+    tags: [Tag.TRADETRUST]
   }
 ];
