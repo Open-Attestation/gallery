@@ -49,7 +49,13 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageSrc, uri,
   const [showQrView, setShowQrView] = useState(false);
 
   return (
-    <a data-testid="display-card" className="w-full md:w-1/2 lg:w-1/3 px-0 md:px-2 py-4 md:py-2" href={uri}>
+    <a
+      data-testid="display-card"
+      className="w-full md:w-1/2 lg:w-1/3 px-0 md:px-2 py-4 md:py-2"
+      href={uri}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <CardContainer className="flex justify-center rounded bg-white">
         <HoverContainer data-testid="hover-container" className="flex-column">
           <div className="relative overflow-hidden">
