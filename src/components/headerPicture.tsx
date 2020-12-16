@@ -16,22 +16,22 @@ const HeaderTextTwo = styled.div`
 interface HeaderPictureProps {
   title: string;
   description: string;
+  children?: React.ReactNode;
 }
 
-export const HeaderPicture: React.FunctionComponent<HeaderPictureProps> = ({ title, description }) => {
+export const HeaderPicture: React.FunctionComponent<HeaderPictureProps> = ({ title, description, children }) => {
   return (
     <section>
-      <div className={`${cssContainerWrapper} py-8`}>
-        <div className="flex flex-wrap items-center">
-          <div className="w-2/3">
-            <div className="py-12">
-              <HeaderTextOne className="font-semibold text-6xl">{title}</HeaderTextOne>
-              <HeaderTextTwo className="font-light text-2xl mt-4 w-full md:w-9/12 lg:w-7/12">
-                {description}
-              </HeaderTextTwo>
-            </div>
+      <div className={`${cssContainerWrapper} py-12`}>
+        <div className="flex flex-wrap items-start">
+          <div className="w-full sm:w-2/3">
+            <HeaderTextOne className="font-semibold text-6xl">{title}</HeaderTextOne>
+            <HeaderTextTwo className="font-light text-2xl mt-4 w-full md:w-9/12 lg:w-8/12">{description}</HeaderTextTwo>
+            {children}
           </div>
-          <img className="w-1/3" src={ClipArt} alt="Uploading" />
+          <div className="w-full sm:w-1/3">
+            <img className="w-full mx-auto max-w-xs" src={ClipArt} alt="Uploading" />
+          </div>
         </div>
       </div>
     </section>

@@ -1,0 +1,39 @@
+{
+  "version": "https://schema.openattestation.com/2.0/schema.json",
+  "data": {
+    "$template": {
+      "type": "610eabe1-65f3-4529-8fcf-a9635eb1d938:string:EMBEDDED_RENDERER",
+      "name": "122f841f-9f94-47ae-b601-246b89ddf448:string:COVERING_LETTER",
+      "url": "11575a97-efd6-4161-bb1d-6c5ae1dd338d:string:https://generic-templates.tradetrust.io"
+    },
+    "issuers": [
+      {
+        "name": "10b4073e-84b3-4185-9d8c-052194645f8f:string:Demo Issuer",
+        "documentStore": "8895dbaa-46b8-4c79-ac7c-3e506c868429:string:0x8bA63EAB43342AAc3AdBB4B827b68Cf4aAE5Caca",
+        "identityProof": {
+          "type": "b00fa2f3-d8dc-4d46-947a-e662447fee93:string:DNS-TXT",
+          "location": "338b06b1-c94e-4cf4-8640-e8acd5206715:string:demo-tradetrust.openattestation.com"
+        }
+      }
+    ],
+    "name": "5b557797-4c6b-4b06-bd48-835155758a4d:string:Covering Letter",
+    "logo": "1d39287e-15b7-49c5-9732-09764c39373c:string:https://pluspng.com/img-png/logo-dbs-png-file-dbs-bank-logo-svg-1280.png",
+    "backgroundColor": "e88764dd-c0b6-487f-9ec4-d86e265c4b0a:string:black",
+    "titleColor": "5270c562-bdab-4ac4-9671-95e762395db3:string:white",
+    "remarksColor": "ad86838f-d2a8-49b6-be8a-6132bcb308b4:string:white",
+    "title": "0781e239-3a5d-4296-9d11-c341298c5934:string:Manage eStatement and eAdvice",
+    "remarks": "0a3364b5-1f80-4592-9444-573f84df10f8:string:Be free of paper whenever you receive your Unit Trust advices. Opt in via digibank, and simply log in to view your new transaction activities or dividend pay-outs instantly.\n\nYou can now manage your eAdvice preferences via digibank.\n\nUpon opt-in, you will receive your eAdvice from the next valid cash transaction onwards.\n\nHowever, if you decide to opt-out from eAdvice, you will receive paper-based advices via mail from the next valid transaction onwards.\n",
+    "uiSchema": { "remarks": { "ui:widget": "415ef18b-6d02-4fbb-894b-4c39f18463d0:string:textarea" } },
+    "links": {
+      "self": {
+        "href": "08fe7f15-0750-4f2b-ae3b-56686a3d6819:string:https://action.openattestation.com?q=%7B%22type%22%3A%22DOCUMENT%22%2C%22payload%22%3A%7B%22uri%22%3A%22https%3A%2F%2Fapi-ropsten.tradetrust.io%2Fstorage%2Fc2de2465-80fd-4b2b-a30b-7c977dd27bdc%22%2C%22key%22%3A%22d48dbe1db4d817794094a6410b1bd19ef32923137cc52a49cd6b80a594b733a7%22%2C%22permittedActions%22%3A%5B%22STORE%22%5D%2C%22redirect%22%3A%22https%3A%2F%2Fdev.tradetrust.io%2F%22%7D%7D"
+      }
+    }
+  },
+  "signature": {
+    "type": "SHA3MerkleProof",
+    "targetHash": "549eecb5d59572494ac08615b5fee9f1b6a9b560c5570ef33f17a85b996aa490",
+    "proof": [],
+    "merkleRoot": "549eecb5d59572494ac08615b5fee9f1b6a9b560c5570ef33f17a85b996aa490"
+  }
+}

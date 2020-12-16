@@ -6,7 +6,7 @@ export const Footer: React.FunctionComponent = () => {
     <footer className="py-6 text-white bg-secondary">
       <div className={`${cssContainerWrapper}`}>
         <div className="flex flex-row">
-          <div className="w-full">{/* <a href="./">Open<span className="font-bold">Attestation</span></a> */}</div>
+          <div className="w-full">Copyright © 2020 Government Technology Agency (Singapore)</div>
         </div>
       </div>
     </footer>
