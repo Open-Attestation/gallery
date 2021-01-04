@@ -111,16 +111,6 @@ export const documents: Document[] = [
     tags: [Tag.OPENCERTS]
   },
   {
-    title: "Covering Letter (DBS)",
-    uri: uriToAction({
-      uri: window.location.href + "static/documents/covering-letter-dbs-ropsten.json",
-      permittedActions: ["VIEW"],
-      redirect: "https://dev.tradetrust.io"
-    }),
-    imageSrc: "/static/img/preview/covering-letter-dbs.jpg",
-    tags: [Tag.TRADETRUST]
-  },
-  {
     title: "Chafta Certificate of Origin",
     uri: uriToAction({
       uri: window.location.href + "static/documents/chafta-coo-ropsten.json",
