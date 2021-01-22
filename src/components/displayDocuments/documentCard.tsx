@@ -85,7 +85,7 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageSrc, uri,
                   event.stopPropagation();
                   setShowQrView(!showQrView);
                 }}
-                className="absolute bottom-0 right-0 flex justify-center transition-colors duration-300 ease-out hover:bg-secondary hover:text-white"
+                className="absolute bottom-0 right-0 flex justify-center transition-colors duration-300 ease-out hover:bg-navy hover:text-white"
               >
                 <MdDescription size={20} className="self-center" />
               </ShowDocumentButton>

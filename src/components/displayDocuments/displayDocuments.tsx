@@ -1,15 +1,9 @@
 import React, { ReactElement, useState, useEffect } from "react";
 import { cssContainerWrapper } from "../../constants";
-import styled from "@emotion/styled";
 import { useFuzzy } from "react-use-fuzzy";
 import { MenuBar } from "./menuBar/menuBar";
 import { DocumentCard } from "./documentCard";
 import { Tag, Document } from "./documents";
-
-const SectionContainer = styled.section`
-  background-color: #e5e5e5;
-`;
-
 interface DisplayDocumentsProps {
   documents: Document[];
 }
@@ -45,11 +39,11 @@ export const DisplayDocuments: React.FunctionComponent<DisplayDocumentsProps> = 
         searchValue={searchValue}
       />
 
-      <SectionContainer className="py-16">
+      <div className="py-16 bg-gray-200">
         <div className={`${cssContainerWrapper} md:px-00`}>
           <div className="flex flex-wrap">{displayCards(documents)}</div>
         </div>
-      </SectionContainer>
+      </div>
     </>
   );
 };

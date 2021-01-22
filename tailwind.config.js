@@ -1,24 +1,24 @@
 module.exports = {
   theme: {
     textColor: theme => ({
-      ...theme("colors"),
+      ...theme("colors")
     }),
     borderColor: theme => ({
-      ...theme("colors"),
+      ...theme("colors")
     }),
     backgroundColor: theme => ({
-      ...theme("colors"),
+      ...theme("colors")
     }),
     extend: {
       colors: {
-        primary: {
-          light: "#feeee7",
+        navy: {
+          default: "#324353"
+        },
+        orange: {
+          200: "#feeee7",
           default: "#f75d20",
-          dark: "#e04406",
-        },
-        secondary: {
-          default: "#2c3549",
-        },
+          600: "#e04406"
+        }
       }
     }
   },
