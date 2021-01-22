@@ -23,7 +23,7 @@ export const HeaderPicture: React.FunctionComponent<HeaderPictureProps> = ({ tit
   return (
     <section>
       <div className={`${cssContainerWrapper} py-12`}>
-        <div className="flex flex-wrap items-start">
+        <div className="flex flex-wrap items-center">
           <div className="w-full sm:w-2/3">
             <HeaderTextOne className="font-semibold text-6xl">{title}</HeaderTextOne>
             <HeaderTextTwo className="font-light text-2xl mt-4 w-full md:w-9/12 lg:w-8/12">{description}</HeaderTextTwo>

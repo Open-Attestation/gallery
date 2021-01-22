@@ -17,8 +17,8 @@ const Button: React.FunctionComponent<{ title: string; selected: boolean }> = ({
   `;
 
   const className = selected
-    ? "w-auto mx-1 font-semibold text-primary bg-primary-light focus:outline-none"
-    : "w-auto mx-1 font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-primary-light hover:text-primary";
+    ? "w-auto mx-1 font-semibold text-orange bg-orange-200 focus:outline-none"
+    : "w-auto mx-1 font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange";
 
   return <ButtonContainer className={className}>{title}</ButtonContainer>;
 };
