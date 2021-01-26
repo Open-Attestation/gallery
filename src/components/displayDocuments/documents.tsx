@@ -93,9 +93,9 @@ export const documents: Document[] = [
   {
     title: "HealthCert Memo",
     uri: uriToAction({
-      uri: window.location.href + "static/documents/healthcerts-memo-notarised.json",
+      uri: "https://notarise.gov.sg/static/documents/healthcerts-memo-notarised.json",
       permittedActions: ["VIEW"],
-      redirect: "https://dev.opencerts.io"
+      redirect: "https://verify.gov.sg/"
     }),
     imageSrc: "/static/img/preview/healthcerts-memo-notarised.png",
     tags: [Tag.HEALTHCERTS]
