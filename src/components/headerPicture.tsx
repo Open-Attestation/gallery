@@ -21,7 +21,7 @@ interface HeaderPictureProps {
 
 export const HeaderPicture: React.FunctionComponent<HeaderPictureProps> = ({ title, description, children }) => {
   return (
-    <section>
+    <section className="bg-white">
       <div className={`${cssContainerWrapper} py-12`}>
         <div className="flex flex-wrap items-center">
           <div className="w-full sm:w-2/3">

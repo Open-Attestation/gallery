@@ -1,5 +1,7 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import { Router, Route } from "react-router-dom";
+import { createMemoryHistory } from "history";
 import { Document, Tag } from "./documents";
 import { DisplayDocuments } from "../displayDocuments/displayDocuments";
 import userEvent from "@testing-library/user-event";
@@ -9,19 +11,19 @@ const sampleDocuments: Document[] = [
     title: "test1",
     uri: "test1",
     imageSrc: "",
-    tags: [Tag.TRADETRUST, Tag.STORABLE]
+    tags: [Tag.TRADE_TRUST, Tag.STORABLE]
   },
   {
     title: "test2",
     uri: "test2",
     imageSrc: "",
-    tags: [Tag.OPENCERTS]
+    tags: [Tag.OPEN_CERTS]
   },
   {
     title: "test3",
     uri: "test3",
     imageSrc: "",
-    tags: [Tag.OPENCERTS]
+    tags: [Tag.OPEN_CERTS]
   },
   {
     title: "test4",
@@ -40,63 +42,125 @@ const sampleDocuments: Document[] = [
     uri: "test6",
     imageSrc: "",
     tags: [Tag.LICENCE, Tag.STORABLE]
+  },
+  {
+    title: "test7",
+    uri: "test7",
+    imageSrc: "",
+    tags: [Tag.HEALTH_CERTS]
   }
 ];
 
 describe("displayDocuments", () => {
-  it("should show all documents, when 'All' button is pressed", () => {
+  it("should show all documents, when in home route", () => {
     expect.assertions(1);
-    const { getByText, getAllByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
-    const allButton = getByText("All");
-    fireEvent.click(allButton);
-    const displayCard = getAllByTestId("display-card");
-    expect(displayCard).toHaveLength(sampleDocuments.length);
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <Route path={`/`}>
+          <DisplayDocuments documents={sampleDocuments} />
+        </Route>
+      </Router>
+    );
+    expect(screen.getAllByTestId("display-card")).toHaveLength(sampleDocuments.length);
   });
 
-  it("should show only TradeTrust documents, when 'TradeTrust' button is pressed", () => {
+  it("should show only TradeTrust documents, when in 'trade-trust' route", () => {
     expect.assertions(1);
-    const { getByText, getAllByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
-    const tradeTrustButton = getByText("TradeTrust");
-    fireEvent.click(tradeTrustButton);
-    const displayCard = getAllByTestId("display-card");
-    expect(displayCard).toHaveLength(1);
+    const history = createMemoryHistory();
+    history.push("/tag/trade-trust");
+    render(
+      <Router history={history}>
+        <Route path={`/tag/trade-trust`}>
+          <DisplayDocuments documents={sampleDocuments} />
+        </Route>
+      </Router>
+    );
+    expect(screen.getAllByTestId("display-card")).toHaveLength(1);
   });
 
-  it("should show OpenCerts documents, when 'OpenCerts' button is pressed", () => {
+  it("should show OpenCerts documents, when in 'open-certs' route", () => {
     expect.assertions(1);
-    const { getByText, getAllByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
-    const openCertsButton = getByText("OpenCerts");
-    fireEvent.click(openCertsButton);
-    const displayCard = getAllByTestId("display-card");
-    expect(displayCard).toHaveLength(2);
+    const history = createMemoryHistory();
+    history.push("/tag/open-certs");
+    render(
+      <Router history={history}>
+        <Route path={`/tag/open-certs`}>
+          <DisplayDocuments documents={sampleDocuments} />
+        </Route>
+      </Router>
+    );
+    expect(screen.getAllByTestId("display-card")).toHaveLength(2);
   });
 
-  it("should show Licence documents, when 'Licence' button is pressed", () => {
+  it("should show OpenCerts documents, when in 'health-certs' route", () => {
     expect.assertions(1);
-    const { getByText, getAllByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
-    const licenceButton = getByText("Licence");
-    fireEvent.click(licenceButton);
-    const displayCard = getAllByTestId("display-card");
-    expect(displayCard).toHaveLength(3);
+    const history = createMemoryHistory();
+    history.push("/tag/health-certs");
+    render(
+      <Router history={history}>
+        <Route path={`/tag/health-certs`}>
+          <DisplayDocuments documents={sampleDocuments} />
+        </Route>
+      </Router>
+    );
+    expect(screen.getAllByTestId("display-card")).toHaveLength(1);
   });
 
-  it("should show Storable documents, when 'Storable' button is pressed", () => {
+  it("should show Licence documents, when in 'licence' route", () => {
     expect.assertions(1);
-    const { getByText, getAllByTestId } = render(<DisplayDocuments documents={sampleDocuments} />);
-    const storableButton = getByText("Storable");
-    fireEvent.click(storableButton);
-    const displayCard = getAllByTestId("display-card");
-    expect(displayCard).toHaveLength(2);
+    const history = createMemoryHistory();
+    history.push("/tag/licence");
+    render(
+      <Router history={history}>
+        <Route path={`/tag/licence`}>
+          <DisplayDocuments documents={sampleDocuments} />
+        </Route>
+      </Router>
+    );
+    expect(screen.getAllByTestId("display-card")).toHaveLength(3);
+  });
+
+  it("should show Storable documents, when in 'storable' route", () => {
+    expect.assertions(1);
+    const history = createMemoryHistory();
+    history.push("/tag/storable");
+    render(
+      <Router history={history}>
+        <Route path={`/tag/storable`}>
+          <DisplayDocuments documents={sampleDocuments} />
+        </Route>
+      </Router>
+    );
+    expect(screen.getAllByTestId("display-card")).toHaveLength(2);
   });
 
   it("should show OpenCerts Demo, when 'certs' is typed in searchbar", () => {
     expect.assertions(2);
-    const { queryAllByTestId, getByTestId, findByText } = render(<DisplayDocuments documents={sampleDocuments} />);
-    const searchBarInput = getByTestId("search-bar-input");
-    userEvent.type(searchBarInput, "certs");
-    const documentsRendered = queryAllByTestId("document-name");
-    expect(documentsRendered).toHaveLength(1);
-    const demoCert = findByText("OpenCerts Demo");
-    expect(demoCert).not.toBeNull();
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <Route path={`/`}>
+          <DisplayDocuments documents={sampleDocuments} />
+        </Route>
+      </Router>
+    );
+    userEvent.type(screen.getByTestId("search-bar-input"), "certs");
+    expect(screen.queryAllByTestId("document-name")).toHaveLength(1);
+    expect(screen.findByText("OpenCerts Demo")).not.toBeNull();
+  });
+
+  it("should show not found, when 'asdasd' is typed in searchbar", () => {
+    expect.assertions(1);
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <Route path={`/`}>
+          <DisplayDocuments documents={sampleDocuments} />
+        </Route>
+      </Router>
+    );
+    userEvent.type(screen.getByTestId("search-bar-input"), "asdasd");
+    expect(screen.findByText("No documents found.")).not.toBeNull();
   });
 });
