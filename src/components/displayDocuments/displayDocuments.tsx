@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Switch, Route, Redirect } from "react-router-dom";
-import { constantCase } from "change-case";
+import { pascalCase } from "change-case";
 import { cssContainerWrapper } from "../../constants";
 import { useFuzzy } from "react-use-fuzzy";
 import { MenuBar } from "./menuBar/menuBar";
 import { DocumentCard } from "./documentCard";
-import { Tag, TagType, Document } from "./documents";
+import { Tag, Document } from "./documents";
 
 interface FilteredDocumentsProps {
   searchValue: string;
@@ -32,14 +32,7 @@ const FilteredDocuments: React.FunctionComponent<FilteredDocumentsProps> = ({
 
   const displayFilteredDocuments = (documents: Document[]): React.ReactNode => {
     const filtered = documents
-      .filter(document => {
-        if (!tagId) return document;
-        const toMatch = constantCase(tagId);
-        const matched = Object.keys(Tag).find(key => {
-          return key === toMatch;
-        }) as TagType;
-        return document.tags.includes(Tag[matched]);
-      })
+      .filter(document => !tagId || document.tags.includes(pascalCase(tagId) as Tag))
       .filter(document => !searchValue || result.includes(document))
       .map((doc, index) => (
         <DocumentCard title={doc.title} uri={doc.uri} imageSrc={doc.imageSrc} tags={doc.tags} key={index} />
