@@ -30,9 +30,9 @@ const uriToAction = ({ uri, key, permittedActions, redirect }: Action): string =
 };
 
 export enum Tag {
-  TRADETRUST = "TradeTrust",
-  OPENCERTS = "OpenCerts",
-  HEALTHCERTS = "HealthCerts",
+  TRADE_TRUST = "TradeTrust",
+  OPEN_CERTS = "OpenCerts",
+  HEALTH_CERTS = "HealthCerts",
   LICENCE = "Licence",
   STORABLE = "Storable"
 }
@@ -48,7 +48,7 @@ export const documents: Document[] = [
       redirect: "https://dev.opencerts.io"
     }),
     imageSrc: "/static/img/preview/opencerts-demo.jpg",
-    tags: [Tag.OPENCERTS, Tag.STORABLE]
+    tags: [Tag.OPEN_CERTS, Tag.STORABLE]
   },
   {
     title: "GovTech Internship Certificate",
@@ -58,7 +58,7 @@ export const documents: Document[] = [
       redirect: "https://dev.opencerts.io"
     }),
     imageSrc: "/static/img/preview/govtech-intern-cert-sample.png",
-    tags: [Tag.OPENCERTS, Tag.STORABLE]
+    tags: [Tag.OPEN_CERTS, Tag.STORABLE]
   },
   {
     title: "TradeTrust eBL",
@@ -68,7 +68,7 @@ export const documents: Document[] = [
       redirect: "https://dev.tradetrust.io"
     }),
     imageSrc: "/static/img/preview/tradetrust-ebl.png",
-    tags: [Tag.TRADETRUST]
+    tags: [Tag.TRADE_TRUST]
   },
   {
     title: "CAAS UAPL",
@@ -88,7 +88,7 @@ export const documents: Document[] = [
       redirect: "https://dev.tradetrust.io"
     }),
     imageSrc: "/static/img/preview/invoice.png",
-    tags: [Tag.TRADETRUST]
+    tags: [Tag.TRADE_TRUST]
   },
   {
     title: "HealthCert Memo",
@@ -98,7 +98,7 @@ export const documents: Document[] = [
       redirect: "https://www.verify.gov.sg/verify"
     }),
     imageSrc: "/static/img/preview/healthcerts-memo-notarised.png",
-    tags: [Tag.HEALTHCERTS]
+    tags: [Tag.HEALTH_CERTS]
   },
   {
     title: "Geekout Cert",
@@ -108,7 +108,7 @@ export const documents: Document[] = [
       redirect: "https://dev.opencerts.io"
     }),
     imageSrc: "/static/img/preview/geekout-cert.png",
-    tags: [Tag.OPENCERTS]
+    tags: [Tag.OPEN_CERTS]
   },
   {
     title: "Chafta Certificate of Origin",
@@ -118,6 +118,6 @@ export const documents: Document[] = [
       redirect: "https://dev.tradetrust.io"
     }),
     imageSrc: "/static/img/preview/chafta-coo.jpg",
-    tags: [Tag.TRADETRUST]
+    tags: [Tag.TRADE_TRUST]
   }
 ];

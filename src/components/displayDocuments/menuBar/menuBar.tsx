@@ -1,8 +1,9 @@
 import React, { SetStateAction, Dispatch } from "react";
+import { NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
 import { FiSearch } from "react-icons/fi";
+import { paramCase } from "change-case";
 import { cssContainerWrapper } from "../../../constants";
-import { MenuBarButtons } from "./menuBarButtons";
 import { Tag } from "../documents";
 
 const MenuBarContainer = styled.nav`
@@ -19,18 +20,11 @@ const SearchBar = styled.div`
 `;
 
 interface MenuBarProps {
-  selectedButton?: Tag;
-  setSelectedButton: Dispatch<SetStateAction<Tag | undefined>>;
   searchValue: string;
   setSearchValue: Dispatch<SetStateAction<string>>;
 }
 
-export const MenuBar: React.FunctionComponent<MenuBarProps> = ({
-  setSelectedButton,
-  selectedButton,
-  searchValue,
-  setSearchValue
-}: MenuBarProps) => {
+export const MenuBar: React.FunctionComponent<MenuBarProps> = ({ searchValue, setSearchValue }: MenuBarProps) => {
   const submitFormHandler = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
   };
@@ -43,9 +37,26 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({
     <MenuBarContainer className={`${cssContainerWrapper} absolute left-0 right-0`}>
       <MenuBarContent className="rounded-lg bg-white py-3">
         <div className="flex flex-wrap px-5 items-center">
-          <div className="w-full md:w-auto mb-3 md:mb-0">
-            <MenuBarButtons setSelectedButton={setSelectedButton} selectedButton={selectedButton} />
-          </div>
+          <NavLink
+            activeClassName="font-semibold text-orange bg-orange-200 focus:outline-none"
+            className="w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1"
+            to={`/`}
+            exact
+          >
+            All
+          </NavLink>
+          {Object.entries(Tag).map(([key, value]) => {
+            return (
+              <NavLink
+                key={key}
+                activeClassName="font-semibold text-orange bg-orange-200 focus:outline-none"
+                className="w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1"
+                to={`/tag/${paramCase(value)}`}
+              >
+                {value}
+              </NavLink>
+            );
+          })}
           <div className="w-full md:w-auto md:ml-auto">
             <SearchBar>
               <div className="flex flex-row items-center rounded">
