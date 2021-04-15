@@ -42,7 +42,7 @@ export const documents: Document[] = [
   {
     title: "OpenCerts Demo",
     uri: uriToAction({
-      uri: window.location.href + "static/documents/ropsten-encrypted.opencert",
+      uri: window.location.origin + "/static/documents/ropsten-encrypted.opencert",
       key: "5b433c297f3b35690461b9ee08d77f3e8ee47ec86e5b8b1322b056da6f0b86c4",
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
@@ -53,7 +53,7 @@ export const documents: Document[] = [
   {
     title: "GovTech Internship Certificate",
     uri: uriToAction({
-      uri: window.location.href + "static/documents/govtech-intern-cert-sample.opencert",
+      uri: window.location.origin + "/static/documents/govtech-intern-cert-sample.opencert",
       permittedActions: ["STORE"],
       redirect: "https://dev.opencerts.io"
     }),
@@ -63,7 +63,7 @@ export const documents: Document[] = [
   {
     title: "TradeTrust eBL",
     uri: uriToAction({
-      uri: window.location.href + "static/documents/ebl.tt",
+      uri: window.location.origin + "/static/documents/ebl.tt",
       permittedActions: ["VIEW", "STORE"],
       redirect: "https://dev.tradetrust.io"
     }),
@@ -73,7 +73,7 @@ export const documents: Document[] = [
   {
     title: "CAAS UAPL",
     uri: uriToAction({
-      uri: window.location.href + "static/documents/caas.json",
+      uri: window.location.origin + "/static/documents/caas.json",
       permittedActions: ["VIEW", "STORE"],
       redirect: "https://dev.opencerts.io"
     }),
@@ -83,7 +83,7 @@ export const documents: Document[] = [
   {
     title: "TradeTrust Invoice",
     uri: uriToAction({
-      uri: window.location.href + "static/documents/invoice-ropsten.json",
+      uri: window.location.origin + "/static/documents/invoice-ropsten.json",
       permittedActions: ["VIEW"],
       redirect: "https://dev.tradetrust.io"
     }),
@@ -103,7 +103,7 @@ export const documents: Document[] = [
   {
     title: "Geekout Cert",
     uri: uriToAction({
-      uri: window.location.href + "static/documents/geekout-cert.json",
+      uri: window.location.origin + "/static/documents/geekout-cert.json",
       permittedActions: ["VIEW"],
       redirect: "https://dev.opencerts.io"
     }),
@@ -113,7 +113,7 @@ export const documents: Document[] = [
   {
     title: "Chafta Certificate of Origin",
     uri: uriToAction({
-      uri: window.location.href + "static/documents/chafta-coo-ropsten.json",
+      uri: window.location.origin + "/static/documents/chafta-coo-ropsten.json",
       permittedActions: ["VIEW"],
       redirect: "https://dev.tradetrust.io"
     }),
