@@ -133,9 +133,9 @@ export const documents: Document[] = [
   {
     title: "OpenCerts Testimonial",
     uri: uriToAction({
-      uri: "https://www.healthcerts.gov.sg/documents/testimonial.opencert",
+      uri: window.location.origin + "/static/documents/testimonial.opencert",
       permittedActions: ["VIEW"],
-      redirect: "https://www.dev.opencerts.io"
+      redirect: "https://dev.opencerts.io"
     }),
     imageSrc: "/static/img/preview/testimonial.png",
     tags: [Tag.OPEN_CERTS]
