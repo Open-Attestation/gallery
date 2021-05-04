@@ -129,5 +129,15 @@ export const documents: Document[] = [
     }),
     imageSrc: "/static/img/preview/healthcerts-vaccine-demo-notarised.png",
     tags: [Tag.HEALTH_CERTS]
+  },
+  {
+    title: "OpenCerts Testimonial",
+    uri: uriToAction({
+      uri: "https://www.healthcerts.gov.sg/documents/testimonial.opencert",
+      permittedActions: ["VIEW"],
+      redirect: "https://www.dev.opencerts.io"
+    }),
+    imageSrc: "/static/img/preview/testimonial.png",
+    tags: [Tag.OPEN_CERTS]
   }
 ];
