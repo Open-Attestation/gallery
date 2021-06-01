@@ -139,5 +139,15 @@ export const documents: Document[] = [
     }),
     imageSrc: "/static/img/preview/testimonial.png",
     tags: [Tag.OPEN_CERTS]
+  },
+  {
+    title: "OpenCerts Certificate of Award",
+    uri: uriToAction({
+      uri: window.location.origin + "/static/documents/certificate-of-award.opencert",
+      permittedActions: ["VIEW"],
+      redirect: "https://dev.opencerts.io"
+    }),
+    imageSrc: "/static/img/preview/certificate-of-award.png",
+    tags: [Tag.OPEN_CERTS]
   }
 ];
