@@ -101,6 +101,16 @@ export const documents: Document[] = [
     tags: [Tag.HEALTH_CERTS]
   },
   {
+    title: "Vaccination HealthCert",
+    uri: uriToAction({
+      uri: window.location.origin + "/static/documents/vaccination-healthcert.json",
+      permittedActions: ["VIEW"],
+      redirect: "https://www.verify.gov.sg/verify"
+    }),
+    imageSrc: "/static/img/preview/vaccination-healthcert.png",
+    tags: [Tag.HEALTH_CERTS]
+  },
+  {
     title: "Geekout Cert",
     uri: uriToAction({
       uri: window.location.origin + "/static/documents/geekout-cert.json",
@@ -119,16 +129,6 @@ export const documents: Document[] = [
     }),
     imageSrc: "/static/img/preview/chafta-coo.jpg",
     tags: [Tag.TRADE_TRUST]
-  },
-  {
-    title: "Vaccination Certificate",
-    uri: uriToAction({
-      uri: "https://www.healthcerts.gov.sg/documents/healthcerts-vaccine-demo-notarised.json",
-      permittedActions: ["VIEW"],
-      redirect: "https://www.verify.gov.sg/verify"
-    }),
-    imageSrc: "/static/img/preview/healthcerts-vaccine-demo-notarised.png",
-    tags: [Tag.HEALTH_CERTS]
   },
   {
     title: "OpenCerts Testimonial",
