@@ -91,13 +91,13 @@ export const documents: Document[] = [
     tags: [Tag.TRADE_TRUST]
   },
   {
-    title: "HealthCert Memo",
+    title: "PDT (PCR) HealthCert",
     uri: uriToAction({
-      uri: "https://www.healthcerts.gov.sg/documents/healthcerts-memo-notarised.json",
+      uri: window.location.origin + "/static/documents/pdt-pcr-healthcert.json",
       permittedActions: ["VIEW"],
       redirect: "https://www.verify.gov.sg/verify"
     }),
-    imageSrc: "/static/img/preview/healthcerts-memo-notarised.png",
+    imageSrc: "/static/img/preview/pdt-pcr-healthcert.png",
     tags: [Tag.HEALTH_CERTS]
   },
   {
