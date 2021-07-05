@@ -91,6 +91,16 @@ export const documents: Document[] = [
     tags: [Tag.TRADE_TRUST]
   },
   {
+    title: "PDT (ART) HealthCert",
+    uri: uriToAction({
+      uri: window.location.origin + "/static/documents/pdt-art-healthcert.json",
+      permittedActions: ["VIEW"],
+      redirect: "https://www.verify.gov.sg/verify"
+    }),
+    imageSrc: "/static/img/preview/pdt-art-healthcert.png",
+    tags: [Tag.HEALTH_CERTS]
+  },
+  {
     title: "PDT (PCR) HealthCert",
     uri: uriToAction({
       uri: window.location.origin + "/static/documents/pdt-pcr-healthcert.json",
