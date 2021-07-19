@@ -12,21 +12,19 @@ interface Action {
   redirect: string;
 }
 
+const stringifyAndEncode = (obj: object): string => window.encodeURIComponent(JSON.stringify(obj));
+
 const uriToAction = ({ uri, key, permittedActions, redirect }: Action): string => {
-  return (
-    "https://action.openattestation.com?q=" +
-    window.encodeURIComponent(
-      JSON.stringify({
-        type: "DOCUMENT",
-        payload: {
-          uri,
-          key,
-          permittedActions,
-          redirect
-        }
-      })
-    )
-  );
+  const action = stringifyAndEncode({
+    type: "DOCUMENT",
+    payload: {
+      uri,
+      permittedActions,
+      redirect
+    }
+  });
+  const anchor = key ? `#${stringifyAndEncode({ key })}` : ``;
+  return `https://action.openattestation.com?q=${action}${anchor}`;
 };
 
 export enum Tag {
