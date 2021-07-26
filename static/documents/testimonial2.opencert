@@ -1,0 +1,56 @@
+{
+  "version": "https://schema.openattestation.com/2.0/schema.json",
+  "data": {
+    "id": "5bae9b79-29cf-494b-b2b0-26dbb33e5823:string:testimonial-abcd2017-nric000G1002",
+    "description": "47d58b30-01a2-4560-a4ca-88ec682837a4:string:SGC Testimonial",
+    "issuedOn": "9cb6bbc6-e33b-42f9-872c-e4edba63f3e8:string:2019-11-22T00:00:00+08:00",
+    "name": "654eb9b5-e114-452e-a1c3-4c03688c6c7b:string:School Graduation Certificate Testimonial",
+    "content": "5b8f3a8e-b8c6-4f59-a3f5-dc5845f273c2:string:<p>To Whom it May Concern:</p><p>I am pleased to write a letter of recommendation for Cindy Neo Ai Ling.</p><p>I have known Cindy for over three years during which time she worked as an Administrative Assistant in my office. Throughout her time with our organization, she demonstrated critical skills that would make her an excellent employee at your company.</p><p>Cindy is both very bright and motivated. I am confident that she will devote herself to a position with your organization with a high degree of diligence. She is a quick learner and has shown the ability to digest large volumes of information.</p><p>Cindy was always willing to offer her assistance and had an excellent rapport with clients, employers,and other organizations.</p><p>I recommend Cindy without reservation. She would be an asset to any employer, and I wholeheartedly recommend her for any endeavour she chooses to pursue. Please let me know if you have need for additional information about this outstanding lady.</p><p>Sincerely</p>",
+    "$template": {
+      "name": "ae0a3f6e-ffe7-4068-ab61-2da8963fb96f:string:TESTIMONIALS2",
+      "type": "81b899a3-0952-406f-b323-bdfd959e8deb:string:EMBEDDED_RENDERER",
+      "url": "d994b208-7ba1-4a84-8b98-5f3f6e617b9f:string:https://demo-renderer.opencerts.io"
+    },
+    "issuers": [
+      {
+        "name": "d6bb9351-0015-46d7-b9cf-59a023f6e0d7:string:Ministry of Education",
+        "did": "3df9d0bf-c89b-4288-b6bf-57364ea8e4d1:string:DID:SG-UEN:U18274928E",
+        "uen": "52fd5a5e-6436-413c-9b76-1b393341c023:string:U18274928E",
+        "url": "8eeab995-08e8-409c-922e-195c5ab78927:string:https://www.moe.gov.sg",
+        "email": "41ffb882-76f4-4fb1-a989-1cf2995ad1a8:string:registrar@moe.gov.sg",
+        "documentStore": "8ed7246b-129a-48b4-95e3-3b4d3104affc:string:0x8Fc57204c35fb9317D91285eF52D6b892EC08cD3",
+        "identityProof": {
+          "type": "9b9dd2c2-bcc7-4da9-b039-be213aa7c8ae:string:DNS-TXT",
+          "location": "60e890d0-f648-4fdb-8c98-df2e4f772688:string:example.openattestation.com"
+        }
+      }
+    ],
+    "recipient": {
+      "name": "f2c4ef1a-3c83-4618-8204-40556a5c55e7:string:John Doe",
+      "nric": "10672af0-43f2-4ee9-9339-23fd59f86e28:string:S1234567J",
+      "studentId": "b801fb19-79c7-4b10-a2be-bbe044c01037:string:12345"
+    },
+    "testimonial": {
+      "role": "47abecd1-4236-4f7a-bc22-c48ee61bbd99:string:chairman",
+      "instituteName": "1c15fe38-e8c0-4c15-a6e1-ecd2875e0eb7:string:ABC Junior College",
+      "achievementArea": "4e119c80-8437-4468-b872-f882cfdf3e3f:string:No Idea",
+      "achievementDate": "055cfd86-e0b5-4811-ad99-149f5e8afe3c:string:2016-11-21"
+    },
+    "referee": {
+      "designation": "072ddd5a-0058-442e-8bc8-7f3d6c5f8728:string:Director",
+      "name": "3ea5bb10-231b-477b-838a-ba55660700c8:string:Raymond Tan",
+      "relationship": "4afa86ea-b132-4b3c-b518-53cb9bed165d:string:",
+      "mobile": "cd2550bc-cf66-47cf-8fba-9fadbc359b9b:string:8123-4567",
+      "email": "8e14ebe9-69d4-4a50-8985-4055315db4fb:string:raymond_tan@123.com.sg",
+      "address": "c2ceef52-2419-4a2a-b588-cf7305d1c4bb:string:123 Pte Ltd | 88 Robinson Road #08-88 Singapore 000888",
+      "seal": "f2b47267-d3de-4f71-b3a2-6c97b20b24e9:string:",
+      "signature": "0ceddd01-97e7-450b-ab04-a9a3feaeb4b8:string:data:image/jpeg;base64,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"
+    }
+  },
+  "signature": {
+    "type": "SHA3MerkleProof",
+    "targetHash": "0c360049b05700f36dd3aeea1d85ead3d463a57293409f40c5ad3073d7f2d611",
+    "proof": [],
+    "merkleRoot": "0c360049b05700f36dd3aeea1d85ead3d463a57293409f40c5ad3073d7f2d611"
+  }
+}
