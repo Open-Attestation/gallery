@@ -111,7 +111,8 @@ export const documents: Document[] = [
   {
     title: "Vaccination HealthCert",
     uri: uriToAction({
-      uri: window.location.origin + "/static/documents/vaccination-healthcert.json",
+      uri:
+        "https://schemata.openattestation.com/sg/gov/moh/vaccination-healthcert/1.0/interim-vaccination-healthcert-wrapped.json",
       permittedActions: ["VIEW"],
       redirect: "https://www.verify.gov.sg/verify"
     }),
