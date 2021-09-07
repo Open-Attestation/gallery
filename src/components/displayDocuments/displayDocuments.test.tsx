@@ -9,43 +9,43 @@ import userEvent from "@testing-library/user-event";
 const sampleDocuments: Document[] = [
   {
     title: "test1",
-    uri: "test1",
+    documents: [{ uri: "test1", kind: "did" }],
     imageSrc: "",
     tags: [Tag.TRADE_TRUST, Tag.STORABLE]
   },
   {
     title: "test2",
-    uri: "test2",
+    documents: [{ uri: "test2", kind: "did" }],
     imageSrc: "",
     tags: [Tag.OPEN_CERTS]
   },
   {
     title: "test3",
-    uri: "test3",
+    documents: [{ uri: "test3", kind: "did" }],
     imageSrc: "",
     tags: [Tag.OPEN_CERTS]
   },
   {
     title: "test4",
-    uri: "test4",
+    documents: [{ uri: "test4", kind: "did" }],
     imageSrc: "",
     tags: [Tag.LICENCE]
   },
   {
     title: "MPA Certificate of Competency",
-    uri: "test5",
+    documents: [{ uri: "test5", kind: "did" }],
     imageSrc: "test5",
     tags: [Tag.LICENCE]
   },
   {
     title: "test6",
-    uri: "test6",
+    documents: [{ uri: "test6", kind: "did" }],
     imageSrc: "",
     tags: [Tag.LICENCE, Tag.STORABLE]
   },
   {
     title: "test7",
-    uri: "test7",
+    documents: [{ uri: "test7", kind: "did" }],
     imageSrc: "",
     tags: [Tag.HEALTH_CERTS]
   }

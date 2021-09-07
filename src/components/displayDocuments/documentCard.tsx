@@ -45,9 +45,11 @@ const DocumentDetails = styled.div`
   line-height: 19px;
 `;
 
-export const DocumentCard: React.FunctionComponent<Document> = ({ imageSrc, uri, title }) => {
+export const DocumentCard: React.FunctionComponent<Document> = ({ imageSrc, documents, title }) => {
   const [showQrView, setShowQrView] = useState(false);
+  const [selectedDocument, setSelectedDocument] = useState(0);
 
+  const uri = documents[selectedDocument].uri;
   return (
     <a
       data-testid="display-card"
@@ -58,6 +60,22 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageSrc, uri,
     >
       <CardContainer className="flex justify-center rounded bg-white">
         <HoverContainer data-testid="hover-container" className="flex-column">
+          <div className="text-center">
+            {documents.map((document, index) => (
+              <span
+                key={index}
+                className={`uppercase ml-1 mr-1 mb-1 px-2 text-xs rounded-lg inline-block font-bold border ${
+                  index === selectedDocument ? "text-white bg-navy" : "border-navy"
+                }`}
+                onClick={e => {
+                  e.preventDefault();
+                  setSelectedDocument(index);
+                }}
+              >
+                {document.kind}
+              </span>
+            ))}
+          </div>
           <div className="relative overflow-hidden">
             {!showQrView ? (
               <DocumentContainer

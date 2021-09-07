@@ -35,7 +35,7 @@ const FilteredDocuments: React.FunctionComponent<FilteredDocumentsProps> = ({
       .filter(document => !tagId || document.tags.includes(pascalCase(tagId) as Tag))
       .filter(document => !searchValue || result.includes(document))
       .map((doc, index) => (
-        <DocumentCard title={doc.title} uri={doc.uri} imageSrc={doc.imageSrc} tags={doc.tags} key={index} />
+        <DocumentCard title={doc.title} documents={doc.documents} imageSrc={doc.imageSrc} tags={doc.tags} key={index} />
       ));
 
     return filtered.length === 0 ? <NoDocumentsFound /> : filtered;
