@@ -42,12 +42,20 @@ export const documents: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/ropsten-encrypted.opencert",
+          uri: window.location.origin + "/static/documents/transcript-encrypted.opencert",
           key: "5b433c297f3b35690461b9ee08d77f3e8ee47ec86e5b8b1322b056da6f0b86c4",
           permittedActions: ["STORE"],
           redirect: "https://dev.opencerts.io"
         }),
         kind: "store"
+      },
+      {
+        uri: uriToAction({
+          uri: window.location.origin + "/static/documents/transcript-did.opencert",
+          permittedActions: ["STORE"],
+          redirect: "https://dev.opencerts.io"
+        }),
+        kind: "did"
       }
     ],
     imageSrc: "/static/img/preview/opencerts-demo.jpg",
