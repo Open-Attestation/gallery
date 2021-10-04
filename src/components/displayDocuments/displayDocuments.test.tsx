@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, within, fireEvent } from "@testing-library/react";
 import { Router, Route } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import { Document, Tag } from "./documents";
@@ -9,9 +9,12 @@ import userEvent from "@testing-library/user-event";
 const sampleDocuments: Document[] = [
   {
     title: "test1",
-    documents: [{ uri: "test1", kind: "did" }],
+    documents: [
+      { uri: "test1-a", kind: "store" },
+      { uri: "test1-b", kind: "did" }
+    ],
     imageSrc: "",
-    tags: [Tag.TRADE_TRUST, Tag.STORABLE]
+    tags: [Tag.TRADE_TRUST]
   },
   {
     title: "test2",
@@ -132,7 +135,7 @@ describe("displayDocuments", () => {
         </Route>
       </Router>
     );
-    expect(screen.getAllByTestId("display-card")).toHaveLength(2);
+    expect(screen.getAllByTestId("display-card")).toHaveLength(1);
   });
 
   it("should show OpenCerts Demo, when 'certs' is typed in searchbar", () => {
@@ -162,5 +165,20 @@ describe("displayDocuments", () => {
     );
     userEvent.type(screen.getByTestId("search-bar-input"), "asdasd");
     expect(screen.findByText("No documents found.")).not.toBeNull();
+  });
+
+  it("should show filtered card when click on document kind, then click documents filter", () => {
+    expect.assertions(1);
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <Route path={`/`}>
+          <DisplayDocuments documents={sampleDocuments} />
+        </Route>
+      </Router>
+    );
+    fireEvent.click(within(screen.getAllByTestId("hover-container")[0]).getByText("did"));
+    fireEvent.click(screen.getByRole("link", { name: "Storable" }));
+    expect(screen.getByText("test6")).not.toBeNull();
   });
 });
