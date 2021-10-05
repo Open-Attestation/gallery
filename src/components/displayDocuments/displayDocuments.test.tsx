@@ -10,7 +10,7 @@ const sampleDocuments: Document[] = [
   {
     title: "test1",
     documents: [
-      { uri: "test1-a", kind: "store" },
+      { uri: "test1-a", kind: "verifiable" },
       { uri: "test1-b", kind: "did" }
     ],
     imageSrc: "",
@@ -44,7 +44,7 @@ const sampleDocuments: Document[] = [
     title: "test6",
     documents: [{ uri: "test6", kind: "did" }],
     imageSrc: "",
-    tags: [Tag.LICENCE, Tag.STORABLE]
+    tags: [Tag.LICENCE]
   },
   {
     title: "test7",
@@ -124,20 +124,6 @@ describe("displayDocuments", () => {
     expect(screen.getAllByTestId("display-card")).toHaveLength(3);
   });
 
-  it("should show Storable documents, when in 'storable' route", () => {
-    expect.assertions(1);
-    const history = createMemoryHistory();
-    history.push("/tag/storable");
-    render(
-      <Router history={history}>
-        <Route path={`/tag/storable`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
-      </Router>
-    );
-    expect(screen.getAllByTestId("display-card")).toHaveLength(1);
-  });
-
   it("should show OpenCerts Demo, when 'certs' is typed in searchbar", () => {
     expect.assertions(2);
     const history = createMemoryHistory();
@@ -178,7 +164,7 @@ describe("displayDocuments", () => {
       </Router>
     );
     fireEvent.click(within(screen.getAllByTestId("hover-container")[0]).getByText("did"));
-    fireEvent.click(screen.getByRole("link", { name: "Storable" }));
+    fireEvent.click(screen.getByRole("link", { name: "Licence" }));
     expect(screen.getByText("test6")).not.toBeNull();
   });
 });

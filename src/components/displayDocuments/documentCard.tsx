@@ -60,7 +60,7 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageSrc, docu
     >
       <CardContainer className="flex justify-center rounded bg-white">
         <HoverContainer data-testid="hover-container" className="flex-column">
-          <div className="text-center">
+          <div className="text-center mb-2">
             {documents.map((document, index) => (
               <span
                 key={index}
