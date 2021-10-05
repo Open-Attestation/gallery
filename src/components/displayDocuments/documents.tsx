@@ -1,6 +1,6 @@
 export interface Document {
   title: string;
-  documents: { uri: string; kind: "store" | "did" }[];
+  documents: { uri: string; kind: "verifiable" | "transferable" | "did" }[];
   imageSrc: string;
   tags: Tag[];
 }
@@ -31,8 +31,7 @@ export enum Tag {
   TRADE_TRUST = "TradeTrust",
   OPEN_CERTS = "OpenCerts",
   HEALTH_CERTS = "HealthCerts",
-  LICENCE = "Licence",
-  STORABLE = "Storable"
+  LICENCE = "Licence"
 }
 export type TagType = keyof typeof Tag;
 
@@ -47,7 +46,7 @@ export const documents: Document[] = [
           permittedActions: ["STORE"],
           redirect: "https://dev.opencerts.io"
         }),
-        kind: "store"
+        kind: "verifiable"
       },
       {
         uri: uriToAction({
@@ -59,7 +58,7 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/opencerts-demo.jpg",
-    tags: [Tag.OPEN_CERTS, Tag.STORABLE]
+    tags: [Tag.OPEN_CERTS]
   },
   {
     title: "GovTech Internship Certificate",
@@ -70,11 +69,11 @@ export const documents: Document[] = [
           permittedActions: ["STORE"],
           redirect: "https://dev.opencerts.io"
         }),
-        kind: "store"
+        kind: "verifiable"
       }
     ],
     imageSrc: "/static/img/preview/govtech-intern-cert-sample.png",
-    tags: [Tag.OPEN_CERTS, Tag.STORABLE]
+    tags: [Tag.OPEN_CERTS]
   },
   {
     title: "TradeTrust eBL",
@@ -85,7 +84,7 @@ export const documents: Document[] = [
           permittedActions: ["VIEW", "STORE"],
           redirect: "https://dev.tradetrust.io"
         }),
-        kind: "store"
+        kind: "transferable"
       }
     ],
     imageSrc: "/static/img/preview/tradetrust-ebl.png",
@@ -100,11 +99,11 @@ export const documents: Document[] = [
           permittedActions: ["VIEW", "STORE"],
           redirect: "https://dev.opencerts.io"
         }),
-        kind: "store"
+        kind: "verifiable"
       }
     ],
     imageSrc: "/static/img/preview/cass-uapl.png",
-    tags: [Tag.LICENCE, Tag.STORABLE]
+    tags: [Tag.LICENCE]
   },
   {
     title: "TradeTrust Invoice",
@@ -115,7 +114,7 @@ export const documents: Document[] = [
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io"
         }),
-        kind: "store"
+        kind: "verifiable"
       }
     ],
     imageSrc: "/static/img/preview/invoice.png",
@@ -176,7 +175,7 @@ export const documents: Document[] = [
           permittedActions: ["VIEW"],
           redirect: "https://dev.opencerts.io"
         }),
-        kind: "store"
+        kind: "verifiable"
       }
     ],
     imageSrc: "/static/img/preview/geekout-cert.png",
@@ -191,7 +190,7 @@ export const documents: Document[] = [
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io"
         }),
-        kind: "store"
+        kind: "verifiable"
       }
     ],
     imageSrc: "/static/img/preview/chafta-coo.jpg",
@@ -206,7 +205,7 @@ export const documents: Document[] = [
           permittedActions: ["VIEW"],
           redirect: "https://dev.opencerts.io"
         }),
-        kind: "store"
+        kind: "verifiable"
       },
       {
         uri: uriToAction({
@@ -229,7 +228,7 @@ export const documents: Document[] = [
           permittedActions: ["VIEW"],
           redirect: "https://dev.opencerts.io"
         }),
-        kind: "store"
+        kind: "verifiable"
       },
       {
         uri: uriToAction({
@@ -252,7 +251,7 @@ export const documents: Document[] = [
           permittedActions: ["VIEW"],
           redirect: "https://dev.opencerts.io"
         }),
-        kind: "store"
+        kind: "verifiable"
       },
       {
         uri: uriToAction({
