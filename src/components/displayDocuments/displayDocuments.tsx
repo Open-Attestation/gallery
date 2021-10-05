@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Switch, Route, Redirect } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 import { pascalCase } from "change-case";
 import { cssContainerWrapper } from "../../constants";
 import { useFuzzy } from "react-use-fuzzy";
@@ -35,7 +36,13 @@ const FilteredDocuments: React.FunctionComponent<FilteredDocumentsProps> = ({
       .filter(document => !tagId || document.tags.includes(pascalCase(tagId) as Tag))
       .filter(document => !searchValue || result.includes(document))
       .map((doc, index) => (
-        <DocumentCard title={doc.title} documents={doc.documents} imageSrc={doc.imageSrc} tags={doc.tags} key={index} />
+        <DocumentCard
+          title={doc.title}
+          documents={doc.documents}
+          imageSrc={doc.imageSrc}
+          tags={doc.tags}
+          key={`${index}-${uuidv4()}`}
+        />
       ));
 
     return filtered.length === 0 ? <NoDocumentsFound /> : filtered;
