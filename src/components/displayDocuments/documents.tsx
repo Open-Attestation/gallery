@@ -158,7 +158,7 @@ export const documents: Document[] = [
           uri:
             "https://schemata.openattestation.com/sg/gov/moh/vaccination-healthcert/1.0/interim-vaccination-healthcert-wrapped.json",
           permittedActions: ["VIEW"],
-          redirect: "https://www.verify.gov.sg/verify"
+          redirect: "https://dev.verify.gov.sg/verify"
         }),
         kind: "did"
       }
