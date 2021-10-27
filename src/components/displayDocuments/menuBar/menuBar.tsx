@@ -2,9 +2,7 @@ import React, { SetStateAction, Dispatch } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
 import { FiSearch } from "react-icons/fi";
-import { paramCase } from "change-case";
 import { cssContainerWrapper } from "../../../constants";
-import { Tag } from "../documents";
 
 const MenuBarContainer = styled.nav`
   transform: translateY(-50%);
