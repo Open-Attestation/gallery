@@ -3,6 +3,7 @@ export interface Document {
   documents: { uri: string; kind: "verifiable" | "transferable" | "did" }[];
   imageSrc: string;
   tags: Tag[];
+  version: "2" | "3";
 }
 
 interface Action {
@@ -58,7 +59,8 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/opencerts-demo.jpg",
-    tags: [Tag.OPEN_CERTS]
+    tags: [Tag.OPEN_CERTS],
+    version: "2"
   },
   {
     title: "GovTech Internship Certificate",
@@ -73,7 +75,8 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/govtech-intern-cert-sample.png",
-    tags: [Tag.OPEN_CERTS]
+    tags: [Tag.OPEN_CERTS],
+    version: "2"
   },
   {
     title: "TradeTrust eBL",
@@ -88,7 +91,8 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/tradetrust-ebl.png",
-    tags: [Tag.TRADE_TRUST]
+    tags: [Tag.TRADE_TRUST],
+    version: "2"
   },
   {
     title: "CAAS UAPL",
@@ -103,7 +107,8 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/cass-uapl.png",
-    tags: [Tag.LICENCE]
+    tags: [Tag.LICENCE],
+    version: "2"
   },
   {
     title: "TradeTrust Invoice",
@@ -118,7 +123,8 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/invoice.png",
-    tags: [Tag.TRADE_TRUST]
+    tags: [Tag.TRADE_TRUST],
+    version: "2"
   },
   {
     title: "PDT (ART) HealthCert",
@@ -133,7 +139,8 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/pdt-art-healthcert.png",
-    tags: [Tag.HEALTH_CERTS]
+    tags: [Tag.HEALTH_CERTS],
+    version: "2"
   },
   {
     title: "PDT (PCR) HealthCert",
@@ -148,7 +155,8 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/pdt-pcr-healthcert.png",
-    tags: [Tag.HEALTH_CERTS]
+    tags: [Tag.HEALTH_CERTS],
+    version: "2"
   },
   {
     title: "Vaccination HealthCert",
@@ -164,7 +172,8 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/vaccination-healthcert.png",
-    tags: [Tag.HEALTH_CERTS]
+    tags: [Tag.HEALTH_CERTS],
+    version: "2"
   },
   {
     title: "Geekout Cert",
@@ -179,7 +188,8 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/geekout-cert.png",
-    tags: [Tag.OPEN_CERTS]
+    tags: [Tag.OPEN_CERTS],
+    version: "2"
   },
   {
     title: "Chafta Certificate of Origin",
@@ -194,7 +204,8 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/chafta-coo.jpg",
-    tags: [Tag.TRADE_TRUST]
+    tags: [Tag.TRADE_TRUST],
+    version: "2"
   },
   {
     title: "OpenCerts Testimonial",
@@ -217,7 +228,8 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/testimonial.png",
-    tags: [Tag.OPEN_CERTS]
+    tags: [Tag.OPEN_CERTS],
+    version: "2"
   },
   {
     title: "OpenCerts Testimonial",
@@ -240,7 +252,8 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/testimonial2.png",
-    tags: [Tag.OPEN_CERTS]
+    tags: [Tag.OPEN_CERTS],
+    version: "2"
   },
   {
     title: "OpenCerts Certificate of Award",
@@ -263,6 +276,39 @@ export const documents: Document[] = [
       }
     ],
     imageSrc: "/static/img/preview/certificate-of-award.png",
-    tags: [Tag.OPEN_CERTS]
+    tags: [Tag.OPEN_CERTS],
+    version: "2"
+  },
+  {
+    title: "TradeTrust eBL",
+    documents: [
+      {
+        uri: uriToAction({
+          uri: window.location.origin + "/static/documents/v3/ebl-ropsten.json",
+          permittedActions: ["VIEW", "STORE"],
+          redirect: "https://dev.tradetrust.io"
+        }),
+        kind: "transferable"
+      }
+    ],
+    imageSrc: "/static/img/preview/tradetrust-ebl.png",
+    tags: [Tag.TRADE_TRUST],
+    version: "3"
+  },
+  {
+    title: "TradeTrust Invoice",
+    documents: [
+      {
+        uri: uriToAction({
+          uri: window.location.origin + "/static/documents/v3/invoice-ropsten.json",
+          permittedActions: ["VIEW"],
+          redirect: "https://dev.tradetrust.io"
+        }),
+        kind: "verifiable"
+      }
+    ],
+    imageSrc: "/static/img/preview/invoice.png",
+    tags: [Tag.TRADE_TRUST],
+    version: "3"
   }
 ];

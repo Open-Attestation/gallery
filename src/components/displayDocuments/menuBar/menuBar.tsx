@@ -2,9 +2,7 @@ import React, { SetStateAction, Dispatch } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
 import { FiSearch } from "react-icons/fi";
-import { paramCase } from "change-case";
 import { cssContainerWrapper } from "../../../constants";
-import { Tag } from "../documents";
 
 const MenuBarContainer = styled.nav`
   transform: translateY(-50%);
@@ -23,6 +21,25 @@ interface MenuBarProps {
   searchValue: string;
   setSearchValue: Dispatch<SetStateAction<string>>;
 }
+
+const navItems = [
+  {
+    label: "TradeTrust",
+    to: "/tag/trade-trust?version=2"
+  },
+  {
+    label: "OpenCerts",
+    to: "/tag/open-certs"
+  },
+  {
+    label: "HealthCerts",
+    to: "/tag/health-certs"
+  },
+  {
+    label: "Licence",
+    to: "/tag/licence"
+  }
+];
 
 export const MenuBar: React.FunctionComponent<MenuBarProps> = ({ searchValue, setSearchValue }: MenuBarProps) => {
   const submitFormHandler = (e: React.FormEvent<HTMLFormElement>): void => {
@@ -45,15 +62,15 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({ searchValue, se
           >
             All
           </NavLink>
-          {Object.entries(Tag).map(([key, value]) => {
+          {navItems.map((item, index) => {
             return (
               <NavLink
-                key={key}
+                key={`nav-item-${index}`}
                 activeClassName="font-semibold text-orange bg-orange-200 focus:outline-none"
                 className="w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1"
-                to={`/tag/${paramCase(value)}`}
+                to={`${item.to}`}
               >
-                {value}
+                {item.label}
               </NavLink>
             );
           })}

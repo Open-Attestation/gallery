@@ -10,7 +10,8 @@ const sampleDocuments: Document[] = [
     title: "test1",
     documents: [{ uri: "test1", kind: "did" }],
     imageSrc: "",
-    tags: [Tag.TRADE_TRUST]
+    tags: [Tag.TRADE_TRUST],
+    version: "2"
   }
 ];
 
