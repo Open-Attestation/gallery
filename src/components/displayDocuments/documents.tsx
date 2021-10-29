@@ -284,7 +284,7 @@ export const documents: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/v3/ebl.tt",
+          uri: window.location.origin + "/static/documents/v3/ebl-ropsten.json",
           permittedActions: ["VIEW", "STORE"],
           redirect: "https://dev.tradetrust.io"
         }),
