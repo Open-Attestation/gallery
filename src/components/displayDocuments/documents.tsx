@@ -79,12 +79,12 @@ export const documents: Document[] = [
     version: "2"
   },
   {
-    title: "TradeTrust eBL",
+    title: "TradeTrust Bill of Lading",
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/ebl.tt",
-          permittedActions: ["VIEW", "STORE"],
+          uri: window.location.origin + "/static/documents/tradetrust/v2/ebl-ropsten.tt",
+          permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io"
         }),
         kind: "transferable"
@@ -115,7 +115,7 @@ export const documents: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/invoice-ropsten.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-ropsten.tt",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io"
         }),
@@ -192,11 +192,11 @@ export const documents: Document[] = [
     version: "2"
   },
   {
-    title: "Chafta Certificate of Origin",
+    title: "ChAFTA Certificate of Origin",
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/chafta-coo-ropsten.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/chafta-coo-ropsten.tt",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io"
         }),
@@ -280,12 +280,12 @@ export const documents: Document[] = [
     version: "2"
   },
   {
-    title: "TradeTrust eBL",
+    title: "TradeTrust Bill of Lading",
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/v3/ebl-ropsten.json",
-          permittedActions: ["VIEW", "STORE"],
+          uri: window.location.origin + "/static/documents/tradetrust/v3/ebl-ropsten.tt",
+          permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io"
         }),
         kind: "transferable"
@@ -300,7 +300,7 @@ export const documents: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/v3/invoice-ropsten.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v3/invoice-ropsten.tt",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io"
         }),
