@@ -192,7 +192,7 @@ export const documents: Document[] = [
     version: "2"
   },
   {
-    title: "Chafta Certificate of Origin",
+    title: "ChAFTA Certificate of Origin",
     documents: [
       {
         uri: uriToAction({
@@ -280,7 +280,7 @@ export const documents: Document[] = [
     version: "2"
   },
   {
-    title: "TradeTrust eBL",
+    title: "TradeTrust Bill of Lading",
     documents: [
       {
         uri: uriToAction({
