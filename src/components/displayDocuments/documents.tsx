@@ -196,7 +196,7 @@ export const documents: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/chafta-coo-ropsten.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/chafta-coo-ropsten.tt",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io"
         }),
