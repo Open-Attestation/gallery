@@ -127,11 +127,11 @@ export const documents: Document[] = [
     version: "2"
   },
   {
-    title: "PDT (ART) HealthCert",
+    title: "PDT v2 (ART) HealthCert",
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/pdt-art-healthcert.json",
+          uri: window.location.origin + "/static/documents/pdt-v2-art-healthcert.json",
           permittedActions: ["VIEW"],
           redirect: "https://www.verify.gov.sg/verify"
         }),
@@ -143,11 +143,11 @@ export const documents: Document[] = [
     version: "2"
   },
   {
-    title: "PDT (PCR) HealthCert",
+    title: "PDT v2 (PCR) HealthCert",
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/pdt-pcr-healthcert.json",
+          uri: window.location.origin + "/static/documents/pdt-v2-pcr-healthcert.json",
           permittedActions: ["VIEW"],
           redirect: "https://www.verify.gov.sg/verify"
         }),
@@ -159,7 +159,7 @@ export const documents: Document[] = [
     version: "2"
   },
   {
-    title: "Vaccination HealthCert",
+    title: "Vaccination v1 HealthCert",
     documents: [
       {
         uri: uriToAction({
