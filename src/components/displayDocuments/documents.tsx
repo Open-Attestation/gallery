@@ -159,7 +159,7 @@ export const documents: Document[] = [
     version: "2"
   },
   {
-    title: "Vaccination v1 HealthCert",
+    title: "Vaccination v1 (2 doses) HealthCert",
     documents: [
       {
         uri: uriToAction({
@@ -167,6 +167,22 @@ export const documents: Document[] = [
             "https://schemata.openattestation.com/sg/gov/moh/vaccination-healthcert/1.0/interim-vaccination-healthcert-wrapped.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.verify.gov.sg/verify"
+        }),
+        kind: "did"
+      }
+    ],
+    imageSrc: "/static/img/preview/vaccination-healthcert.png",
+    tags: [Tag.HEALTH_CERTS],
+    version: "2"
+  },
+  {
+    title: "Vaccination v1 (2 doses + 1 booster) HealthCert",
+    documents: [
+      {
+        uri: uriToAction({
+          uri: window.location.origin + "/static/documents/vac-v1-2-plus-1-healthcert.json",
+          permittedActions: ["VIEW"],
+          redirect: "https://www.verify.gov.sg/verify"
         }),
         kind: "did"
       }
