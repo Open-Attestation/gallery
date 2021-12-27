@@ -180,7 +180,7 @@ export const documents: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/vac-v1-2+1-healthcert.json",
+          uri: window.location.origin + "/static/documents/vac-v1-2-plus-1-healthcert.json",
           permittedActions: ["VIEW"],
           redirect: "https://www.verify.gov.sg/verify"
         }),
