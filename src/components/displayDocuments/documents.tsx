@@ -147,7 +147,7 @@ export const documents: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/pdt-v2-pcr-healthcert.json",
+          uri: "https://schemata.openattestation.com/sg/gov/moh/pdt-healthcert/2.0/endorsed-wrapped.json",
           permittedActions: ["VIEW"],
           redirect: "https://www.verify.gov.sg/verify"
         }),
@@ -166,7 +166,7 @@ export const documents: Document[] = [
           uri:
             "https://schemata.openattestation.com/sg/gov/moh/vaccination-healthcert/1.0/interim-vaccination-healthcert-wrapped.json",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.verify.gov.sg/verify"
+          redirect: "https://www.verify.gov.sg/verify"
         }),
         kind: "did"
       }
