@@ -127,6 +127,22 @@ export const documents: Document[] = [
     version: "2"
   },
   {
+    title: "TradeTrust Invoice (Redacted)",
+    documents: [
+      {
+        uri: uriToAction({
+          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-redacted-ropsten.tt",
+          permittedActions: ["VIEW"],
+          redirect: "https://dev.tradetrust.io"
+        }),
+        kind: "verifiable"
+      }
+    ],
+    imageSrc: "/static/img/preview/invoice-redacted.png",
+    tags: [Tag.TRADE_TRUST],
+    version: "2"
+  },
+  {
     title: "PDT v2 (ART) HealthCert",
     documents: [
       {
