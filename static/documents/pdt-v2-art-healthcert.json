@@ -1,335 +1,334 @@
 {
-  "version": "https://schema.openattestation.com/2.0/schema.json",
-  "data": {
-    "id": "2766290c-b565-437e-bda2-89d2d1b8f2ce:string:3a37847b-3f2d-40de-b8ee-6ef076bf42d2",
-    "version": "4b59a936-057b-4bef-85b7-f74418497f9f:string:pdt-healthcert-v2.0",
-    "type": "f8284bd0-ff55-4d66-8aa8-54cfa13d461b:string:ART",
-    "validFrom": "15295612-764b-4e47-a1e9-f43d00966945:string:2021-08-24T04:22:36.062Z",
-    "fhirVersion": "232447cb-e0a8-445c-a8c0-ac012bb8b039:string:4.0.1",
-    "fhirBundle": {
-      "resourceType": "88555e70-a5ef-4f44-a9c3-9566a23feaa5:string:Bundle",
-      "type": "8c722976-ee88-4a8a-8607-176c990e9d83:string:collection",
-      "entry": [
-        {
-          "fullUrl": "d70804cb-571d-4de5-b9af-c358c3899eec:string:urn:uuid:ba7b7c8d-c509-4d9d-be4e-f99b6de29e23",
-          "resource": {
-            "resourceType": "4e06161d-cb32-46ba-a392-ccc1f7f00239:string:Patient",
-            "extension": [
-              {
-                "url": "e356b9b6-63a9-412d-bf13-deb4c1405faa:string:http://hl7.org/fhir/StructureDefinition/patient-nationality",
-                "extension": [
-                  {
-                    "url": "202606a5-0529-4bb2-b68d-3252c635ffa6:string:code",
-                    "valueCodeableConcept": {
-                      "text": "87059482-5efc-4954-865f-57de1e0b27a5:string:Patient Nationality",
-                      "coding": [
-                        {
-                          "system": "d92f64da-d769-4871-9f9c-1360d200f554:string:urn:iso:std:iso:3166",
-                          "code": "efe3d098-23bb-4897-832d-b368015b6883:string:SG"
+    "version": "https://schema.openattestation.com/2.0/schema.json",
+    "data": {
+        "id": "e59f0692-995b-47ec-879f-a0c8fe3ed798:string:78073ba2-2a4a-4e62-9b09-a537d3c93f34",
+        "version": "17c92603-5b41-420f-8dd4-cac109b2b2fb:string:pdt-healthcert-v2.0",
+        "type": "4da932c8-c956-412c-8b5d-696b2f87d119:string:ART",
+        "validFrom": "8ae0d39f-dfcf-4e52-a554-881dbe2f2853:string:2021-08-24T04:22:36.062Z",
+        "fhirVersion": "f893d84a-d6c7-4ab6-9f48-291dd80e1322:string:4.0.1",
+        "fhirBundle": {
+            "resourceType": "d2a66a32-e2e5-4b0e-913c-c15a4fd89fa6:string:Bundle",
+            "type": "e913fd4a-cab0-48ce-9014-a1d42f7a275a:string:collection",
+            "entry": [
+                {
+                    "fullUrl": "409d15c8-5fe3-4364-a165-de35f134c116:string:urn:uuid:ba7b7c8d-c509-4d9d-be4e-f99b6de29e23",
+                    "resource": {
+                        "resourceType": "a5c57832-304b-437e-9385-68d9d090ea3a:string:Patient",
+                        "extension": [
+                            {
+                                "url": "f3221825-dca2-4499-9464-09b3cb4e0f0f:string:http://hl7.org/fhir/StructureDefinition/patient-nationality",
+                                "extension": [
+                                    {
+                                        "url": "50168912-13be-4604-a7df-b72abc91cd59:string:code",
+                                        "valueCodeableConcept": {
+                                            "text": "37acb77a-e285-4b60-9502-ee4c30ada197:string:Patient Nationality",
+                                            "coding": [
+                                                {
+                                                    "system": "6b2f0ffb-d54c-438b-883f-dfb3d19b6f81:string:urn:iso:std:iso:3166",
+                                                    "code": "e120cd44-85c6-4242-9408-dd5cd08faa5b:string:SG"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "identifier": [
+                            {
+                                "id": "ee6254ff-07d1-46ac-ae9f-4d35379f8f7f:string:PPN",
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "50ccfded-c4aa-4b7c-9fc0-b6bb804608eb:string:http://terminology.hl7.org/CodeSystem/v2-0203",
+                                            "code": "d3ff2bcd-d3f3-4f9e-960b-17e629070939:string:PPN",
+                                            "display": "ccdf3bb8-a901-4b20-9fbb-50e52448396c:string:Passport Number"
+                                        }
+                                    ]
+                                },
+                                "value": "a8b70e25-710a-4ad0-99e8-0a09eb338cbc:string:E7831177G"
+                            },
+                            {
+                                "id": "f1bb1721-739d-44a7-b8e9-beb6ec0f8a5d:string:NRIC-FIN",
+                                "value": "07fd2d77-e046-4d1b-92b9-426173c0d679:string:S****989Z"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "text": "498427de-d3d6-42c9-98d5-27ca4aea7d06:string:Tan Chen Chen"
+                            }
+                        ],
+                        "gender": "b65baa60-10ed-482f-ac06-4d8c2aba2495:string:female",
+                        "birthDate": "899d18c6-b3da-4ea6-9faa-c1828881b3cf:string:1990-01-15"
+                    }
+                },
+                {
+                    "fullUrl": "70c559e4-9597-4b77-ace8-56b05a1a885f:string:urn:uuid:7729970e-ab26-469f-b3e5-36a42ec24146",
+                    "resource": {
+                        "resourceType": "bc7945a5-0c84-40cc-880c-9264a7e1018e:string:Observation",
+                        "specimen": {
+                            "type": "61df4e3a-e705-4c67-90af-009c321ed848:string:Specimen",
+                            "reference": "51bdb086-9150-4fa0-8b0f-bc75a3277c49:string:urn:uuid:0275bfaf-48fb-44e0-80cd-9c504f80e6ae"
+                        },
+                        "performer": [
+                            {
+                                "type": "bdde96f6-d71d-4753-950d-929dbe73f5bb:string:Practitioner",
+                                "reference": "0303737f-ad48-4377-9127-ad147d6453c7:string:urn:uuid:3dbff0de-d4a4-4e1d-98bf-af7428b8a04b"
+                            },
+                            {
+                                "id": "4c5b8c55-a8c9-4527-a7a7-ededd25ae5e7:string:LHP",
+                                "type": "33c2f1c5-9cee-4087-85cf-90cb5d296d33:string:Organization",
+                                "reference": "67ca0b2d-374b-4b4e-8e2b-105badf30461:string:urn:uuid:fa2328af-4882-4eaa-8c28-66dab46950f1"
+                            }
+                        ],
+                        "identifier": [
+                            {
+                                "id": "2813cdfe-8cfc-41cd-bf21-b45237946be1:string:ACSN",
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "8aead6d3-b19e-4633-b75d-cba90cc0b823:string:http://terminology.hl7.org/CodeSystem/v2-0203",
+                                            "code": "7c1edf6f-6279-4eb4-b4f7-8f555356e3b5:string:ACSN",
+                                            "display": "e4ab5618-b4f3-4c51-bae6-d24724ab09f1:string:Accession ID"
+                                        }
+                                    ]
+                                },
+                                "value": "aad69d19-4e7d-47bf-911c-8928ecccb582:string:123456789"
+                            }
+                        ],
+                        "category": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "ab177683-c7b8-407f-8ca2-26b2f717fa86:string:http://snomed.info/sct",
+                                        "code": "3220b419-f89f-4355-8b84-8094b1594d04:string:840539006",
+                                        "display": "5ecec6e6-ec93-4a7b-8b58-3a247302d0a0:string:COVID-19"
+                                    }
+                                ]
+                            }
+                        ],
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "cded76b2-bfba-40b5-97fd-9a1909a4320d:string:http://loinc.org",
+                                    "code": "843d42fe-5f4e-4f9f-83db-491ee155d091:string:97097-0",
+                                    "display": "140bb399-ab8f-467a-a102-3fb04f135c92:string:SARS-CoV-2 (COVID-19) Ag [Presence] in Upper respiratory specimen by Rapid immunoassay"
+                                }
+                            ]
+                        },
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "7396da84-434f-4fcd-ac79-b4dca400987b:string:http://snomed.info/sct",
+                                    "code": "9e9547aa-2918-4ff4-9e4a-34f3a67b62a3:string:260385009",
+                                    "display": "279f24e6-9f9c-4712-af7f-bbb120e72e12:string:Negative"
+                                }
+                            ]
+                        },
+                        "note": [
+                            {
+                                "id": "5aa993d9-16e5-4683-8b1f-14514c845de5:string:MODALITY",
+                                "text": "2ca84bd0-933f-471f-8def-8f3bf04d89cc:string:Administered"
+                            }
+                        ],
+                        "effectiveDateTime": "838d3481-c6d3-4655-875f-d3ab3abf66da:string:2020-09-28T06:15:00Z",
+                        "status": "94ab2ed1-f6ad-4068-ab4e-12bdf12bc3d9:string:final"
+                    }
+                },
+                {
+                    "fullUrl": "d3fb29fb-9ffe-4a83-ba85-643ecee3ec7b:string:urn:uuid:0275bfaf-48fb-44e0-80cd-9c504f80e6ae",
+                    "resource": {
+                        "resourceType": "16accbbc-1c6d-4c2c-ae76-4d5ec864de8f:string:Specimen",
+                        "subject": {
+                            "type": "36ce45f3-40ba-459d-91f6-62f70d41c6a3:string:Device",
+                            "reference": "c1ea5317-9992-48b9-8cd7-412790282a6d:string:urn:uuid:9103a5c8-5957-40f5-85a1-e6633e890777"
+                        },
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "5d4fae43-8221-4e4b-976e-55e39b285e9b:string:http://snomed.info/sct",
+                                    "code": "51579953-ad93-4221-b88e-0c355aef3c12:string:697989009",
+                                    "display": "1765263e-e70c-4961-9f5d-3d58243fe2f8:string:Anterior nares swab"
+                                }
+                            ]
+                        },
+                        "collection": {
+                            "collectedDateTime": "2fda0914-033d-481c-92ad-25d386dfb460:string:2020-09-27T06:15:00Z"
                         }
-                      ]
                     }
-                  }
-                ]
-              }
-            ],
-            "identifier": [
-              {
-                "id": "467ac259-0c3f-4981-b60e-90ed1946c34f:string:PPN",
-                "type": {
-                  "coding": [
-                    {
-                      "system": "1a64c09b-2890-4ce0-b164-42677fa8f91f:string:http://terminology.hl7.org/CodeSystem/v2-0203",
-                      "code": "2183c0f8-66a3-4a42-bb7a-e281e482b2e3:string:PPN",
-                      "display": "df7a9651-e5be-4afe-bece-887b8ae14439:string:Passport Number"
-                    }
-                  ]
                 },
-                "value": "bac46cfa-8e46-423d-9e6f-476b8585f8cc:string:E7831177G"
-              },
-              {
-                "id": "bf4813bb-4ced-43e4-bdf6-59183f4ffed2:string:NRIC-FIN",
-                "value": "6470f016-a10a-49d5-97fe-ac3f7ffa2424:string:S****989Z"
-              }
-            ],
-            "name": [
-              {
-                "text": "9b161c4f-cd3b-4303-a5c6-8007d6c97713:string:Tan Chen Chen"
-              }
-            ],
-            "gender": "85af13ff-a267-45a9-bf97-b809f60ff440:string:female",
-            "birthDate": "181186d6-9e22-4d96-a32c-6c3323b36a11:string:1990-01-15"
-          }
-        },
-        {
-          "fullUrl": "cd628503-ec30-4a2f-bb25-124e3e705ea1:string:urn:uuid:7729970e-ab26-469f-b3e5-36a42ec24146",
-          "resource": {
-            "resourceType": "35489796-9ced-404b-bf70-733ad55cfff4:string:Observation",
-            "specimen": {
-              "type": "98553743-493c-4533-85c9-00049b47dc48:string:Specimen",
-              "reference": "e1e0c418-7142-4ff4-b448-df0cad814a11:string:urn:uuid:0275bfaf-48fb-44e0-80cd-9c504f80e6ae"
-            },
-            "performer": [
-              {
-                "type": "566d9b1c-300a-4687-b249-20da65a44cf1:string:Practitioner",
-                "reference": "f1e0d0fc-722c-4170-b458-c402afb60390:string:urn:uuid:3dbff0de-d4a4-4e1d-98bf-af7428b8a04b"
-              },
-              {
-                "id": "b9134650-632c-434d-8f48-3f47f75da854:string:LHP",
-                "type": "ddb4005f-8648-427b-9909-5da018078533:string:Organization",
-                "reference": "8f6a6eec-110a-4eb0-8643-3fe5335e8387:string:urn:uuid:fa2328af-4882-4eaa-8c28-66dab46950f1"
-              }
-            ],
-            "identifier": [
-              {
-                "id": "77434fde-a833-499a-9ec4-e0f45873908a:string:ACSN",
-                "type": {
-                  "coding": [
-                    {
-                      "system": "a506ab52-53c8-4cb1-926e-408460478e2a:string:http://terminology.hl7.org/CodeSystem/v2-0203",
-                      "code": "55806bd7-e1ec-4951-84c7-a526664ed7e1:string:ACSN",
-                      "display": "27309561-c891-465a-b765-03b59da39fd4:string:Accession ID"
+                {
+                    "fullUrl": "cc190ff4-6e7d-447a-9643-6010d9bb31c1:string:urn:uuid:3dbff0de-d4a4-4e1d-98bf-af7428b8a04b",
+                    "resource": {
+                        "resourceType": "ba29e048-5bef-4fcd-9d8f-6eedc02dfe34:string:Practitioner",
+                        "name": [
+                            {
+                                "text": "987de52d-60cc-4d7f-b38e-0b653bb51112:string:Dr Michael Lim"
+                            }
+                        ],
+                        "qualification": [
+                            {
+                                "code": {
+                                    "coding": [
+                                        {
+                                            "system": "942e9da4-dcbe-46b5-b3d7-99699388d6d6:string:http://terminology.hl7.org/CodeSystem/v2-0203",
+                                            "code": "6a4954a4-9dbb-41fd-8312-293a28bd6ba0:string:MCR",
+                                            "display": "58e90554-6aef-4b4e-9848-1b00ba8eaebb:string:Practitioner Medicare number"
+                                        }
+                                    ]
+                                },
+                                "identifier": [
+                                    {
+                                        "id": "0721ada0-c831-405f-afff-75ff567a294f:string:MCR",
+                                        "value": "529ca499-c3c6-42d0-a9a3-59fe980b73d6:string:123456"
+                                    }
+                                ],
+                                "issuer": {
+                                    "type": "93797247-9461-4780-9115-13025b2541e4:string:Organization",
+                                    "reference": "f573ab77-622c-4122-8cd9-6e022c3e18b1:string:urn:uuid:bc7065ee-42aa-473a-a614-afd8a7b30b1e"
+                                }
+                            }
+                        ]
                     }
-                  ]
                 },
-                "value": "47e63e36-8516-4d6f-b122-f7ff86c7c676:string:123456789"
-              }
-            ],
-            "category": [
-              {
-                "coding": [
-                  {
-                    "system": "cf6536b7-123e-483c-83ef-9189ffec8c6c:string:http://snomed.info/sct",
-                    "code": "7c3016a3-a66e-4640-a121-dc424125d23c:string:840539006",
-                    "display": "e546c9c0-00c3-44a7-820b-53a564a0f3da:string:COVID-19"
-                  }
-                ]
-              }
-            ],
-            "code": {
-              "coding": [
                 {
-                  "system": "eca282e8-a478-4f05-a7d7-1641c614c4dc:string:http://loinc.org",
-                  "code": "f3eec78e-0e7e-41af-af89-d39b863e1b58:string:97097-0",
-                  "display": "6b1e1885-887a-40b0-bca4-1d6ad4eb759a:string:SARS-CoV-2 (COVID-19) Ag [Presence] in Upper respiratory specimen by Rapid immunoassay"
-                }
-              ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
+                    "fullUrl": "6a971349-82c9-45b9-91a1-d87dde682b0e:string:urn:uuid:bc7065ee-42aa-473a-a614-afd8a7b30b1e",
+                    "resource": {
+                        "resourceType": "f4fc8cd2-2c98-4794-9ee7-f577b8fb45fd:string:Organization",
+                        "name": "60451cd9-31d1-489e-a31a-502d5ce209b8:string:Ministry of Health (MOH)",
+                        "type": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "9fded626-4c3e-4da7-b422-e96ae4e9a556:string:http://terminology.hl7.org/CodeSystem/organization-type",
+                                        "code": "dcdbca57-1b8a-486b-a90a-03e4135f1153:string:govt",
+                                        "display": "6509e072-223d-48b8-9882-395e245146a3:string:Government"
+                                    }
+                                ]
+                            }
+                        ],
+                        "contact": [
+                            {
+                                "telecom": [
+                                    {
+                                        "system": "8252e780-92ec-4614-8d36-d01caff1bcb4:string:url",
+                                        "value": "3677c3f9-831d-4676-aca6-d70c3ebd2ba8:string:https://www.moh.gov.sg"
+                                    },
+                                    {
+                                        "system": "0ff67b50-f364-49b0-bda2-c051c6480af6:string:phone",
+                                        "value": "5af6347d-12be-4044-9aa4-591d55ee3c95:string:+6563259220"
+                                    }
+                                ],
+                                "address": {
+                                    "type": "44a48e38-09ec-4df2-ad24-cc55706b8215:string:physical",
+                                    "use": "0dbc84e3-e133-480f-88c9-8daee3d3f741:string:work",
+                                    "text": "f7733575-9e7c-4ddd-b587-b5269e471eff:string:Ministry of Health, 16 College Road, College of Medicine Building, Singapore 169854"
+                                }
+                            }
+                        ]
+                    }
+                },
                 {
-                  "system": "d75b899f-839b-4f6c-877d-c6894ec3f46a:string:http://snomed.info/sct",
-                  "code": "d6cc18f9-4818-4631-90c9-b6ece0b705b7:string:260385009",
-                  "display": "e4077d9a-caf2-4c26-9701-4f3a42dab14a:string:Negative"
+                    "fullUrl": "4f34daa2-6093-44a5-bd92-70d78bf2fe44:string:urn:uuid:fa2328af-4882-4eaa-8c28-66dab46950f1",
+                    "resource": {
+                        "resourceType": "a9b028e2-7bb8-44bf-bcab-24ed3dc1a018:string:Organization",
+                        "name": "97a212db-37b3-4039-be57-a7f62ef06180:string:MacRitchie Medical Clinic",
+                        "type": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "dfd8fdea-bb2c-4836-aa31-56064febfa0a:string:http://terminology.hl7.org/CodeSystem/organization-type",
+                                        "code": "2c1c2c35-618d-41d9-a28f-1badef197f7d:string:prov",
+                                        "display": "5d5a9895-d2e5-4cb9-bd62-3a033675b0e3:string:Healthcare Provider"
+                                    }
+                                ],
+                                "text": "4f9b1e7f-b4fe-474b-9b56-54fe6420f4c4:string:Licensed Healthcare Provider"
+                            }
+                        ],
+                        "contact": [
+                            {
+                                "telecom": [
+                                    {
+                                        "system": "cfeb5548-c4d3-427c-bcdc-da8591f1ea2f:string:url",
+                                        "value": "84b4d549-1b7a-40e9-8df1-03010fa35173:string:https://www.macritchieclinic.com.sg"
+                                    },
+                                    {
+                                        "system": "7e09059a-6a72-4bb4-9eb9-d59cb9ad49eb:string:phone",
+                                        "value": "8e433917-579f-4ae2-9270-9bdf1fffe057:string:+6561234567"
+                                    }
+                                ],
+                                "address": {
+                                    "type": "df127010-6e96-4e1c-9b99-a872e9638134:string:physical",
+                                    "use": "39f14bf5-7308-441e-9a46-acfc60c1c4a2:string:work",
+                                    "text": "b6fb5bc6-b7f6-4c31-9018-4e4fcff2c749:string:MacRitchie Hospital, Thomson Road, Singapore 123000"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "fullUrl": "9e55f582-b749-4b95-80e6-8c50fd6b2e6c:string:urn:uuid:9103a5c8-5957-40f5-85a1-e6633e890777",
+                    "resource": {
+                        "resourceType": "4462a1c2-0338-4aeb-acfa-cc1d8009aec1:string:Device",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "8543beaa-2f2c-49d6-aea0-54f64bf81f32:string:https://covid-19-diagnostics.jrc.ec.europa.eu/devices",
+                                    "code": "bac68944-5f0e-4832-92fd-e7eb76c30bd8:string:1232",
+                                    "display": "4e988113-7e9c-4512-adbf-931bc36a4764:string:Abbott Rapid Diagnostics, Panbio COVID-19 Ag Rapid Test"
+                                }
+                            ]
+                        }
+                    }
                 }
-              ]
-            },
-            "effectiveDateTime": "65b92407-f0d7-4b16-8587-3dba6df3f76f:string:2020-09-28T06:15:00Z",
-            "status": "86f3051a-9034-4484-a0c2-f0411f34f934:string:final"
-          }
+            ]
         },
-        {
-          "fullUrl": "c39bf987-f8e4-4624-97d2-3e5d918f7437:string:urn:uuid:0275bfaf-48fb-44e0-80cd-9c504f80e6ae",
-          "resource": {
-            "resourceType": "660ab396-d387-40dc-a573-590e0dd5ebd7:string:Specimen",
-            "subject": {
-              "type": "5791224c-6739-45a7-b644-515be934d111:string:Device",
-              "reference": "7e0e8f5a-e11b-48ff-a750-f6f30ddbb636:string:urn:uuid:9103a5c8-5957-40f5-85a1-e6633e890777"
-            },
-            "type": {
-              "coding": [
-                {
-                  "system": "35c1d29e-25dc-4188-8cb5-8e196cb4b122:string:http://snomed.info/sct",
-                  "code": "59363ff3-efe1-4fd7-bf88-dd70a237bcce:string:697989009",
-                  "display": "98651fc5-c59d-486f-a4b4-070cd302e97c:string:Anterior nares swab"
+        "issuers": [
+            {
+                "name": "9176628f-a0b6-42c2-86f0-cf3ca3a15edb:string:SAMPLE ISSUER (DO NOT VERIFY)",
+                "id": "5a99bc89-35e9-4b2a-92d0-b7e3c7e4066d:string:did:ethr:0xE39479928Cc4EfFE50774488780B9f616bd4B830",
+                "revocation": {
+                    "type": "2e31a8dd-4cf6-41a3-a14e-23da77a0dbc1:string:NONE"
+                },
+                "identityProof": {
+                    "type": "52cf9a3b-4338-46e1-ba25-ca0150437542:string:DNS-DID",
+                    "location": "d4724db1-4e5c-4d82-89dd-bea6d236f74d:string:donotverify.testing.verify.gov.sg",
+                    "key": "99866782-702e-4a6f-95fc-ff9074dd6e52:string:did:ethr:0xE39479928Cc4EfFE50774488780B9f616bd4B830#controller"
                 }
-              ]
-            },
-            "collection": {
-              "collectedDateTime": "45e37835-113a-483b-b9ad-baa599ad368c:string:2020-09-27T06:15:00Z"
             }
-          }
+        ],
+        "$template": {
+            "name": "784d5e0e-054e-4199-82cc-eb44fa40dd0a:string:HEALTH_CERT",
+            "type": "66ffb36c-6929-435d-82cd-04d710e9f316:string:EMBEDDED_RENDERER",
+            "url": "52334e20-1e6f-4061-b190-38fa86b96d3e:string:https://healthcert.renderer.moh.gov.sg/"
         },
-        {
-          "fullUrl": "e5bbfbcd-8d4b-413e-9f2a-83b2e3901287:string:urn:uuid:3dbff0de-d4a4-4e1d-98bf-af7428b8a04b",
-          "resource": {
-            "resourceType": "feb40668-22a0-4fe1-831f-631309285297:string:Practitioner",
-            "name": [
-              {
-                "text": "e389f004-eded-4bab-a0db-d768afa78e76:string:Dr Michael Lim"
-              }
-            ],
-            "qualification": [
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "system": "619b8c10-5a89-4d81-9c37-b8361d86d235:string:http://terminology.hl7.org/CodeSystem/v2-0203",
-                      "code": "a259d8cf-285d-4b70-bd7c-43eb78d69063:string:MCR",
-                      "display": "26da6ef3-abc3-485e-be74-fe668dc88ee1:string:Practitioner Medicare number"
-                    }
-                  ]
-                },
-                "identifier": [
-                  {
-                    "id": "5277bb73-c8dc-4681-93ee-c8c7969384fe:string:MCR",
-                    "value": "4be371fa-3231-40ed-9962-b4ea89081fb1:string:123456"
-                  }
-                ],
-                "issuer": {
-                  "type": "a7420d34-6d42-4e54-a530-cf95fdd707fa:string:Organization",
-                  "reference": "a37e7529-e4c9-4181-a792-012d95e22438:string:urn:uuid:bc7065ee-42aa-473a-a614-afd8a7b30b1e"
-                }
-              }
-            ]
-          }
+        "notarisationMetadata": {
+            "reference": "9d22aacf-c3a5-492f-b717-a230c631e467:string:78073ba2-2a4a-4e62-9b09-a537d3c93f34",
+            "notarisedOn": "de3b68ff-c29a-44f9-845f-9da2b1b57e60:string:2022-03-11T01:58:09.723Z",
+            "passportNumber": "18539051-9b23-457a-ad48-e4dd0d544263:string:E7831177G",
+            "url": "21647938-88b4-4ec5-9119-43efd801414d:string:https://dev.verify.gov.sg/verify?q=%7B%22type%22%3A%22DOCUMENT%22%2C%22payload%22%3A%7B%22uri%22%3A%22http%3A%2F%2Flocalhost%3A5000%2Fstg%2Fdocument%2Fec4bcba7-5115-4349-af23-8fac4f53a9af%22%2C%22permittedActions%22%3A%5B%22VIEW%22%2C%22STORE%22%5D%2C%22redirect%22%3A%22https%3A%2F%2Fdev.verify.gov.sg%2Fverify%22%7D%7D#%7B%22key%22%3A%220304316b78888aa483fa1a34bdf445cf7dcbbf36eb8452194adf89b798bee6ad%22%7D"
         },
-        {
-          "fullUrl": "7b262952-16d3-42a4-9bb4-4aa9466093df:string:urn:uuid:bc7065ee-42aa-473a-a614-afd8a7b30b1e",
-          "resource": {
-            "resourceType": "b99e300a-de61-45e6-b84a-fd578bb9d80a:string:Organization",
-            "name": "b5ec6126-8da0-491d-9966-f8f8b2cbe954:string:Ministry of Health (MOH)",
-            "type": [
-              {
-                "coding": [
-                  {
-                    "system": "070b299f-5294-4626-bb71-38660745fd88:string:http://terminology.hl7.org/CodeSystem/organization-type",
-                    "code": "22d608e0-e448-4616-b954-24b30cdbd4d6:string:govt",
-                    "display": "a027cf44-996d-4f67-8081-623d53d1814d:string:Government"
-                  }
-                ]
-              }
-            ],
-            "contact": [
-              {
-                "telecom": [
-                  {
-                    "system": "5af60667-3d03-4671-ac70-3ba9069f8cc4:string:url",
-                    "value": "0dcc4a03-add5-445f-aa02-c402449bd136:string:https://www.moh.gov.sg"
-                  },
-                  {
-                    "system": "56e80422-8a85-42d8-a9c7-19f465919f04:string:phone",
-                    "value": "6e27f84a-494b-4b5a-a79e-a9e2154aa667:string:+6563259220"
-                  }
-                ],
-                "address": {
-                  "type": "413e9451-6a44-4486-b8bb-8a2f3da63e8c:string:physical",
-                  "use": "924ac67d-af15-4f3c-a4db-02574eff7630:string:work",
-                  "text": "157c2b9a-373c-4722-b29d-fc5c0feb6389:string:Ministry of Health, 16 College Road, College of Medicine Building, Singapore 169854"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "fullUrl": "60513823-0f57-44cb-a527-5f146482d4b5:string:urn:uuid:fa2328af-4882-4eaa-8c28-66dab46950f1",
-          "resource": {
-            "resourceType": "4aece6f4-0004-43ae-b54b-c7d11bc46ef6:string:Organization",
-            "name": "479de6d8-4c80-4811-9c62-877c2991c769:string:MacRitchie Medical Clinic",
-            "type": [
-              {
-                "coding": [
-                  {
-                    "system": "2c9dd559-89b4-453c-8199-46c3d2bcae26:string:http://terminology.hl7.org/CodeSystem/organization-type",
-                    "code": "d966819b-c21d-432b-bd4d-27b4e340623b:string:prov",
-                    "display": "0b129b9e-b370-40a2-866a-bec312131b2a:string:Healthcare Provider"
-                  }
-                ],
-                "text": "17b72f2f-d8ce-42ea-a50e-f690faaa515f:string:Licensed Healthcare Provider"
-              }
-            ],
-            "contact": [
-              {
-                "telecom": [
-                  {
-                    "system": "b1879b15-377c-4234-b3c2-50ef571c895c:string:url",
-                    "value": "bb0a3e66-32b2-4e18-88bb-4f801872587e:string:https://www.macritchieclinic.com.sg"
-                  },
-                  {
-                    "system": "d1c2c1d5-01aa-4255-859f-e320b7b60ac9:string:phone",
-                    "value": "5cfea331-920f-4944-a113-a6995f47720a:string:+6561234567"
-                  }
-                ],
-                "address": {
-                  "type": "0ce52927-62f7-4836-ac9a-4d8bff374740:string:physical",
-                  "use": "01540af1-e1f1-4a62-8947-0c0e3518bcc1:string:work",
-                  "text": "287bf3a2-b2cc-4802-9c33-e601f692ae36:string:MacRitchie Hospital, Thomson Road, Singapore 123000"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "fullUrl": "aecbc70e-07ad-42b3-a753-d20b7fa3d526:string:urn:uuid:9103a5c8-5957-40f5-85a1-e6633e890777",
-          "resource": {
-            "resourceType": "b7085700-1b10-4d19-a432-eb41ca9dfa88:string:Device",
-            "type": {
-              "coding": [
-                {
-                  "system": "2fad2857-6851-45d6-9610-3b5ff96fa988:string:https://covid-19-diagnostics.jrc.ec.europa.eu/devices",
-                  "code": "740e314a-6a49-4beb-8cc1-7d577fb52eda:string:1232",
-                  "display": "408fea6e-e442-4224-a5da-348560e0280d:string:Abbott Rapid Diagnostics, Panbio COVID-19 Ag Rapid Test"
-                }
-              ]
+        "logo": "896b96bb-2c64-4fbf-bc72-5aa103683f13:string:data:image/png;base64,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",
+        "attachments": [
+            {
+                "filename": "49a5e242-dd4b-4d0f-a8c8-e1d377db9e32:string:healthcert.txt",
+                "type": "1c16f198-8290-49b8-9e93-64cf5dc0fd39:string:text/open-attestation",
+                "data": "26d5c2ec-7d4c-4236-8e20-cfab80875a5b:string:eyJ2ZXJzaW9uIjoiaHR0cHM6Ly9zY2hlbWEub3BlbmF0dGVzdGF0aW9uLmNvbS8yLjAvc2NoZW1hLmpzb24iLCJkYXRhIjp7ImlkIjoiMjgyYjE5NTQtZTNkZi00NTM5LWE3NmMtYWRiZWQ2OTg3ZTc4OnN0cmluZzozNDAxMzliMC04ZTkyLTRlZDYtYTU4OS1kNTQ3MzBmNTI5NjMiLCJ2ZXJzaW9uIjoiOGNlMTRmNjEtMWI3Zi00NWZlLWIyYWQtM2I3MWY1NDM3YzYwOnN0cmluZzpwZHQtaGVhbHRoY2VydC12Mi4wIiwidHlwZSI6IjBkYWQwM2Q2LTVlMjUtNDYyNy1hZTI0LWNmNDIxMTc4MjE5NTpzdHJpbmc6QVJUIiwidmFsaWRGcm9tIjoiZjllNzk4OWQtYjQ2ZS00NTFkLWE5NzEtNjQ4OTJjZDk1YzgxOnN0cmluZzoyMDIxLTA4LTI0VDA0OjIyOjM2LjA2MloiLCJmaGlyVmVyc2lvbiI6IjIwMWRjZTIzLTdkOGQtNGE2Mi04NWRhLTc2MTQ3OWE5ZjNjOTpzdHJpbmc6NC4wLjEiLCJmaGlyQnVuZGxlIjp7InJlc291cmNlVHlwZSI6ImZiNWFjYTU5LTdhNzUtNGNlZC1iN2MyLTlhZGJlNDY5ZDk2NzpzdHJpbmc6QnVuZGxlIiwidHlwZSI6ImNmNmM5MzQzLTc3NGYtNDBkOS1hOThkLTE4YmQyZGM2MDVjNDpzdHJpbmc6Y29sbGVjdGlvbiIsImVudHJ5IjpbeyJmdWxsVXJsIjoiOTJjMjc5OWYtMjgyYi00YjQyLTliNzAtZWU4YTdmMjRkZjE1OnN0cmluZzp1cm46dXVpZDpiYTdiN2M4ZC1jNTA5LTRkOWQtYmU0ZS1mOTliNmRlMjllMjMiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiI0ZWY2NDAxMS1hZmZmLTRkNWYtYTY4Mi05MDljZWI4N2Y0NjY6c3RyaW5nOlBhdGllbnQiLCJleHRlbnNpb24iOlt7InVybCI6IjNhNDM5ODg3LTM5ZmEtNDI4MC04OWZhLWE5YmRmMGEzNDg0ZDpzdHJpbmc6aHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL3BhdGllbnQtbmF0aW9uYWxpdHkiLCJleHRlbnNpb24iOlt7InVybCI6ImYxM2ViOTgwLTNiNTItNDBiOS05ZDE5LTEyZDg1ZDZhNGQ3NzpzdHJpbmc6Y29kZSIsInZhbHVlQ29kZWFibGVDb25jZXB0Ijp7InRleHQiOiJmM2QzZTlmYy1iMGEyLTQzMzUtOTk2NC1hMjBjMThjNjU0ODI6c3RyaW5nOlBhdGllbnQgTmF0aW9uYWxpdHkiLCJjb2RpbmciOlt7InN5c3RlbSI6IjIwNWEwM2E5LTI5N2MtNDMxYy04MWM5LTI2NDY4YmQ2OTlmZDpzdHJpbmc6dXJuOmlzbzpzdGQ6aXNvOjMxNjYiLCJjb2RlIjoiYjBmODMyZmEtMWVjMC00ODFjLWFiNjktOTExMzMzY2UzYmFlOnN0cmluZzpTRyJ9XX19XX1dLCJpZGVudGlmaWVyIjpbeyJpZCI6Ijc2MDNiYzlmLTAzZWItNGZjZC04YmVhLWY1OWFiMmZjZWE5OTpzdHJpbmc6UFBOIiwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Ijk5NTM1YTU4LWM2MGYtNDFjMi05ZTc4LTQ0ZmIyYWEwZGMxZTpzdHJpbmc6aHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS92Mi0wMjAzIiwiY29kZSI6IjI4ZWEyYmNhLTg3NmYtNDM1MS04ZWE0LWQ3ZTE3MDc5MjJkZTpzdHJpbmc6UFBOIiwiZGlzcGxheSI6ImM0ODg0MjY5LWVmNGEtNDdhYS04YmJlLTAwOTIxYzg2ZGI5ZTpzdHJpbmc6UGFzc3BvcnQgTnVtYmVyIn1dfSwidmFsdWUiOiI2MTE5ZmVhNS02ZDQxLTQyYmItYjgwOC0xMTYyYWI5MmFmZTQ6c3RyaW5nOkU3ODMxMTc3RyJ9LHsiaWQiOiI5MjJhZmExYS03Yjk3LTQ4MzMtODUwNC0xOTQzYWQ1OTkxNWU6c3RyaW5nOk5SSUMtRklOIiwidmFsdWUiOiJjYzM4ZjM0YS04MGE1LTQ2ZGYtODhjYi0yZWZmZjY1ZjBjOGI6c3RyaW5nOlM5MDk4OTg5WiJ9XSwibmFtZSI6W3sidGV4dCI6IjAxYjIzZGNiLWExNGMtNDNhNy05MjE2LWJjNDM3MTUyNWYwNzpzdHJpbmc6VGFuIENoZW4gQ2hlbiJ9XSwiZ2VuZGVyIjoiZDcxMDg4MjItYzUzMC00ZjJlLTg1NmYtMDE4M2RhNjJiYzZjOnN0cmluZzpmZW1hbGUiLCJiaXJ0aERhdGUiOiI1M2MwN2M5MS0xOGM5LTQ0YjQtYjA4Ny1mZDIxZmUzODA2MTU6c3RyaW5nOjE5OTAtMDEtMTUifX0seyJmdWxsVXJsIjoiNmUyNzk0YzktNDI1ZC00MTgwLWE4ZjItMTQ1ZjBmMTU1ZjgyOnN0cmluZzp1cm46dXVpZDo3NzI5OTcwZS1hYjI2LTQ2OWYtYjNlNS0zNmE0MmVjMjQxNDYiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiI1NjlhMjdiNy03ZDYxLTQ2YjktYTcwYS05ZGI1ZTA1MDAxOTI6c3RyaW5nOk9ic2VydmF0aW9uIiwic3BlY2ltZW4iOnsidHlwZSI6Ijc5YzViNTI4LWI2ZDYtNGUyMC1iODI3LWQ0MzhjYTQ2ZjQ4NzpzdHJpbmc6U3BlY2ltZW4iLCJyZWZlcmVuY2UiOiIyOGEyN2NhNi1jMWVmLTQ0MzUtOGFmNi1kZjNmNTJlNzY2NzQ6c3RyaW5nOnVybjp1dWlkOjAyNzViZmFmLTQ4ZmItNDRlMC04MGNkLTljNTA0ZjgwZTZhZSJ9LCJwZXJmb3JtZXIiOlt7InR5cGUiOiI3MTY0MmIwMy0wOTc1LTQ4YWQtOTk4MS03NmYxZDc2Y2NjMDg6c3RyaW5nOlByYWN0aXRpb25lciIsInJlZmVyZW5jZSI6IjY0ZWRlNmYyLTllM2ItNDg0YS1iYjVkLWI2YmQ3N2RiNzI3MjpzdHJpbmc6dXJuOnV1aWQ6M2RiZmYwZGUtZDRhNC00ZTFkLTk4YmYtYWY3NDI4YjhhMDRiIn0seyJpZCI6ImIxZGRlYThlLTM2YjUtNGE5Yy1hM2U5LTZjMGIyOTFlZWZiNDpzdHJpbmc6TEhQIiwidHlwZSI6ImNmMzhlMjIwLTllNDUtNDgxZC1iODMwLWM4YTUwMjExNGNlYjpzdHJpbmc6T3JnYW5pemF0aW9uIiwicmVmZXJlbmNlIjoiZGQ5YjE3YmQtM2MyOC00YmJhLWIyMWQtZTEyYWEwZTUwZWU1OnN0cmluZzp1cm46dXVpZDpmYTIzMjhhZi00ODgyLTRlYWEtOGMyOC02NmRhYjQ2OTUwZjEifV0sImlkZW50aWZpZXIiOlt7ImlkIjoiMDE2OWZhMGYtZmFjOC00MTk4LTkzZmItMzdiMTExNDk4OTFiOnN0cmluZzpBQ1NOIiwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6IjU3N2Y4YjM0LTdlZGMtNDlhOS04YTZmLTMyN2ZiMzgwNjcyMDpzdHJpbmc6aHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS92Mi0wMjAzIiwiY29kZSI6ImU5YTMzOWYzLWY5MzEtNGQyYS05NjQ1LTk3MzcxODM0OTYxYzpzdHJpbmc6QUNTTiIsImRpc3BsYXkiOiJkZWZlZDUxZS03NWM1LTQwNzMtOGQxMC00YTFlZTM4Nzc5NGQ6c3RyaW5nOkFjY2Vzc2lvbiBJRCJ9XX0sInZhbHVlIjoiZjc1YTljN2YtYWRjMi00NjBiLTg0YWUtNGMwNDBjMmE2MzcwOnN0cmluZzoxMjM0NTY3ODkifV0sImNhdGVnb3J5IjpbeyJjb2RpbmciOlt7InN5c3RlbSI6IjE1NGViMzMyLTQ0MjYtNDc5Ny1iM2EwLThjODM0Y2IyMDgzYTpzdHJpbmc6aHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiI2MjQ4NGQwYS0xODk1LTQyZmUtOGMyZC0zZDAyYmJhMGZkZGU6c3RyaW5nOjg0MDUzOTAwNiIsImRpc3BsYXkiOiJiYjU2YjExZC0xMjAzLTQ1ZmItYTBlOS00N2JlNzlmNDVlZTA6c3RyaW5nOkNPVklELTE5In1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiIyZDlkZTlmNi0yOWNkLTQ3MzQtOGRhOC03MmU3YTUzYTdlNzg6c3RyaW5nOmh0dHA6Ly9sb2luYy5vcmciLCJjb2RlIjoiYzAxODI3OWYtZjI2My00MGYzLTkwMTMtMDVhZWNiNDhhMThjOnN0cmluZzo5NzA5Ny0wIiwiZGlzcGxheSI6Ijk4NmUyMTUxLTc3YzUtNDZlNy1hYmI2LWQwNDAwNDMwMGJiNTpzdHJpbmc6U0FSUy1Db1YtMiAoQ09WSUQtMTkpIEFnIFtQcmVzZW5jZV0gaW4gVXBwZXIgcmVzcGlyYXRvcnkgc3BlY2ltZW4gYnkgUmFwaWQgaW1tdW5vYXNzYXkifV19LCJ2YWx1ZUNvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6IjRjMDJiYzU3LTgxZTQtNDE1Yy04YTM4LTU0MmU5OTYyYWQwYzpzdHJpbmc6aHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiIxMjJmMzQ3My1lNjM3LTQ1ZWYtOGE3Yi1hODM4NmY3NjQzMzE6c3RyaW5nOjI2MDM4NTAwOSIsImRpc3BsYXkiOiI2N2ZkYWQzMi0wZTcxLTQ1ZjItOGM2NS05NGFjNDExNGVhMjk6c3RyaW5nOk5lZ2F0aXZlIn1dfSwibm90ZSI6W3siaWQiOiIxMDlhOWY1Zi1jNDkyLTRiNDYtYmY2NS01NWQwNGU0YzU1MWM6c3RyaW5nOk1PREFMSVRZIiwidGV4dCI6IjUxNGJlOTkzLWI1OWItNDJlNC1iZDZlLTVmNzVkYzk1OGRiZjpzdHJpbmc6QWRtaW5pc3RlcmVkIn1dLCJlZmZlY3RpdmVEYXRlVGltZSI6IjBiZDEwMzE3LWMyNWUtNDM2Mi04ZWZmLWU4YTJmZmNmZDEwNTpzdHJpbmc6MjAyMC0wOS0yOFQwNjoxNTowMFoiLCJzdGF0dXMiOiI2MDgxYmM3Mi0yYWY5LTRiNGQtOTU4MC1lNzVhN2JmZWY3Yzc6c3RyaW5nOmZpbmFsIn19LHsiZnVsbFVybCI6Ijc4OTIwMzRmLTcwZTMtNDM3Zi05YjU4LTE1MjFlZjFlMTk3NDpzdHJpbmc6dXJuOnV1aWQ6MDI3NWJmYWYtNDhmYi00NGUwLTgwY2QtOWM1MDRmODBlNmFlIiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiYmExYjVkOWYtYTk4MS00MzYwLTk1YmMtMzViYjQxNzQ0MWExOnN0cmluZzpTcGVjaW1lbiIsInN1YmplY3QiOnsidHlwZSI6Ijc3OTlkNzdkLTdjN2QtNDBkMy1iZWEzLWZmNDUwMjAyZTM4MzpzdHJpbmc6RGV2aWNlIiwicmVmZXJlbmNlIjoiNzRhMjUyMDYtOGRmNS00MWIxLWIyNDAtY2M1NDQ3NDEyNTNjOnN0cmluZzp1cm46dXVpZDo5MTAzYTVjOC01OTU3LTQwZjUtODVhMS1lNjYzM2U4OTA3NzcifSwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6IjFmNmQ0YzI2LTU4ODMtNDJkZC1iNDRhLWM5NGY2ZDBjZWUzNTpzdHJpbmc6aHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiJjNjYxMGI1Yi02MzJkLTQwZTktOTMxOC01MjljMTgxYzBiYjY6c3RyaW5nOjY5Nzk4OTAwOSIsImRpc3BsYXkiOiI4MzcyNTU2Ny05YzE1LTQ0MGEtOGY3Yi0wZmUxYWViYjk3MTY6c3RyaW5nOkFudGVyaW9yIG5hcmVzIHN3YWIifV19LCJjb2xsZWN0aW9uIjp7ImNvbGxlY3RlZERhdGVUaW1lIjoiNzE3NDEyYjItZWM1ZC00MmI5LThiNTctNzQ0M2IyMjI2NDZlOnN0cmluZzoyMDIwLTA5LTI3VDA2OjE1OjAwWiJ9fX0seyJmdWxsVXJsIjoiMzRiOTkzNzYtY2FiNy00YWI5LWIzODAtY2U4N2YyZTM0MjQ5OnN0cmluZzp1cm46dXVpZDozZGJmZjBkZS1kNGE0LTRlMWQtOThiZi1hZjc0MjhiOGEwNGIiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiI4ZmJmMDVkOS01OTI2LTRkMTItYjhiOC1mYTAwYjE4N2JkZmQ6c3RyaW5nOlByYWN0aXRpb25lciIsIm5hbWUiOlt7InRleHQiOiI2NjJjNjc1ZS0xZjc3LTQxZjUtOWM2NC05NTkwZjM0YzlmMDE6c3RyaW5nOkRyIE1pY2hhZWwgTGltIn1dLCJxdWFsaWZpY2F0aW9uIjpbeyJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiODA2MmEzN2EtNzJkMy00ZjQxLWI2NjYtZDk5NGMxM2NhM2MxOnN0cmluZzpodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL3YyLTAyMDMiLCJjb2RlIjoiMzM2YTFkNDktMmZjNC00ZWM2LTk4OTktNDdkNzczYWM2OTk0OnN0cmluZzpNQ1IiLCJkaXNwbGF5IjoiODJlYTc2ZGMtNDQ2MC00MDZlLTlmNjgtOTUxMmU4N2Q3ZWI4OnN0cmluZzpQcmFjdGl0aW9uZXIgTWVkaWNhcmUgbnVtYmVyIn1dfSwiaWRlbnRpZmllciI6W3siaWQiOiJhMThhNGQ4Ni04ZTBmLTRlNGQtYWQ1Yi0wMDQzOTQ1Mjg2MzA6c3RyaW5nOk1DUiIsInZhbHVlIjoiNjU2NGFkYjMtNjQzMy00OWY3LWI3MmUtNjJmZTc4MDcyY2VmOnN0cmluZzoxMjM0NTYifV0sImlzc3VlciI6eyJ0eXBlIjoiMTVmODBlNGMtY2UzZC00NWY5LTgzZGUtNTE3ZGY4MmI0YWM2OnN0cmluZzpPcmdhbml6YXRpb24iLCJyZWZlcmVuY2UiOiI1NGE2MWRiNS05NGRiLTRhMmItYWE4YS0xZDBmZDI1MjQxMmE6c3RyaW5nOnVybjp1dWlkOmJjNzA2NWVlLTQyYWEtNDczYS1hNjE0LWFmZDhhN2IzMGIxZSJ9fV19fSx7ImZ1bGxVcmwiOiI4YzFlMzAyYi1iYWIyLTRiZTAtODU1OC05YTc2MjM3NWMwZGM6c3RyaW5nOnVybjp1dWlkOmJjNzA2NWVlLTQyYWEtNDczYS1hNjE0LWFmZDhhN2IzMGIxZSIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6ImMxNWUyOWFiLWYzYzUtNDNlMC1hM2IzLTYyYTZhMmYwYzliMDpzdHJpbmc6T3JnYW5pemF0aW9uIiwibmFtZSI6ImUyMjE5YmFlLWE0OTgtNDQwMS1iOGJmLTYwZTFmOTVlMTU4ZDpzdHJpbmc6TWluaXN0cnkgb2YgSGVhbHRoIChNT0gpIiwidHlwZSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiIzZjFlMDBiZi1lYmI3LTRhNWMtYjY3NS00M2IxZjhmMmJmNWQ6c3RyaW5nOmh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vb3JnYW5pemF0aW9uLXR5cGUiLCJjb2RlIjoiZDY4ZGZkYTYtNTViOS00NTdiLTllYTctYTQzODZlNGZhNDVmOnN0cmluZzpnb3Z0IiwiZGlzcGxheSI6ImZhYjQ3MGE0LTBkM2YtNDFkOC1iMmM1LWZmNWIzYWU2NDY5MTpzdHJpbmc6R292ZXJubWVudCJ9XX1dLCJjb250YWN0IjpbeyJ0ZWxlY29tIjpbeyJzeXN0ZW0iOiIxNmM1MGM4OC1hOGE0LTQxNDAtYjRhOS0xYTY5YWViYmJiM2E6c3RyaW5nOnVybCIsInZhbHVlIjoiOGViZGRkNzgtY2FiNC00OGRiLTgwODUtMmQzMDBjNTA1M2RlOnN0cmluZzpodHRwczovL3d3dy5tb2guZ292LnNnIn0seyJzeXN0ZW0iOiIyMWExYWY4MS00MDYxLTRmMjgtYjZlMy0wZjMzOTA2NjY2NTU6c3RyaW5nOnBob25lIiwidmFsdWUiOiJjNTllODJkNS01NDYwLTRlN2MtYjYxMy00ODdkZDcwODYwNzc6c3RyaW5nOis2NTYzMjU5MjIwIn1dLCJhZGRyZXNzIjp7InR5cGUiOiI0ZDU0YTFiNi00N2FlLTRmMWYtYjE0MS04ODVlYTgwNDU2NDQ6c3RyaW5nOnBoeXNpY2FsIiwidXNlIjoiOTg5YTRjZWYtYTQ3YS00ZTJkLWJiNjctY2VjZjVhNDc3ZTkwOnN0cmluZzp3b3JrIiwidGV4dCI6ImI4NTRhMTFlLTE4NmYtNDg5OS1iOTA0LTRlMmFkNzJiZGM2NzpzdHJpbmc6TWluaXN0cnkgb2YgSGVhbHRoLCAxNiBDb2xsZWdlIFJvYWQsIENvbGxlZ2Ugb2YgTWVkaWNpbmUgQnVpbGRpbmcsIFNpbmdhcG9yZSAxNjk4NTQifX1dfX0seyJmdWxsVXJsIjoiNmUwOGQ0YzEtZWRjYi00Y2QzLTllZDEtZTMwZWVlYmNhNzc0OnN0cmluZzp1cm46dXVpZDpmYTIzMjhhZi00ODgyLTRlYWEtOGMyOC02NmRhYjQ2OTUwZjEiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiIyNWI4MjhiNy0yNmNjLTQwOTUtYTNmNS1lZmZjMDNlMTNhZGI6c3RyaW5nOk9yZ2FuaXphdGlvbiIsIm5hbWUiOiJkOWRhZmZkYS05OGViLTQ5NjItYWJiYi0wN2UyMmZhNTY2OWE6c3RyaW5nOk1hY1JpdGNoaWUgTWVkaWNhbCBDbGluaWMiLCJ0eXBlIjpbeyJjb2RpbmciOlt7InN5c3RlbSI6IjdjYjI1NjIxLTNjMDQtNDFkZS1iOWYwLTFiZWExNWUzYjJmMjpzdHJpbmc6aHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vcmdhbml6YXRpb24tdHlwZSIsImNvZGUiOiJmZWRkYTYyYS1mNTY0LTRiNTQtODA3Yi1iMTdjMDI0Nzk3Mzk6c3RyaW5nOnByb3YiLCJkaXNwbGF5IjoiZTFjMjQ0MmMtNGFiNi00Y2MzLTk0YmEtMmE3M2Q5OThjZjU3OnN0cmluZzpIZWFsdGhjYXJlIFByb3ZpZGVyIn1dLCJ0ZXh0IjoiMDQ1OGU1YTgtNjM3Ni00MzU1LWI4YjAtODllNThkZTFjNDU1OnN0cmluZzpMaWNlbnNlZCBIZWFsdGhjYXJlIFByb3ZpZGVyIn1dLCJjb250YWN0IjpbeyJ0ZWxlY29tIjpbeyJzeXN0ZW0iOiIxMjAyNDI5MS1iYWI3LTRlZjItODk3Mi1hZWRiM2ZkYzUyODY6c3RyaW5nOnVybCIsInZhbHVlIjoiYjliYjI0ZjItOWJkNy00YTQxLWI1ZjAtMDE3ODlhMGQyNTY4OnN0cmluZzpodHRwczovL3d3dy5tYWNyaXRjaGllY2xpbmljLmNvbS5zZyJ9LHsic3lzdGVtIjoiZmNiN2ViZjktNDIyYi00MzgxLWJhMjAtZDQyNmU3ODk5NDI3OnN0cmluZzpwaG9uZSIsInZhbHVlIjoiYzk1YzBkNGUtZmM2Ni00ZTVkLThhMGYtMjUzOTc3ZTY3M2JmOnN0cmluZzorNjU2MTIzNDU2NyJ9XSwiYWRkcmVzcyI6eyJ0eXBlIjoiZjhkZWEyMmYtYjE5MS00ZmZkLWJiOGYtYWMzOWYxZGIwNDJlOnN0cmluZzpwaHlzaWNhbCIsInVzZSI6Ijg4OGQxYmM3LTZmNDQtNDI3Yi05OTdlLTJkZjdkNjlhMzgzNDpzdHJpbmc6d29yayIsInRleHQiOiJjNWI0OTRhNi1mZjI2LTRiZjMtYjIzZC1lYjQ4NDJiYmY3NWQ6c3RyaW5nOk1hY1JpdGNoaWUgSG9zcGl0YWwsIFRob21zb24gUm9hZCwgU2luZ2Fwb3JlIDEyMzAwMCJ9fV19fSx7ImZ1bGxVcmwiOiIxODZiYzBjNC0yYjM2LTQ4NGMtYjliMy02MGQ4MjVjOGJmM2E6c3RyaW5nOnVybjp1dWlkOjkxMDNhNWM4LTU5NTctNDBmNS04NWExLWU2NjMzZTg5MDc3NyIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6IjZjMTUxOTQ2LWFiZjItNGZhZC1hZDlhLTNkOTcyMTIzZDNmOTpzdHJpbmc6RGV2aWNlIiwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6IjdmYWM0MDE1LWM0YmYtNDU4MS04MTBlLTNlY2Q3MDk3MGU0ZTpzdHJpbmc6aHR0cHM6Ly9jb3ZpZC0xOS1kaWFnbm9zdGljcy5qcmMuZWMuZXVyb3BhLmV1L2RldmljZXMiLCJjb2RlIjoiMTQ5MmM0MDAtMWIwNy00N2Q3LWE4ZjktNjE2ZGQxODRlZTYxOnN0cmluZzoxMjMyIiwiZGlzcGxheSI6IjE4MGM4NmYzLWMwMWEtNDBlNS05MDRkLWFhZGVjZDk2YmJlMTpzdHJpbmc6QWJib3R0IFJhcGlkIERpYWdub3N0aWNzLCBQYW5iaW8gQ09WSUQtMTkgQWcgUmFwaWQgVGVzdCJ9XX19fV19LCJsb2dvIjoiOTFiZjE5MzctNDA4NS00OTkxLWJlOTYtZWM5YjI0NzNiODU5OnN0cmluZzpkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQWZRQUFBRElDQU1BQUFBcHgrUGFBQUFBTTFCTVZFVUFBQURNek16TXpNek16TXpNek16TXpNek16TXpNek16TXpNek16TXpNek16TXpNek16TXpNek16TXpNek16TXpNek16ZUNtaUFBQUFBRUhSU1RsTUFRTCtBN3hBZ24yRFAzekJ3cjFDUEVsK0kvUUFBQndkSlJFRlVlTnJzbmQxMjJ5b1FSdmtISVNITit6L3R5VWs5b1RFQ1ExYlRCYzIzYnlOczBCNUdJREFSQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQWsrSWsrSWR4NGc1TjRCOUdRL3JQQTlKL0lQZlNnd0wvTUVFQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUR3UDVaUG9QNXI3RkpLQWY3Y3VmQmloUE5Ta1g1aGxBOXUrRHNQN2RYL0pLMVAyVlBpU0lvZWJFckx3Vmg1WngrOEMxWTIyWXRQMEZwZjZoZGVhK21xMVdsaXhmZWo2UmNEeGowOXN3WGJiZUJRcGlqdWcyMGFqL1NFOGJ2bzVoRXVhdkF1U0twUWZKeFRHOTFnVXJDVjZqU1FFMG9Qa2U0d3VrZTcwNUVxcExOV3h0TXRTazRqdlhHbGQrdExseHZWTU5uYWtEN21FbmRZVFZXU25WODYwV1VYbDM0Uk15N0JlbXB5R3pON3BBYm1YRUE2YmZ2SzB1MzJ1VEZLS1ZNMHIwWXcxTVRjRnZwOGlWTFBEMCs5Z0hReSs3clNmM2VlanAySHVGY3NtbGRpRXowRnpLWGZTUnczcWUwOFhxZDlkUDZRS09Obmt1NGxHM05TYi9SQnRLdEt0MXR0ZEJKaVliMlZJN2JyYzd0YzhJWW90SnpIVUIwYytPK1QzclRRdUxLc1pScXB6a1RTN2RaSTR2bytxSm5kRUdPOEV6ZWN5amFjNi9JVE4yS09XYVVMSVQvYUxkZVVucXBkaTdWVzIrS3ljMjlGTDNzN2UzaGk1TFRTaGVXV3B5V2xINFh6bXZXam5pT2lGTjNZV0RpdldJOTJXdWs1Y3QyQzBwM0p6bDlZTjY2V0k1SVYvVnlGODZyMWExN3BINVVNQzBwWC9Ed1hWVTUyNEtzNVlnRFptTDR6R3oxdzgwcDMzUGoxcE12Y2krdGMyY0ZJam1oSDJkV1ZmdWFWTHVMank5ZVR6Z3FPcnFld3YwdnVtLzFLUjQrMmE2RGg1cFhPN1Y5TytzNEtSSlBBRHV4Tmp0akZDQ2svQ2x0RXpnZnpTdGVyU3ZkWlFaZURveXlxeFFndVIxbFhtQmxJLzlQU2ViWnBiT2U4Yml2dDJiRks5WWFLNGVIZTdOTE5hdExQM3FHWUxmTDcxUm9NdkI2WHU5NkozVFd0OUxUb1FNNXptOFlmeGJISUVTUFpYWFcvdG92VFNvK1BxRnhOZXN3WnFqTy9YMDlPdkJnaTlPY0h3N2xsVXVrY3YrZGkwcm5lcWY5OXVYb0tnbE1Nd2FsbDd4L215MG1sUDVwaVZudjNmdVorMTkzeG5wVFlMejNTamVqUExYcE82VHRYYnpYcGZJVWNlSkhtUHNYQUpzYkkrYUw3ZnZzcHBWc09YN3VhZEo5RnZ1VDYzUHhzWkFRM1VNeHlnTHlXdnNrNi9sdWt1NDBmYjh0dG9sREZGYjFaUVE2L21Sa3YxaVc5aTFKNkMvMWFlakFjdlFQVm1VdDZGQjJjbjI2SnpETzRUc2FMY1dlYVRibzdJbjA0WDA4Njk2WHhUbnJrbXpHQ0hpbW1KcEx1TmFQaTcxZitLT2t0ZTVJSzlPclM3NGluZ1BTZkpkMW9JU0Q5WjBtL2hQaEIwbysvTGQzTU1HVXJTVTY4czl5VXpYU08zc3VoVytCaCtKajBveXoyc25acWdwY3pkNWl3cHZSdm1LZlhwWS9QMHllU2ZzZ0hPaGxpd3RMUzdjQlNpUjFhWkZQMzBxK0J0M2ZYYks5aFEyVHIrNHJTYys4ZGZsWENPMmw2cFkrUElzNXBGMXhzNGttYlhWQjZ6MEpXUlJkSCs2QjB3OFZlb3lkZVdsVjg0eGFVTG52WDA4dkV6Tm4rSEpPdSt0ZlQxY1NiS1BMZXd2V2tjL2MxL1l0czRTbEorREhwdW5zRjMwNjlYU3J3N1ZoUWVsNGdITjNRdUhPOGpFay9POGNDK1VvL3BYUit2RzBMU24vWlh4bFh5SW9jNjBQU2hlbGR3dmR6YjRIVzNJNzFwTy8wd0hZcU9JcDh2NDFKVDUyVE5qZjVqeDI0Zm1FOTZXTHJHNy9ic29NNmVoQ0dwSjhzMC9aVjNrOHFuVE9kWDFCNjZIT2diNGI1S1JmdGw1NGZDN292eXZaWnBYdDZKeTRvM1pxZWRPdk1UZHNsUFVoRDBybFd4dlZNRnRTMFAxVU9uUHZXazg0WGRiMERJWFcva0hpTVNMZW03ck1NS0RtdDlKMEhtZ3RLLzNCZzdHaGdPR0xDZ1BUOGFmcDFwZFRFeDQ4ODZuZ3RLRjJjOU9wc2dWRGJPS0NKT1Fha2krMVZyRmkrd3JpSnBmTmEvb3JTaGNyVzI4NmpMWXN5eWZaTGw4U0V0bk02NWoxU0xIK3dYVkc2amMwRFlJOTg2RnVqS0puUUxWMGMxTXJ3N3NPNW4vZnd3RGZrb2o5Z2ZENG96aHlGQVVWTXFCUmxZckNkMG9VblJya2l5RXpPUEZOTEZ6VHpUNVZsQlhkM09tOG96a0J0T09kRFBaa1U5azkvUENwTGtIYXJuWlVmSWhYT3YwLzZJU3YwU09jdmovMWI5dHpma041RzN4N2ViZEloMzRXZkY2dHBEcnJZSzZQVXBkLzRmSlMzYnBYYXJ0T0pOK1NSREJYT3YwbDZtNkV6WjF6MzVsdzlrM1JPMDFXTUZCVTRINCsyMWxNYmI4WHMwdmx2WVZIcDNQVXFLQ2NhT0RVc25iTkxTUjVjVEMrZForcHBWZWxDbkthMTE3ZU5UTlFrU1ZGaVUydFArUXJTT1Z2WlphVUxxd3Z0UENoL2pkTWIzUk45OVFPa29qdjhMc1FTMGsvTzcrdEtmK05NVDk2TlAwVXZMdmluUm05Sm4yNHdWcmJEQ2JHSWRGNHhWQk5KL3hKU2U2VWVvL0JqLzlJLzdEeTBQdnJuSnk1b3BTSVJSWlgwYVFVQUFQelgzaDNVQUFDQVFBeDdZQUQvYW5GQkNOZGFtSUFCQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFEQW1tb2VLOUh6aUI1STlFQlhueDhBQUFBQUFBQUFBTEJtQUlaS216V0lueHlPQUFBQUFFbEZUa1N1UW1DQyIsImlzc3VlcnMiOlt7ImlkIjoiOTc1MDBlNWItNWUxYS00ZjkyLTlhMzEtYThjMmY4NDgyYzVjOnN0cmluZzpkaWQ6ZXRocjoweEUzOTQ3OTkyOENjNEVmRkU1MDc3NDQ4ODc4MEI5ZjYxNmJkNEI4MzAiLCJyZXZvY2F0aW9uIjp7InR5cGUiOiJlMjRkOTJlZi02NGM2LTQxZDUtOTBmOC1mYWQ0ODkzNjc0MmI6c3RyaW5nOk5PTkUifSwibmFtZSI6ImU3ZThiNGY2LTA3NTMtNDA0NC05MTE2LTBiZThkZWMyMTkyODpzdHJpbmc6U0FNUExFIENMSU5JQyIsImlkZW50aXR5UHJvb2YiOnsidHlwZSI6ImZiODRlNzUzLWM0YWEtNGQ3Ny1iMzlhLTk5MTUzOTRkZDU0ZjpzdHJpbmc6RE5TLURJRCIsImxvY2F0aW9uIjoiYmFiZWNkZTAtMzQ5ZC00ODIyLTgxYzItODUwMTY3NmQ4Y2M4OnN0cmluZzpkb25vdHZlcmlmeS50ZXN0aW5nLnZlcmlmeS5nb3Yuc2ciLCJrZXkiOiIzOGJmYTYyNy1iNGQzLTRiMzctOTZiYS1jYjUxMGNiYzE1NzE6c3RyaW5nOmRpZDpldGhyOjB4RTM5NDc5OTI4Q2M0RWZGRTUwNzc0NDg4NzgwQjlmNjE2YmQ0QjgzMCNjb250cm9sbGVyIn19XSwiJHRlbXBsYXRlIjp7Im5hbWUiOiI2NjQyYmZiNi01YjE0LTQ3OTItYTZjNy05MjliYzk0ZDc5M2E6c3RyaW5nOkhFQUxUSF9DRVJUIiwidHlwZSI6IjEwMjZlZjdjLTk2MWItNGM1Ni1hNjMxLWJmY2VjYjY0NmQ1MjpzdHJpbmc6RU1CRURERURfUkVOREVSRVIiLCJ1cmwiOiIyM2I4MDFmYS01M2U3LTRhZWQtYTQyOC1kZTliZGVkNzVkNWU6c3RyaW5nOmh0dHBzOi8vaGVhbHRoY2VydC5yZW5kZXJlci5tb2guZ292LnNnLyJ9fSwic2lnbmF0dXJlIjp7InR5cGUiOiJTSEEzTWVya2xlUHJvb2YiLCJ0YXJnZXRIYXNoIjoiMzMwMDE2ZmQ0ZTFlMWRjZTY3ZDBiM2QyYzE2ZmU0MDhkNDdhMTc2YmI3YTJkZGFjODdkYmFjM2MwOGI3ZTFhZSIsInByb29mIjpbXSwibWVya2xlUm9vdCI6IjMzMDAxNmZkNGUxZTFkY2U2N2QwYjNkMmMxNmZlNDA4ZDQ3YTE3NmJiN2EyZGRhYzg3ZGJhYzNjMDhiN2UxYWUifSwicHJvb2YiOlt7InR5cGUiOiJPcGVuQXR0ZXN0YXRpb25TaWduYXR1cmUyMDE4IiwiY3JlYXRlZCI6IjIwMjItMDMtMDlUMDM6MzY6MDQuMjk2WiIsInByb29mUHVycG9zZSI6ImFzc2VydGlvbk1ldGhvZCIsInZlcmlmaWNhdGlvbk1ldGhvZCI6ImRpZDpldGhyOjB4RTM5NDc5OTI4Q2M0RWZGRTUwNzc0NDg4NzgwQjlmNjE2YmQ0QjgzMCNjb250cm9sbGVyIiwic2lnbmF0dXJlIjoiMHgyZWI5MWMwMWMyNTU2YThhZThjNGJhOWM4MTJlMmVlNDA4MTA5YTU5MTJhZjhmZGFkNTQ5ZGE0MWUxNjkyNWFjNzNhMGExNjRlZGExYjQ3YmYzOGIzZGVmMDc0N2E0NjcxMjM4YjE1YzQ1ZjQyNjIxMDc2NjE3OTkzMmExNTZlMDFiIn1dfQ=="
             }
-          }
-        }
-      ]
+        ]
     },
-    "issuers": [
-      {
-        "name": "c1f314f0-89f4-4647-9cd2-d9e553dc8c2c:string:SAMPLE ISSUER (DO NOT VERIFY)",
-        "id": "f8861d76-f858-4903-a4ed-ec4fa2c19adf:string:did:ethr:0xE39479928Cc4EfFE50774488780B9f616bd4B830",
-        "revocation": {
-          "type": "8419cb21-425b-41e5-aa74-4e1668ff42c5:string:NONE"
-        },
-        "identityProof": {
-          "type": "94cbeaf3-89ac-4ef1-9fe4-89052db7b2b8:string:DNS-DID",
-          "location": "41006b58-83e3-4926-a26a-132e5588b61a:string:donotverify.testing.verify.gov.sg",
-          "key": "362eb58a-9316-43a2-ac7c-b0f596956bdd:string:did:ethr:0xE39479928Cc4EfFE50774488780B9f616bd4B830#controller"
-        }
-      }
-    ],
-    "$template": {
-      "name": "3ff8f14a-f616-4f06-a858-d0eb105531a6:string:HEALTH_CERT",
-      "type": "0d4536da-e97a-41c0-853f-f32fc7b9e66c:string:EMBEDDED_RENDERER",
-      "url": "61818d1c-9dd3-4d75-ac39-facc15cae76e:string:https://healthcert.renderer.moh.gov.sg/"
+    "signature": {
+        "type": "SHA3MerkleProof",
+        "targetHash": "7f505c6d578bf0d89f88f1128580b84af92de4a28ae6512ae46dd7cc0d8e423e",
+        "proof": [],
+        "merkleRoot": "7f505c6d578bf0d89f88f1128580b84af92de4a28ae6512ae46dd7cc0d8e423e"
     },
-    "notarisationMetadata": {
-      "reference": "0f88b51b-0f6c-4dc2-ae8b-85003e47b2dc:string:3a37847b-3f2d-40de-b8ee-6ef076bf42d2",
-      "notarisedOn": "26e86889-77a0-4e6c-89a4-a5b9a16ddfc6:string:2021-12-29T02:45:37.328Z",
-      "passportNumber": "1cffd5b1-41b3-44d9-a404-5854eb73c616:string:E7831177G",
-      "url": "c624008a-c47c-40ed-8144-4533d9d23208:string:https://www.verify.gov.sg/verify?q=%7B%22type%22%3A%22DOCUMENT%22%2C%22payload%22%3A%7B%22uri%22%3A%22https%3A%2F%2Fapi-vaccine.storage.staging.notarise.io%2Fdocument%2F3df30dca-160f-4646-bc47-92d2553699cd%22%2C%22permittedActions%22%3A%5B%22VIEW%22%2C%22STORE%22%5D%2C%22redirect%22%3A%22https%3A%2F%2Fwww.verify.gov.sg%2Fverify%22%7D%7D#%7B%22key%22%3A%2275b52809bd6ab9a8781b78e6d2aafe2dec24cb2c71a8abe9a66af2ddb965e7ac%22%7D",
-      "signedEuHealthCerts": [
+    "proof": [
         {
-          "type": "437c8091-6fb8-48b0-ba5f-777e69f6d038:string:ART",
-          "qr": "6b756b3e-03ee-46f7-bd1e-bef25b44813c:string:HC1:6BFK%G.WP5OA043ZGUWA26VL/G5I70BDDWDTIE7D.7W+N%3CF*STQ1EWCDXCE15CIF3CF0.S1/UUTISTCHHA.1M0O2G$BQHM803559--G6ON4%M135K:VFQ0FEN884*X8PKJTUE8G4LVF21GICU36IOFW73PA-G$:EQ83T2S*MOK28-*2S266RNJMMA52D7FK9K78HOXO-0CI4PXP7J6PANR.ABBXEAOKJQU$LD9GRV%ETVP-UN7YNEY8IGREVN+6H%PP.H441NQ4ANFS.3I8$7Z1J28PP4DJKJUF4NK5A11G8GI54USTR+6*4UMBSN0MB98RC6N4B*%5SS8HES*VJ8XFN221YD/903 K$WJ8IN2XGJK8FAD4N68$7P24 %9MJ02AAU.AF2CJRMUAIVHED:57SVCEAEOU4 E9EJY9SMX0CNDFT5ZVJ9RQF*K-F8Z-EVH8K6J0RSPTC:ERMSBL%1G+856SII4WX8Z89/OV2TG0AJ7CL9IRAICJ 6N8A0 H$D45-5M9PVRNO:CY1IL56Y743 UCQ0XVH7VJ6Z1%HV.MI%OJKVBG+AV9WUP19:E060MNN76HKN3F*O+GP:9J%FD102QS9:/8E$4%T28AS+BH$T0WTPQUIE4R8.LREF/17J4NU/CHO7%9FK3VNYA9EU$:PDOAJ5KJKI G27KFG I9$ICRMT/QF%C+72NXNSQ0+23B KK/F4/OLDO5FC3HL3:VMO5F0E711%H5BH9:2BO MJ+JAZMV/MD8LD4K7-CFP92Z0*HAGH3KR8R8RAHM7W0V20936/2INAF%FEKCG $L1%EP.5CHNA7OVFJW IZJAGJNQFD19ON%OM8VPVB87QE107:R3O7U+8.%EEHPD03QT4/BU63W-Y6O$RB:JF99JHP0PR8DRRWCT 0MIJT F386DBAT8A*IV$824JFYMATM9AT4. 16AJST8HQPK58.6IQTO$$2U0MP IPLD1486DRJNDL%V.4L:WVMIF.$SP$TLZBBTUZJVJYF6HNHYSKUJK03 9KGYNJ.SC9M.5EE5GYWNO7G.UUE6IG5UTFRWSNIZPTASD5G/6FBRPK/3+60HZNA1",
-          "expiryDateTime": "adad8ced-3903-4156-9171-b714dfb5a13b:string:2022-01-05T02:45:37.216Z"
+            "type": "OpenAttestationSignature2018",
+            "created": "2022-03-11T01:58:09.750Z",
+            "proofPurpose": "assertionMethod",
+            "verificationMethod": "did:ethr:0xE39479928Cc4EfFE50774488780B9f616bd4B830#controller",
+            "signature": "0xe808566ccc724b25ef2ad700bb419cf00981002551a0bb1d2eb86ae3292243931833b48068f75df40efe533c7fb65f0f4bc8c13d3bf07447f22dffcda7228d461c"
         }
-      ]
-    },
-    "logo": "1aa9b8dd-bd51-46ee-bb49-581bc1fc6ca0:string:data:image/png;base64,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",
-    "attachments": [
-      {
-        "filename": "77ac43cf-4986-4799-8aad-7202acce11c9:string:healthcert.txt",
-        "type": "43667456-c9e8-4c90-8953-8438ff02042f:string:text/open-attestation",
-        "data": "9db95179-6f89-4ca5-be1d-c8ec425a9033:string:eyJ2ZXJzaW9uIjoiaHR0cHM6Ly9zY2hlbWEub3BlbmF0dGVzdGF0aW9uLmNvbS8yLjAvc2NoZW1hLmpzb24iLCJkYXRhIjp7ImlkIjoiZTk5MTM2OTctOGU0YS00MmY1LTljZGEtYmQ2YmExMDhiMDEzOnN0cmluZzozNDAxMzliMC04ZTkyLTRlZDYtYTU4OS1kNTQ3MzBmNTI5NjMiLCJ2ZXJzaW9uIjoiOTUwYzU2ZmMtNzU1Ni00NzZhLWJlMzEtZWIzZGFkMGViYzQ2OnN0cmluZzpwZHQtaGVhbHRoY2VydC12Mi4wIiwidHlwZSI6ImNlNzJlY2QzLTlkMDEtNGI4Yi05NGQ5LTI0MWQwOTcxZTBjZDpzdHJpbmc6QVJUIiwidmFsaWRGcm9tIjoiNzhhNWRiZGQtMTRiMy00ZTYxLWJhYmUtODgxZTBhZmU2Yzc5OnN0cmluZzoyMDIxLTA4LTI0VDA0OjIyOjM2LjA2MloiLCJmaGlyVmVyc2lvbiI6IjUwMDc5MmIxLTRmOWQtNGM5ZC1hNGNhLTExOTViYWQ2MTk5MTpzdHJpbmc6NC4wLjEiLCJmaGlyQnVuZGxlIjp7InJlc291cmNlVHlwZSI6ImNhMzQ5ZWY1LTU3MTItNDU5Ni1iNGI3LWQwMjQ2MGU5ZGZlNjpzdHJpbmc6QnVuZGxlIiwidHlwZSI6IjQ2ZWRiZGFiLWU2M2YtNDExNS1iZjBjLTgxOTZjNTIzMTM2NjpzdHJpbmc6Y29sbGVjdGlvbiIsImVudHJ5IjpbeyJmdWxsVXJsIjoiMGI1MmQ0OTItNDJjOS00ODYwLThjNmUtMjkzMTE4ODQxY2ZiOnN0cmluZzp1cm46dXVpZDpiYTdiN2M4ZC1jNTA5LTRkOWQtYmU0ZS1mOTliNmRlMjllMjMiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiIxNzQ4ZTBjOC02M2Q4LTRjMzAtYWQ0OC1lMzk0YWFiZWM1Yjc6c3RyaW5nOlBhdGllbnQiLCJleHRlbnNpb24iOlt7InVybCI6IjAwMmI1NDRiLTc2ZGQtNDVmMy04MmI0LTdhNzk4Y2I5OTk4MDpzdHJpbmc6aHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL3BhdGllbnQtbmF0aW9uYWxpdHkiLCJleHRlbnNpb24iOlt7InVybCI6ImQyYjlmMDQzLWZmMjYtNGFmZi1iNjdkLTYyZjIzZTBiNmYzYzpzdHJpbmc6Y29kZSIsInZhbHVlQ29kZWFibGVDb25jZXB0Ijp7InRleHQiOiIzOTE0ZTg3Ny01MDg0LTRlMTQtYmY4Zi1iZGNjYzcxMWI4ZjA6c3RyaW5nOlBhdGllbnQgTmF0aW9uYWxpdHkiLCJjb2RpbmciOlt7InN5c3RlbSI6IjlkMWJhZDg0LTBlOWQtNDRhMi05MDE1LWE5MzlhZDhjOGUwNjpzdHJpbmc6dXJuOmlzbzpzdGQ6aXNvOjMxNjYiLCJjb2RlIjoiZjlhY2RhYmYtYzViMS00OGViLTgwN2EtOTYyMDkxMWY3NmQ0OnN0cmluZzpTRyJ9XX19XX1dLCJpZGVudGlmaWVyIjpbeyJpZCI6Ijg5ZDM2ZmJmLTY4YTctNGRjNy1iNzFiLTZmMWFjYjIzYjUxYzpzdHJpbmc6UFBOIiwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6IjNiNjFhNjQ0LTgwYTEtNDcwMi05MGQwLTQwNTZjZWEzODIwYTpzdHJpbmc6aHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS92Mi0wMjAzIiwiY29kZSI6ImU0NWMwOWE5LTdmNjMtNDNlMC1iMjJlLWU0NDI5ZGNmYzhjYzpzdHJpbmc6UFBOIiwiZGlzcGxheSI6IjI0ZDRmNzI0LTM0NTEtNGU3ZC04NjEyLWJmN2YzYzE2ZDQ3ZDpzdHJpbmc6UGFzc3BvcnQgTnVtYmVyIn1dfSwidmFsdWUiOiJhODRjYmNmMC0yMzE5LTQ0MjUtODU1MC0xYjg0YzZjOWFlMzA6c3RyaW5nOkU3ODMxMTc3RyJ9LHsiaWQiOiIxNTNmNjk2OS1kYmVjLTQ1NjgtYThmMi0zMjRmNmY1OWM0M2U6c3RyaW5nOk5SSUMtRklOIiwidmFsdWUiOiJlOWIxNWRlZS1hZThjLTRlMTItOGJkZC01ZmMxMGM5OWQxM2I6c3RyaW5nOlM5MDk4OTg5WiJ9XSwibmFtZSI6W3sidGV4dCI6IjVjNmJiMTJmLTljZWUtNGVkYi04MTM5LWRkMjZmNDNiOWFiYzpzdHJpbmc6VGFuIENoZW4gQ2hlbiJ9XSwiZ2VuZGVyIjoiNjMxYzI4NGYtNDA4MC00MzUxLTg0YzUtYjZlOWM2MjU2ZDlhOnN0cmluZzpmZW1hbGUiLCJiaXJ0aERhdGUiOiJmNDU5Y2E2ZC0yOTJhLTQ0MGMtYjVmOS04OTQ5N2Y4YTBmMmE6c3RyaW5nOjE5OTAtMDEtMTUifX0seyJmdWxsVXJsIjoiOTliN2EyZmEtZWViZi00NmUxLWI4MjUtYjJmZmI1ODQ1NWE0OnN0cmluZzp1cm46dXVpZDo3NzI5OTcwZS1hYjI2LTQ2OWYtYjNlNS0zNmE0MmVjMjQxNDYiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiI1ODY2YzIxNi1mYmY1LTQxZmItYTY5Yy03MjU3YmYwOTkxNWY6c3RyaW5nOk9ic2VydmF0aW9uIiwic3BlY2ltZW4iOnsidHlwZSI6IjAwY2EwZmU3LTY5OTgtNDQxNC1iNmU1LTY4YWYyNTdhOTk4ODpzdHJpbmc6U3BlY2ltZW4iLCJyZWZlcmVuY2UiOiI0MDFiNTQwZC04MzFlLTQ1OGItOWM3Yi02MTE5NWI0ZTEwM2I6c3RyaW5nOnVybjp1dWlkOjAyNzViZmFmLTQ4ZmItNDRlMC04MGNkLTljNTA0ZjgwZTZhZSJ9LCJwZXJmb3JtZXIiOlt7InR5cGUiOiI3ZTRmNzdlZC00ODZmLTRmZmYtYTUwOS1kMGViYjY5NTIzZGU6c3RyaW5nOlByYWN0aXRpb25lciIsInJlZmVyZW5jZSI6IjFjNjQzZGZjLTM5ZDAtNGVmNS04NDMyLWQ4MjU2MzlkZjI4MDpzdHJpbmc6dXJuOnV1aWQ6M2RiZmYwZGUtZDRhNC00ZTFkLTk4YmYtYWY3NDI4YjhhMDRiIn0seyJpZCI6IjhiOTVlNjJmLTFhZDYtNDRmMC05MGYxLWMxOWUyOWMyYWI5NTpzdHJpbmc6TEhQIiwidHlwZSI6IjBiOWQzNGU1LWJhOWItNGIxZS04Mjc4LTc0ODM1MzUzYjgzYjpzdHJpbmc6T3JnYW5pemF0aW9uIiwicmVmZXJlbmNlIjoiYmZmYjdkODMtM2NhMy00NGQxLTkzNWUtMTNkZGUzMzczMjJhOnN0cmluZzp1cm46dXVpZDpmYTIzMjhhZi00ODgyLTRlYWEtOGMyOC02NmRhYjQ2OTUwZjEifV0sImlkZW50aWZpZXIiOlt7ImlkIjoiODhhZTk4YzQtZTUyMS00YmFkLWE4ZGYtZGIzNDMzMGIxZWNjOnN0cmluZzpBQ1NOIiwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6IjcwNTc0NjM3LTE0MmMtNGRmMS05NWUxLTQwOGM0OWQ2ZmIxNjpzdHJpbmc6aHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS92Mi0wMjAzIiwiY29kZSI6ImZmNDQ5YWJkLTFiODItNGVlYi04MzAwLTkwMjdjYzZmNTk2YjpzdHJpbmc6QUNTTiIsImRpc3BsYXkiOiJmMDA2NDlmNy0yMjZkLTRjZmQtOTAwMC1mM2RmOWQzMzZkODc6c3RyaW5nOkFjY2Vzc2lvbiBJRCJ9XX0sInZhbHVlIjoiNGFjNGVlZjUtODgyZi00ZmNhLTgzMDMtMTNkYTA0ODVmZDc1OnN0cmluZzoxMjM0NTY3ODkifV0sImNhdGVnb3J5IjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Ijg4MDRlZGMwLTRjODQtNDRiZi05ZjgyLTY3ZDU1YjllMjAzNzpzdHJpbmc6aHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiJhNTc5NjFhYS00YjQ0LTQyYTgtODQxYy0wYzRlZWVmYjdlZjU6c3RyaW5nOjg0MDUzOTAwNiIsImRpc3BsYXkiOiI1ODAxNjZjZS0xN2NhLTQ3MDQtYjBkOC0wZTkwYjlhZDY5MmQ6c3RyaW5nOkNPVklELTE5In1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiI2ZDZkNDZhMC01ZTFmLTQ3NGEtYjY4My1hMGQ4OTUzYmRkN2E6c3RyaW5nOmh0dHA6Ly9sb2luYy5vcmciLCJjb2RlIjoiNzNlZWQ3NWYtNWM5OS00NDYxLWE5YjYtOWUzNzMwODI5NmI5OnN0cmluZzo5NzA5Ny0wIiwiZGlzcGxheSI6IjM4ZTNlNTRiLWUyZDQtNDk3NC05YzhkLTI1MTU5Y2EyZDcwNDpzdHJpbmc6U0FSUy1Db1YtMiAoQ09WSUQtMTkpIEFnIFtQcmVzZW5jZV0gaW4gVXBwZXIgcmVzcGlyYXRvcnkgc3BlY2ltZW4gYnkgUmFwaWQgaW1tdW5vYXNzYXkifV19LCJ2YWx1ZUNvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6ImQ5MjI3MmY1LWZhMjUtNDQ2Mi1hNDhmLWZjZWMzYTQ0OGZmZDpzdHJpbmc6aHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiIzZGJmZmQxNC1mN2I4LTQ2N2QtYTZiMC00YzU2ZmI2MWYzOTY6c3RyaW5nOjI2MDM4NTAwOSIsImRpc3BsYXkiOiIyYzY1Y2M3Mi1iNDY1LTRkMTYtOGVmNC1lNjA3ZDExNDMxZDE6c3RyaW5nOk5lZ2F0aXZlIn1dfSwiZWZmZWN0aXZlRGF0ZVRpbWUiOiJmNmQxODZkNC1iYjQxLTRkMzUtOWZkYS1hMDcyN2QzMWRiODA6c3RyaW5nOjIwMjAtMDktMjhUMDY6MTU6MDBaIiwic3RhdHVzIjoiNDgxODU5YjUtZDljZC00MDQ0LTg2ZjktMjJhMTliYmRmNWE0OnN0cmluZzpmaW5hbCJ9fSx7ImZ1bGxVcmwiOiI4OGIyYjBjZS1lZThlLTQwNTctYTBhZS1hNDg5NGJiNDM1ZWI6c3RyaW5nOnVybjp1dWlkOjAyNzViZmFmLTQ4ZmItNDRlMC04MGNkLTljNTA0ZjgwZTZhZSIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6ImZiZmEzYjJlLWFkMjItNDgzYy04YzQzLTk3YjQ0Yzc2NzA2MzpzdHJpbmc6U3BlY2ltZW4iLCJzdWJqZWN0Ijp7InR5cGUiOiJhMjQ1MTZlMi0yYjUwLTRiNDQtYmU4Ny01Y2U3NzJhMDYwYjM6c3RyaW5nOkRldmljZSIsInJlZmVyZW5jZSI6IjExYjU1OGI1LTk3YTctNDM2OS1iNGU2LTBkYWQ2ZDM2MmM5MDpzdHJpbmc6dXJuOnV1aWQ6OTEwM2E1YzgtNTk1Ny00MGY1LTg1YTEtZTY2MzNlODkwNzc3In0sInR5cGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJlOGYyZTcwYi1lNzZjLTQ0MGQtYjIzNC03ZTk1NzlhY2YyMTc6c3RyaW5nOmh0dHA6Ly9zbm9tZWQuaW5mby9zY3QiLCJjb2RlIjoiNjQ3OTc2ODktNzNhMy00MGJmLTgzYjAtZTAyZjhkNGNmNTMyOnN0cmluZzo2OTc5ODkwMDkiLCJkaXNwbGF5IjoiNTc4ZTJmM2UtMjNlYi00Nzg1LThiNTUtOGZhNmJiZTNhYTkzOnN0cmluZzpBbnRlcmlvciBuYXJlcyBzd2FiIn1dfSwiY29sbGVjdGlvbiI6eyJjb2xsZWN0ZWREYXRlVGltZSI6IjIwMWE3MWVlLTlhY2MtNDgxNy04NGJhLTBkZDIwODUxMmMxNTpzdHJpbmc6MjAyMC0wOS0yN1QwNjoxNTowMFoifX19LHsiZnVsbFVybCI6IjljNDE3MWM4LWQ4NmUtNDg0ZS05ZmFhLTNlZWNlMjM3YTBlYzpzdHJpbmc6dXJuOnV1aWQ6M2RiZmYwZGUtZDRhNC00ZTFkLTk4YmYtYWY3NDI4YjhhMDRiIiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiNGFjYWJhNDItYjhjNy00ZTI1LTljZTAtNjE0YTM3NTc5Mzg1OnN0cmluZzpQcmFjdGl0aW9uZXIiLCJuYW1lIjpbeyJ0ZXh0IjoiZWQxZmVjZjMtNmMwYi00Yjk1LTg4ZGItMjY5NjE4NmExMDRiOnN0cmluZzpEciBNaWNoYWVsIExpbSJ9XSwicXVhbGlmaWNhdGlvbiI6W3siY29kZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6IjJlMmNmMzgwLTdmY2YtNGZjYy04OTI3LTJiMjNmZWJiOWFiOTpzdHJpbmc6aHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS92Mi0wMjAzIiwiY29kZSI6ImViYmYyNjViLWQ2YTUtNGNkMS05YzBmLTI4NzdiOWJlYzQ3NzpzdHJpbmc6TUNSIiwiZGlzcGxheSI6ImMyMDgwNTIyLTQzNmYtNDE1MS1hYmRkLTljZTVlODA4NmJhNzpzdHJpbmc6UHJhY3RpdGlvbmVyIE1lZGljYXJlIG51bWJlciJ9XX0sImlkZW50aWZpZXIiOlt7ImlkIjoiYjMyZDJhMTctNWE0OS00NmIxLTgwNDItMDkxYTUxNWZkYmYwOnN0cmluZzpNQ1IiLCJ2YWx1ZSI6IjQzOGU2MTUzLTk3NmQtNGVmZC04ZjhlLTBmNzI4MzViNjkzNzpzdHJpbmc6MTIzNDU2In1dLCJpc3N1ZXIiOnsidHlwZSI6IjA4YTgzMTUxLTdlMGItNDA3MS1hMDhhLTc5NzRjZTljZmVjMjpzdHJpbmc6T3JnYW5pemF0aW9uIiwicmVmZXJlbmNlIjoiZTBkZDc0ZGUtYmFhNC00Mzg2LWE2NjYtYWJiYmM1NWMzYTBjOnN0cmluZzp1cm46dXVpZDpiYzcwNjVlZS00MmFhLTQ3M2EtYTYxNC1hZmQ4YTdiMzBiMWUifX1dfX0seyJmdWxsVXJsIjoiY2I5MTExY2QtYzYzYy00NzQ3LWE3ZDMtYjdlMzIxNDVjNTdmOnN0cmluZzp1cm46dXVpZDpiYzcwNjVlZS00MmFhLTQ3M2EtYTYxNC1hZmQ4YTdiMzBiMWUiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiI3OGZjMjEyYS00ZGRmLTRmZTEtYmE2Ni1iYTE3NWQ2OTU3NmY6c3RyaW5nOk9yZ2FuaXphdGlvbiIsIm5hbWUiOiI0OWE3MzNjYS1lOTc3LTQzMjktYTExNS00Yjc0YjY5YzE4ZGQ6c3RyaW5nOk1pbmlzdHJ5IG9mIEhlYWx0aCAoTU9IKSIsInR5cGUiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiYmZmZjczZWItMGQ0NS00YWQ0LThiYTAtODEwYzljMTU5YmQ1OnN0cmluZzpodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL29yZ2FuaXphdGlvbi10eXBlIiwiY29kZSI6IjdiYTE5ODEwLTVjODYtNDg5Mi04ZjIzLTg0MDQ3N2M4MDljMzpzdHJpbmc6Z292dCIsImRpc3BsYXkiOiJlOGRmYWQ2Mi0zNGFkLTRmOGYtYjczZi01ZDdmODU1MjdiMmE6c3RyaW5nOkdvdmVybm1lbnQifV19XSwiY29udGFjdCI6W3sidGVsZWNvbSI6W3sic3lzdGVtIjoiNjg1ZjZlOGItODdlMi00MGM4LTg0NmMtYzQwOTkyYmZiOTA0OnN0cmluZzp1cmwiLCJ2YWx1ZSI6IjI5N2E0Mzk4LTRiZjItNDIwZC1iMTJhLTVmZTUzM2QwMDI1NTpzdHJpbmc6aHR0cHM6Ly93d3cubW9oLmdvdi5zZyJ9LHsic3lzdGVtIjoiMDRhYjAzY2QtYjIzNy00YWQ3LTg1ODEtNDE4MzFjYjk2YjYzOnN0cmluZzpwaG9uZSIsInZhbHVlIjoiNmQ0YTBlYzUtMjI3MS00NjQwLTg2ZDctNmY5ODhjNWVhMGMyOnN0cmluZzorNjU2MzI1OTIyMCJ9XSwiYWRkcmVzcyI6eyJ0eXBlIjoiZjk5OWNkOTgtOThkOS00ZThmLWJmMWMtNTQxMGI3YmEyMjAwOnN0cmluZzpwaHlzaWNhbCIsInVzZSI6ImFiZjJkOWNlLTI4NTctNDliMC04YjYwLWQyNjFiNDE3ZDNkMDpzdHJpbmc6d29yayIsInRleHQiOiJiOTE3NDdiZC00ZTAzLTRlMWEtYjkxMS0wYzRmMDBmMzIxMTk6c3RyaW5nOk1pbmlzdHJ5IG9mIEhlYWx0aCwgMTYgQ29sbGVnZSBSb2FkLCBDb2xsZWdlIG9mIE1lZGljaW5lIEJ1aWxkaW5nLCBTaW5nYXBvcmUgMTY5ODU0In19XX19LHsiZnVsbFVybCI6IjAxMmExZGFmLTViZGEtNDhiYi04ZjgwLWJiZGNlNTk2MzAyODpzdHJpbmc6dXJuOnV1aWQ6ZmEyMzI4YWYtNDg4Mi00ZWFhLThjMjgtNjZkYWI0Njk1MGYxIiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiMTk2Y2I2NmQtZGNlMi00NjYxLWJjMzgtZjNmZWY0ZTY0YzNlOnN0cmluZzpPcmdhbml6YXRpb24iLCJuYW1lIjoiNzE2Y2VmMjgtODlhMC00YTdkLWI0ZjEtZWUyMjVlYWIwNTA1OnN0cmluZzpNYWNSaXRjaGllIE1lZGljYWwgQ2xpbmljIiwidHlwZSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiI5ZGRjMWRlYS01OGMzLTRlZmItODM1OC1hMTQzY2UyNTIzNjk6c3RyaW5nOmh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vb3JnYW5pemF0aW9uLXR5cGUiLCJjb2RlIjoiOWIxYjdlZGYtMGY2MC00ZGU5LWE5MWMtMzNhZWJiYjczMjllOnN0cmluZzpwcm92IiwiZGlzcGxheSI6ImY2NTYxZjM0LThiMTgtNDVhNy04ZmEzLTA3NWY4YTA1NGUwNTpzdHJpbmc6SGVhbHRoY2FyZSBQcm92aWRlciJ9XSwidGV4dCI6IjA0NGUyMzgyLWRjMTgtNGFhOS1iODExLTRmMDAzMzYzYWY0MzpzdHJpbmc6TGljZW5zZWQgSGVhbHRoY2FyZSBQcm92aWRlciJ9XSwiY29udGFjdCI6W3sidGVsZWNvbSI6W3sic3lzdGVtIjoiZmM0NzUzODQtY2UwOS00ZjQ1LWFlY2YtZGRhOWI2YTI0YTE3OnN0cmluZzp1cmwiLCJ2YWx1ZSI6IjFmYWM3MTRlLWUxOWUtNGMxYS05ODg3LTU3OTE0NDE0NGMzYTpzdHJpbmc6aHR0cHM6Ly93d3cubWFjcml0Y2hpZWNsaW5pYy5jb20uc2cifSx7InN5c3RlbSI6Ijc5YTJlYWM5LWUyZDYtNDk1ZS04YjUyLTdjMWRhNGMyYmJhMDpzdHJpbmc6cGhvbmUiLCJ2YWx1ZSI6ImVmMjk1NDBhLTUzODYtNGFlZC1hYjQxLTVmNjBkNjI4Mzg3NTpzdHJpbmc6KzY1NjEyMzQ1NjcifV0sImFkZHJlc3MiOnsidHlwZSI6ImI5YzlhZTBkLTgzZjktNDEzZS1hM2Y4LThiYWViMTlkMzk2NjpzdHJpbmc6cGh5c2ljYWwiLCJ1c2UiOiJjZWEzMzk2YS04MDU5LTRmYzAtYjJjMi0zMTMzOGE3NzNhZWQ6c3RyaW5nOndvcmsiLCJ0ZXh0IjoiNjBhYjBjNTgtNWYyMC00YjRhLWI2OTctNTM3NmI5NzI2YzJjOnN0cmluZzpNYWNSaXRjaGllIEhvc3BpdGFsLCBUaG9tc29uIFJvYWQsIFNpbmdhcG9yZSAxMjMwMDAifX1dfX0seyJmdWxsVXJsIjoiZGM4OGMyMjUtMmQwOC00NDllLThjZDYtYWU1MzBhNWJkZWYyOnN0cmluZzp1cm46dXVpZDo5MTAzYTVjOC01OTU3LTQwZjUtODVhMS1lNjYzM2U4OTA3NzciLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiI2M2YzMzg1OS0yYjg4LTQ3YmYtYjQ3OS00MDlhYjE4NGUyY2U6c3RyaW5nOkRldmljZSIsInR5cGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiIzMzUxMzNkZi1iY2FkLTQ4NTUtOWQzYi1kNjU3N2QzNGE1NzM6c3RyaW5nOmh0dHBzOi8vY292aWQtMTktZGlhZ25vc3RpY3MuanJjLmVjLmV1cm9wYS5ldS9kZXZpY2VzIiwiY29kZSI6ImY0YWZlZDliLTY5N2MtNDNlZS04Mzg0LTkwNmFmMGM3ZmZhMDpzdHJpbmc6MTIzMiIsImRpc3BsYXkiOiI3ZDYwOTlmYi01NTg0LTRlZGItODQ0OC1hYTU3NzdjOWVhMTM6c3RyaW5nOkFiYm90dCBSYXBpZCBEaWFnbm9zdGljcywgUGFuYmlvIENPVklELTE5IEFnIFJhcGlkIFRlc3QifV19fX1dfSwibG9nbyI6IjIxOTVlZjM0LWI0ZjktNDI5NC05NTVhLWM2MTVkNDdhZWQyYjpzdHJpbmc6ZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFmUUFBQURJQ0FNQUFBQXB4K1BhQUFBQU0xQk1WRVVBQUFETXpNek16TXpNek16TXpNek16TXpNek16TXpNek16TXpNek16TXpNek16TXpNek16TXpNek16TXpNek16TXpNemVDbWlBQUFBQUVIUlNUbE1BUUwrQTd4QWduMkRQM3pCd3IxQ1BFbCtJL1FBQUJ3ZEpSRUZVZU5yc25kMTIyeW9RUnZrSElTSE4rei90eVVrOW9URUNRMWJUQmMyM2J5TnMwQjVHSURBUkFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFrK0lrK0lkeDRnNU40QjlHUS9yUEE5Si9JUGZTZ3dML01FRUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFEd1A1WlBvUDVyN0ZKS0FmN2N1ZkJpaFBOU2tYNWhsQTl1K0RzUDdkWC9KSzFQMlZQaVNJb2ViRXJMd1ZoNVp4KzhDMVkyMll0UDBGcGY2aGRlYSttcTFXbGl4ZmVqNlJjRHhqMDlzd1hiYmVCUXBpanVnMjBhai9TRThidm81aEV1YXZBdVNLcFFmSnhURzkxZ1VyQ1Y2alNRRTBvUGtlNHd1a2U3MDVFcXBMTld4dE10U2s0anZYR2xkK3RMbHh2Vk1ObmFrRDdtRW5kWVRWV1NuVjg2MFdVWGwzNFJNeTdCZW1weUd6TjdwQWJtWEVBNmJmdkswdTMydVRGS0tWTTByMFl3MU1UY0Z2cDhpVkxQRDArOWdIUXkrN3JTZjNlZWpwMkh1RmNzbWxkaUV6MEZ6S1hmU1J3M3FlMDhYcWQ5ZFA2UUtPTm5rdTRsRzNOU2IvUkJ0S3RLdDF0dGRCSmlZYjJWSTdicmM3dGM4SVlvdEp6SFVCMGMrTytUM3JUUXVMS3NaUnFwemtUUzdkWkk0dm8rcUpuZEVHTzhFemVjeWphYzYvSVROMktPV2FVTElUL2FMZGVVbnFwZGk3VlcyK0t5YzI5RkwzczdlM2hpNUxUU2hlV1dweVdsSDRYem12V2puaU9pRk4zWVdEaXZXSTkyV3VrNWN0MkMwcDNKemw5WU42NldJNUlWL1Z5Rjg2cjFhMTdwSDVVTUMwcFgvRHdYVlU1MjRLczVZZ0RabUw0ekd6MXc4MHAzM1BqMXBNdmNpK3RjMmNGSWptaEgyZFdWZnVhVkx1TGp5OWVUemdxT3JxZXd2MHZ1bS8xS1I0KzJhNkRoNXBYTzdWOU8rczRLUkpQQUR1eE5qdGpGQ0NrL0NsdEV6Z2Z6U3RlclN2ZFpRWmVEb3l5cXhRZ3VSMWxYbUJsSS85UFNlYlpwYk9lOGJpdnQyYkZLOVlhSzRlSGU3TkxOYXRMUDNxR1lMZkw3MVJvTXZCNlh1OTZKM1RXdDlMVG9RTTV6bThZZnhiSElFU1BaWFhXL3RvdlRTbytQcUZ4TmVzd1pxak8vWDA5T3ZCZ2k5T2NIdzdsbFV1a2N2K2RpMHJuZXFmOTl1WG9LZ2xNTXdhbGw3eC9teTBtbFA1cGlWbnYzZnVaKzE5M3hucFRZTHozU2plalBMWHBPNlR0WGJ6WHBmSVVjZUpIbVBzWEFKc2JJK2FMN2Z2c3BwVnNPWDd1YWRKOUZ2dVQ2M1B4c1pBUTNVTXh5Z0x5V3ZzazYvbHVrdTQwZmI4dHRvbERGRmIxWlFRNi9tUmt2MWlXOWkxSjZDLzFhZWpBY3ZRUFZtVXQ2RkIyY24yNkp6RE80VHNhTGNXZWFUYm83SW4wNFgwODY5Nlh4VG5ya216R0NIaW1tSnBMdU5hUGk3MWYrS09rdGU1SUs5T3JTNzRpbmdQU2ZKZDFvSVNEOVowbS9oUGhCMG8rL0xkM01NR1VyU1U2OHM5eVV6WFNPM3N1aFcrQmgrSmowb3l6MnNuWnFncGN6ZDVpd3B2UnZtS2ZYcFkvUDB5ZVNmc2dIT2hsaXd0TFM3Y0JTaVIxYVpGUDMwcStCdDNmWGJLOWhRMlRyKzRyU2MrOGRmbFhDTzJsNnBZK1BJczVwRjF4czRrbWJYVkI2ejBKV1JSZEgrNkIwdzhWZW95ZGVXbFY4NHhhVUxudlgwOHZFek5uK0hKT3UrdGZUMWNTYktQTGV3dldrYy9jMS9ZdHM0U2xKK0RIcHVuc0YzMDY5WFNydzdWaFFlbDRnSE4zUXVITzhqRWsvTzhjQytVby9wWFIrdkcwTFNuL1pYeGxYeUlvYzYwUFNoZWxkd3ZkemI0SFczSTcxcE8vMHdIWXFPSXA4djQxSlQ1MlROamY1angyNGZtRTk2V0xyRzcvYnNvTTZlaENHcEo4czAvWlYzazhxblRPZFgxQjY2SE9nYjRiNUtSZnRsNTRmQzdvdnl2WlpwWHQ2Snk0bzNacWVkT3ZNVGRzbFBVaEQwcmxXeHZWTUZ0UzBQMVVPblB2V2s4NFhkYjBESVhXL2tIaU1TTGVtN3JNTUtEbXQ5SjBIbWd0Sy8zQmc3R2hnT0dMQ2dQVDhhZnAxcGRURXg0ODg2bmd0S0YyYzlPcHNnVkRiT0tDSk9RYWtpKzFWckZpK3dyaUpwZk5hL29yU2hjclcyODZqTFlzeXlmWkxsOFNFdG5NNjVqMVNMSCt3WFZHNmpjMERZSTk4NkZ1aktKblFMVjBjMU1ydzdzTzVuL2Z3d0Rma29qOWdmRDRvemh5RkFVVk1xQlJsWXJDZDBvVW5ScmtpeUV6T1BGTkxGelR6VDVWbEJYZDNPbThvemtCdE9PZERQWmtVOWs5L1BDcExrSGFyblpVZkloWE92MC82SVN2MFNPY3ZqLzFiOXR6ZmtONUczeDdlYmRJaDM0V2ZGNnRwRHJyWUs2UFVwZC80ZkpTM2JwWGFydE9KTitTUkRCWE92MGw2bTZFeloxejM1bHc5azNSTzAxV01GQlU0SDQrMjFsTWJiOFhzMHZsdllWSHAzUFVxS0NjYU9EVXNuYk5MU1I1Y1RDK2RaK3BwVmVsQ25LYTExN2VOVE5Ra1NWRmlVMnRQK1FyU09WdlpaYVVMcXd2dFBDaC9qZE1iM1JOOTlRT2tvanY4THNRUzBrL083K3RLZitOTVQ5Nk5QMFV2THZpblJtOUpuMjR3VnJiRENiR0lkRjR4VkJOSi94SlNlNlVlby9Cai85SS83RHkwUHZybkp5NW9wU0lSUlpYMGFRVUFBUHpYM2gzVUFBQ0FRQXg3WUFEL2FuRkJDTmRhbUlBQkFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBREFtbW9lSzlIemlCNUk5RUJYbng4QUFBQUFBQUFBQUxCbUFJWktteldJbnh5T0FBQUFBRWxGVGtTdVFtQ0MiLCJpc3N1ZXJzIjpbeyJpZCI6IjlhMDMwMzA4LTZmNTgtNGQwMC1iMWMwLWNlMGVjYTA4ODJiZDpzdHJpbmc6ZGlkOmV0aHI6MHhFMzk0Nzk5MjhDYzRFZkZFNTA3NzQ0ODg3ODBCOWY2MTZiZDRCODMwIiwicmV2b2NhdGlvbiI6eyJ0eXBlIjoiMjIyM2FjOTUtY2MyNC00Zjk3LWFlNzItM2E5MGU3YTIzNDQwOnN0cmluZzpOT05FIn0sIm5hbWUiOiIxNDI2YmY1OS1lMzVmLTRhNWItODA4ZS0xYTA5NWQ1Y2I4OGI6c3RyaW5nOlNBTVBMRSBDTElOSUMiLCJpZGVudGl0eVByb29mIjp7InR5cGUiOiIyODEyZGMzMC0zNjBiLTRkOGYtYWFkNC1hMThlNmIwZjZjZGU6c3RyaW5nOkROUy1ESUQiLCJsb2NhdGlvbiI6ImQ5OTU2MjZhLTMxNzYtNGFmNS1iZjQ1LWUwZjQzZDM3ZmQwZTpzdHJpbmc6ZG9ub3R2ZXJpZnkudGVzdGluZy52ZXJpZnkuZ292LnNnIiwia2V5IjoiNmExMGQ3NzQtNjNmMi00MTRlLWIzMDUtNGFhOTk2YWRhNWMzOnN0cmluZzpkaWQ6ZXRocjoweEUzOTQ3OTkyOENjNEVmRkU1MDc3NDQ4ODc4MEI5ZjYxNmJkNEI4MzAjY29udHJvbGxlciJ9fV0sIiR0ZW1wbGF0ZSI6eyJuYW1lIjoiOWQ3ZTYyYjAtZWJlNi00ZTFhLWFlZGQtYjhmYTI5YjQzOGI2OnN0cmluZzpIRUFMVEhfQ0VSVCIsInR5cGUiOiJkNzA0NjM0MC03MDNkLTQyNWEtYTAwOC0xZDY1NWExZTZjMDU6c3RyaW5nOkVNQkVEREVEX1JFTkRFUkVSIiwidXJsIjoiZTcyMTliNjktZWZjMC00M2RmLWFlMTgtNGNiMDI1MmFlMjFjOnN0cmluZzpodHRwczovL2hlYWx0aGNlcnQucmVuZGVyZXIubW9oLmdvdi5zZy8ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiU0hBM01lcmtsZVByb29mIiwidGFyZ2V0SGFzaCI6ImY3Yzc0NWI5OWUyMGY0MjkxMmFhYzFiNWNkZjkzNmZlZmY5ZDg2ZTJmZWViNTRhZGZjYjg0ZGQ1ZmIyYzEwNjgiLCJwcm9vZiI6W10sIm1lcmtsZVJvb3QiOiJmN2M3NDViOTllMjBmNDI5MTJhYWMxYjVjZGY5MzZmZWZmOWQ4NmUyZmVlYjU0YWRmY2I4NGRkNWZiMmMxMDY4In0sInByb29mIjpbeyJ0eXBlIjoiT3BlbkF0dGVzdGF0aW9uU2lnbmF0dXJlMjAxOCIsImNyZWF0ZWQiOiIyMDIxLTA4LTI3VDAyOjA3OjAxLjI3M1oiLCJwcm9vZlB1cnBvc2UiOiJhc3NlcnRpb25NZXRob2QiLCJ2ZXJpZmljYXRpb25NZXRob2QiOiJkaWQ6ZXRocjoweEUzOTQ3OTkyOENjNEVmRkU1MDc3NDQ4ODc4MEI5ZjYxNmJkNEI4MzAjY29udHJvbGxlciIsInNpZ25hdHVyZSI6IjB4ZmZhODY4MTg0YWFlZDMwMjRlMmRiNWJkMzc4YTQxMDg3NTM0MWI5Y2ZiZWE2ZjE1ZTdkMmUxNjgzMTZjOTVkMjJhNGJiYTdjNGYxMzAxYjdhNjk0MGY2MGZiZGVkOWJiMTZmZTYzOGE5YzU2YjkyNzI1NDc2M2M3NGM1MzliY2UxYiJ9XX0="
-      }
     ]
-  },
-  "signature": {
-    "type": "SHA3MerkleProof",
-    "targetHash": "7a4d7341c18d24b01e1194adb265a3ab0e2eb7cbf757b8e27498491ef79c1b84",
-    "proof": [],
-    "merkleRoot": "7a4d7341c18d24b01e1194adb265a3ab0e2eb7cbf757b8e27498491ef79c1b84"
-  },
-  "proof": [
-    {
-      "type": "OpenAttestationSignature2018",
-      "created": "2021-12-29T02:45:37.343Z",
-      "proofPurpose": "assertionMethod",
-      "verificationMethod": "did:ethr:0xE39479928Cc4EfFE50774488780B9f616bd4B830#controller",
-      "signature": "0x82ea6d286fd192b1d0e28740cb8d9e3b5529ec348a35a84ef8df1abe7127aba56bc1155598745a305fc97374cf0511399459675d2eebe658c657824b3ab9a5ed1c"
-    }
-  ]
 }
