@@ -117,6 +117,7 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageSrc, docu
             )}
             {!showQrView && documents[selectedDocument].downloadUrl && (
               <DownloadDocumentButton
+                data-testid="download-document-button"
                 onClick={event => {
                   event.preventDefault();
                   event.stopPropagation();
