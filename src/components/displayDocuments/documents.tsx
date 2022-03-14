@@ -159,6 +159,22 @@ export const documents: Document[] = [
     version: "2"
   },
   {
+    title: "PDT v2 (LAMP) HealthCert",
+    documents: [
+      {
+        uri: uriToAction({
+          uri: window.location.origin + "/static/documents/pdt-v2-lamp-healthcert.json",
+          permittedActions: ["VIEW"],
+          redirect: "https://www.verify.gov.sg/verify"
+        }),
+        kind: "did"
+      }
+    ],
+    imageSrc: "/static/img/preview/pdt-lamp-healthcert.png",
+    tags: [Tag.HEALTH_CERTS],
+    version: "2"
+  },
+  {
     title: "PDT v2 (PCR) HealthCert",
     documents: [
       {
