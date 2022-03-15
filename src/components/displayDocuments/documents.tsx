@@ -1,6 +1,6 @@
 export interface Document {
   title: string;
-  documents: { uri: string; kind: "verifiable" | "transferable" | "did" }[];
+  documents: { uri: string; kind: "verifiable" | "transferable" | "did"; downloadUrl?: string }[];
   imageSrc: string;
   tags: Tag[];
   version: "2" | "3";
@@ -151,7 +151,8 @@ export const documents: Document[] = [
           permittedActions: ["VIEW"],
           redirect: "https://www.verify.gov.sg/verify"
         }),
-        kind: "did"
+        kind: "did",
+        downloadUrl: window.location.origin + "/static/documents/pdt-v2-art-healthcert.json"
       }
     ],
     imageSrc: "/static/img/preview/pdt-art-healthcert.png",
@@ -167,7 +168,8 @@ export const documents: Document[] = [
           permittedActions: ["VIEW"],
           redirect: "https://www.verify.gov.sg/verify"
         }),
-        kind: "did"
+        kind: "did",
+        downloadUrl: window.location.origin + "/static/documents/pdt-v2-lamp-healthcert.json"
       }
     ],
     imageSrc: "/static/img/preview/pdt-lamp-healthcert.png",
@@ -183,7 +185,8 @@ export const documents: Document[] = [
           permittedActions: ["VIEW"],
           redirect: "https://www.verify.gov.sg/verify"
         }),
-        kind: "did"
+        kind: "did",
+        downloadUrl: "https://schemata.openattestation.com/sg/gov/moh/pdt-healthcert/2.0/endorsed-wrapped.json"
       }
     ],
     imageSrc: "/static/img/preview/pdt-pcr-healthcert.png",
@@ -200,7 +203,9 @@ export const documents: Document[] = [
           permittedActions: ["VIEW"],
           redirect: "https://www.verify.gov.sg/verify"
         }),
-        kind: "did"
+        kind: "did",
+        downloadUrl:
+          "https://schemata.openattestation.com/sg/gov/moh/vaccination-healthcert/1.0/interim-vaccination-healthcert-wrapped.json"
       }
     ],
     imageSrc: "/static/img/preview/vaccination-healthcert.png",
@@ -216,7 +221,8 @@ export const documents: Document[] = [
           permittedActions: ["VIEW"],
           redirect: "https://www.verify.gov.sg/verify"
         }),
-        kind: "did"
+        kind: "did",
+        downloadUrl: window.location.origin + "/static/documents/vac-v1-2-plus-1-healthcert.json"
       }
     ],
     imageSrc: "/static/img/preview/vaccination-healthcert.png",

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import QRCode from "qrcode.react";
-import { MdDescription } from "react-icons/md";
+import { MdDescription, MdFileDownload } from "react-icons/md";
 import { QrCodeButton } from "./qrCodeButton";
 import { Document } from "./documents";
 
@@ -12,6 +12,13 @@ const ShowDocumentButton = styled.div`
   border-radius: 12px 0px 4px;
   transition: transform 0.3s ease-in;
   transform: translateX(100%) translateY(100%);
+`;
+
+const DownloadDocumentButton = styled.div`
+  width: 48px;
+  height: 48px;
+  background: #feeee7;
+  border-radius: 0px 12px 0px 4px;
 `;
 
 const CardContainer = styled.div`
@@ -107,6 +114,19 @@ export const DocumentCard: React.FunctionComponent<Document> = ({ imageSrc, docu
               >
                 <MdDescription size={20} className="self-center" />
               </ShowDocumentButton>
+            )}
+            {!showQrView && documents[selectedDocument].downloadUrl && (
+              <DownloadDocumentButton
+                data-testid="download-document-button"
+                onClick={event => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  window.open(documents[selectedDocument].downloadUrl, "_blank")?.focus();
+                }}
+                className="absolute bottom-0 left-0 flex justify-center transition-colors duration-300 ease-out hover:bg-navy hover:text-white"
+              >
+                <MdFileDownload size={20} className="self-center" />
+              </DownloadDocumentButton>
             )}
           </div>
           <DocumentDetails data-testid="document-name" className="mt-5 font-medium text-base">
