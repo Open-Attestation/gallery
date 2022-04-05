@@ -194,6 +194,23 @@ export const documents: Document[] = [
     version: "2"
   },
   {
+    title: "PDT v2 (PCR + SER) HealthCert",
+    documents: [
+      {
+        uri: uriToAction({
+          uri: window.location.origin + "/static/documents/pdt-v2-pcr-ser-healthcert.json",
+          permittedActions: ["VIEW"],
+          redirect: "https://www.verify.gov.sg/verify"
+        }),
+        kind: "did",
+        downloadUrl: window.location.origin + "/static/documents/pdt-v2-pcr-ser-healthcert.json"
+      }
+    ],
+    imageSrc: "/static/img/preview/pdt-pcr-healthcert.png",
+    tags: [Tag.HEALTH_CERTS],
+    version: "2"
+  },
+  {
     title: "Vaccination v1 (2 doses) HealthCert",
     documents: [
       {
