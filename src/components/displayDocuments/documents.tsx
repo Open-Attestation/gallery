@@ -211,6 +211,23 @@ export const documents: Document[] = [
     version: "2"
   },
   {
+    title: "Recovery v2 HealthCert",
+    documents: [
+      {
+        uri: uriToAction({
+          uri: window.location.origin + "/static/documents/rec-v2-pcr-healthcert.json",
+          permittedActions: ["VIEW"],
+          redirect: "https://www.verify.gov.sg/verify"
+        }),
+        kind: "did",
+        downloadUrl: window.location.origin + "/static/documents/rec-v2-pcr-healthcert.json"
+      }
+    ],
+    imageSrc: "/static/img/preview/recovery-healthcert.png",
+    tags: [Tag.HEALTH_CERTS],
+    version: "2"
+  },
+  {
     title: "Vaccination v1 (2 doses) HealthCert",
     documents: [
       {
