@@ -5,6 +5,6 @@
 
 [[headers]]
 # Define which paths this specific [[headers]] block will cover.
-for = "/static/documents/*"
+for = "/static/documents/**/*"
 [headers.values]
 Access-Control-Allow-Origin = "*"
