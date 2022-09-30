@@ -6,22 +6,35 @@ export interface Document {
   version: "2" | "3";
 }
 
+enum ChainId {
+  Local = 1337,
+  Ethereum = 1,
+  Ropsten = 3,
+  Rinkeby = 4,
+  Goerli = 5,
+  Polygon = 137,
+  PolygonMumbai = 80001,
+  Sepolia = 11155111
+}
+
 interface Action {
   uri: string;
   key?: string;
   permittedActions: string[];
   redirect: string;
+  chainId?: ChainId;
 }
 
 const stringifyAndEncode = (obj: object): string => window.encodeURIComponent(JSON.stringify(obj));
 
-const uriToAction = ({ uri, key, permittedActions, redirect }: Action): string => {
+const uriToAction = ({ uri, key, permittedActions, redirect, chainId }: Action): string => {
   const action = stringifyAndEncode({
     type: "DOCUMENT",
     payload: {
       uri,
       permittedActions,
-      redirect
+      redirect,
+      chainId
     }
   });
   const anchor = key ? `#${stringifyAndEncode({ key })}` : ``;
@@ -85,7 +98,8 @@ export const documents: Document[] = [
         uri: uriToAction({
           uri: window.location.origin + "/static/documents/tradetrust/v2/ebl-ropsten.tt",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.tradetrust.io"
+          redirect: "https://dev.tradetrust.io",
+          chainId: ChainId.Ropsten
         }),
         kind: "transferable"
       }
@@ -117,7 +131,8 @@ export const documents: Document[] = [
         uri: uriToAction({
           uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-ropsten.tt",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.tradetrust.io"
+          redirect: "https://dev.tradetrust.io",
+          chainId: ChainId.Ropsten
         }),
         kind: "verifiable"
       }
@@ -133,7 +148,8 @@ export const documents: Document[] = [
         uri: uriToAction({
           uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-redacted-ropsten.tt",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.tradetrust.io"
+          redirect: "https://dev.tradetrust.io",
+          chainId: ChainId.Ropsten
         }),
         kind: "verifiable"
       }
@@ -286,7 +302,8 @@ export const documents: Document[] = [
         uri: uriToAction({
           uri: window.location.origin + "/static/documents/tradetrust/v2/chafta-coo-ropsten.tt",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.tradetrust.io"
+          redirect: "https://dev.tradetrust.io",
+          chainId: ChainId.Ropsten
         }),
         kind: "verifiable"
       }
@@ -374,7 +391,8 @@ export const documents: Document[] = [
         uri: uriToAction({
           uri: window.location.origin + "/static/documents/tradetrust/v3/ebl-ropsten.tt",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.tradetrust.io"
+          redirect: "https://dev.tradetrust.io",
+          chainId: ChainId.Ropsten
         }),
         kind: "transferable"
       }
@@ -390,7 +408,8 @@ export const documents: Document[] = [
         uri: uriToAction({
           uri: window.location.origin + "/static/documents/tradetrust/v3/invoice-ropsten.tt",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.tradetrust.io"
+          redirect: "https://dev.tradetrust.io",
+          chainId: ChainId.Ropsten
         }),
         kind: "verifiable"
       }

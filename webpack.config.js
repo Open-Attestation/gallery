@@ -82,7 +82,7 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     inline: true,
-    port: 3000,
+    port: 9000,
     stats: {
       colors: true,
       progress: true
