@@ -131,7 +131,7 @@ export const documents: Document[] = [
         uri: uriToAction({
           uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-ropsten.tt",
           permittedActions: ["VIEW"],
-          redirect: "http://localhost:3000",
+          redirect: "https://dev.tradetrust.io",
           chainId: ChainId.Ropsten
         }),
         kind: "verifiable"
