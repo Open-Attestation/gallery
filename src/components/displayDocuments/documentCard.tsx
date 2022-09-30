@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import QRCode from "qrcode.react";
 import { MdDescription, MdFileDownload } from "react-icons/md";
 import { QrCodeButton } from "./qrCodeButton";
-import { Document } from "./documents";
+import { Document } from "../documents/types";
 
 const ShowDocumentButton = styled.div`
   width: 48px;
