@@ -6,7 +6,7 @@ import { cssContainerWrapper } from "../../constants";
 import { useFuzzy } from "react-use-fuzzy";
 import { MenuBar } from "./menuBar/menuBar";
 import { DocumentCard } from "./documentCard";
-import { Tag, Document } from "./documents";
+import { Tag, Document } from "../documents/types";
 
 interface FilteredDocumentsProps {
   searchValue: string;
