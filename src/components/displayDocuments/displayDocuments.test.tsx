@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, within, fireEvent } from "@testing-library/react";
 import { Router, Route } from "react-router-dom";
 import { createMemoryHistory } from "history";
-import { Document, Tag } from "./documents";
+import { Document, Tag } from "../documents/types";
 import { DisplayDocuments } from "../displayDocuments/displayDocuments";
 import userEvent from "@testing-library/user-event";
 
