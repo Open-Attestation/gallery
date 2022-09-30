@@ -7,10 +7,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/ebl-ropsten.tt",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/ebl-goerli.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.Ropsten
+          chainId: ChainId.Goerli
         }),
         kind: "transferable"
       }
@@ -24,10 +24,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-ropsten.tt",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-goerli.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.Ropsten
+          chainId: ChainId.Goerli
         }),
         kind: "verifiable"
       }
@@ -41,10 +41,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-redacted-ropsten.tt",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-redacted-goerli.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.Ropsten
+          chainId: ChainId.Goerli
         }),
         kind: "verifiable"
       }
@@ -58,10 +58,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/chafta-coo-ropsten.tt",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/chafta-coo-goerli.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.Ropsten
+          chainId: ChainId.Goerli
         }),
         kind: "verifiable"
       }
@@ -75,10 +75,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v3/ebl-ropsten.tt",
+          uri: window.location.origin + "/static/documents/tradetrust/v3/ebl-goerli.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.Ropsten
+          chainId: ChainId.Goerli
         }),
         kind: "transferable"
       }
@@ -92,10 +92,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v3/invoice-ropsten.tt",
+          uri: window.location.origin + "/static/documents/tradetrust/v3/invoice-goerli.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.Ropsten
+          chainId: ChainId.Goerli
         }),
         kind: "verifiable"
       }
