@@ -52,7 +52,7 @@ export const documentsOpenCerts: Document[] = [
           permittedActions: ["VIEW"],
           redirect: "https://dev.opencerts.io"
         }),
-        kind: "verifiable"
+        kind: "did"
       }
     ],
     imageSrc: "/static/img/preview/geekout-cert.png",
