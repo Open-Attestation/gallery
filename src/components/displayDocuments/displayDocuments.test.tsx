@@ -59,12 +59,20 @@ const sampleDocuments: Document[] = [
     tags: [Tag.HEALTH_CERTS],
     version: "2"
   },
+
   {
     title: "test8",
     documents: [{ uri: "test8", kind: "verifiable" }],
     imageSrc: "",
     tags: [Tag.TRADE_TRUST],
     version: "3"
+  },
+  {
+    title: "test9",
+    documents: [{ uri: "test9", kind: "did" }],
+    imageSrc: "",
+    tags: [Tag.NYC_CERTS],
+    version: "2"
   }
 ];
 
@@ -79,7 +87,7 @@ describe("displayDocuments", () => {
         </Route>
       </Router>
     );
-    expect(screen.getAllByTestId("display-card")).toHaveLength(7);
+    expect(screen.getAllByTestId("display-card")).toHaveLength(8);
   });
 
   it("should show only TradeTrust documents, when in 'trade-trust' route", () => {
@@ -117,6 +125,20 @@ describe("displayDocuments", () => {
     render(
       <Router history={history}>
         <Route path={`/tag/health-certs`}>
+          <DisplayDocuments documents={sampleDocuments} />
+        </Route>
+      </Router>
+    );
+    expect(screen.getAllByTestId("display-card")).toHaveLength(1);
+  });
+
+  it("should show NYC documents, when in 'nyc-certs' route", () => {
+    expect.assertions(1);
+    const history = createMemoryHistory();
+    history.push("/tag/nyc-certs");
+    render(
+      <Router history={history}>
+        <Route path={`/tag/nyc-certs`}>
           <DisplayDocuments documents={sampleDocuments} />
         </Route>
       </Router>

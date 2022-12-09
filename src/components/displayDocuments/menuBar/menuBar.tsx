@@ -38,6 +38,10 @@ const navItems = [
   {
     label: "Licence",
     to: "/tag/licence"
+  },
+  {
+    label: "National Youth Council",
+    to: "/tag/nyc-certs"
   }
 ];
 
