@@ -18,7 +18,7 @@ const makeNycDocument = ({
         permittedActions: ["VIEW"],
         redirect: "https://dev.verify.gov.sg/verify"
       }),
-      kind: "verifiable",
+      kind: "did",
       downloadUrl: `http://document-storage.oa.gov.sg/national-youth-council_${oaFilename}`
     }
   ],
