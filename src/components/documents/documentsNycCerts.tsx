@@ -113,7 +113,6 @@ export const documentsNyc: Document[] = [
     oaFilename: "obs-moc.oa",
     imgFilename: "obs-moc.png"
   }),
-
   makeNycDocument({
     title: "OBS Certificate of Successful Completion",
     oaFilename: "successful-completion.oa",
