@@ -8,7 +8,7 @@ const makeNycDocument = ({
 }: {
   title: string;
   oaFilename: string;
-  imgFilename: png;
+  imgFilename: string;
 }): Document => ({
   title,
   documents: [
