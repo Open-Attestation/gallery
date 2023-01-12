@@ -35,7 +35,7 @@ export const documentsNyc: Document[] = [
     imgFilename: "bcls-aed.jpg"
   }),
   makeNycDocument({
-    title: "OBS Standard Firt Aid",
+    title: "OBS Standard First Aid",
     oaFilename: "standard-first-aid.oa",
     imgFilename: "standard-first-aid.png"
   }),
