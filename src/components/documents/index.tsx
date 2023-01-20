@@ -3,11 +3,13 @@ import { uriToAction } from "./utils";
 import { documentsTradeTrust } from "./documentsTradeTrust";
 import { documentsOpenCerts } from "./documentsOpenCerts";
 import { documentsHealthCerts } from "./documentsHealthCerts";
+import { documentsNyc } from "./documentsNycCerts";
 
 export const documentsAll: Document[] = [
   ...documentsTradeTrust,
   ...documentsOpenCerts,
   ...documentsHealthCerts,
+  ...documentsNyc,
   {
     title: "CAAS UAPL",
     documents: [
