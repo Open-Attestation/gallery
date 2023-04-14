@@ -19,7 +19,7 @@ const makeNycDocument = ({
         redirect: "https://dev.verify.gov.sg/verify"
       }),
       kind: "did",
-      downloadUrl: `http://document-storage.oa.gov.sg/national-youth-council_${oaFilename}`
+      downloadUrl: `https://document-storage.oa.gov.sg/national-youth-council_${oaFilename}`
     }
   ],
   imageSrc: `/static/img/preview/nyc/${imgFilename}`,
