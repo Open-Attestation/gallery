@@ -1,0 +1,83 @@
+{
+  "version": "https://schema.openattestation.com/2.0/schema.json",
+  "data": {
+    "name": "04512b95-f3ff-48d4-ba7c-5048776cebbc:string:TradeTrust Invoice v2",
+    "$template": {
+      "name": "fdccdb39-45cc-48c2-8494-9eb7247fecdb:string:INVOICE",
+      "type": "f3001435-92f3-43a7-a2cc-64a74616a339:string:EMBEDDED_RENDERER",
+      "url": "0169189d-1904-416e-8313-705a7466df4e:string:https://generic-templates.tradetrust.io"
+    },
+    "id": "31eb3e09-dba6-414c-af35-69a6d4f050fa:string:1111",
+    "date": "88f5566f-9956-4abc-ac6f-911af758a787:string:2018-02-21",
+    "customerId": "2349948b-f034-4dda-b072-a4a65b355e34:string:564",
+    "terms": "06b94946-326d-4598-b6f9-efd61b491fa9:string:Due Upon Receipt",
+    "billFrom": {
+      "name": "0731584e-672c-408e-a5ff-df673530ac16:string:ABC Company",
+      "streetAddress": "61b2ae69-e6a5-4121-84fb-487c98715b56:string:Level 1, Industry Offices",
+      "city": "59e39d0f-8f9f-41d1-a5d6-509a9240d2b1:string:Singapore"
+    },
+    "billTo": {
+      "company": {
+        "name": "97f24915-bcf0-4934-844c-6919a289be2b:string:DEF Company",
+        "city": "c4dc5baa-af20-4afc-a4b8-7b94002f902f:string:Singapore"
+      },
+      "name": "497938f3-c454-4f74-b3a2-c2a379c3cc00:string:James Lee"
+    },
+    "billableItems": [
+      {
+        "description": "5fec249e-1140-497d-bd8c-ea6b74770218:string:Service Fee",
+        "quantity": "acff9803-23c4-4a61-ac47-a9ebf444ab2c:number:1",
+        "unitPrice": "5d782adc-dcc4-4491-9eb8-dfb8cfed0444:number:200",
+        "amount": "f7659296-a89a-4739-b2f1-5eea6ab4a295:number:200"
+      },
+      {
+        "description": "93964ed9-ee51-43d9-a806-462f3a46513b:string:Labor: 5 hours at $75/hr",
+        "quantity": "b66c776c-c403-4f83-be44-d1ff4fa559ea:number:5",
+        "unitPrice": "51bde006-1ad4-4555-9e21-bcc328a55a8f:number:75",
+        "amount": "65fafabf-91bb-4ff5-b0d7-bfde7d9af5c4:number:375"
+      },
+      {
+        "description": "862f9676-da67-4889-b393-7835e046fc55:string:New client discount",
+        "quantity": "6ce57f1c-df64-48f0-8338-8b02e9c028d7:number:1",
+        "unitPrice": "9f8c1a6e-515f-4b04-bfed-bea228370887:number:50",
+        "amount": "ed46c43b-2d8c-4eb4-bdc2-c74eae1ef22a:number:50"
+      }
+    ],
+    "subtotal": "dea482a0-9105-4fc8-870b-fc2631fce648:number:625",
+    "tax": "7c457952-725e-4e15-a33d-4290aac0e3da:number:0",
+    "taxTotal": "baf95929-13d7-44eb-ac4b-bdc2c3f4c840:number:0",
+    "total": "3f8333d4-4b60-40ae-b03d-052825091eff:number:625",
+    "issuers": [
+      {
+        "name": "01c9ad20-d77e-4c41-9485-71e3626ff69b:string:GovTech",
+        "documentStore": "f464d1f7-4488-41ff-b028-7eb8290f9931:string:0x93092C2B449712281008112870063fF439367C00",
+        "identityProof": {
+          "type": "5827cb6c-f977-4ec5-b132-71956840b6a1:string:DNS-TXT",
+          "location": "4cfafdc2-954a-4673-8010-9df05b4dde6f:string:example.tradetrust.io"
+        }
+      }
+    ],
+    "links": {
+      "self": {
+        "href": "aae4cd5e-bcf1-4fbc-a14f-db2d4d911050:string:https://action.openattestation.com/?q=%7B%22type%22%3A%22DOCUMENT%22%2C%22payload%22%3A%7B%22uri%22%3A%22https%3A%2F%2Fgallery.openattestation.com%2Fstatic%2Fdocuments%2Ftradetrust%2Fv2%2Finvoice-mumbai.json%22%2C%22permittedActions%22%3A%5B%22VIEW%22%5D%2C%22redirect%22%3A%22https%3A%2F%2Fdev.tradetrust.io%22%2C%22chainId%22%3A%2280001%22%7D%7D"
+      }
+    },
+    "network": {
+      "chain": "563e79bf-fc00-4ba1-8326-0ee8eeec0348:string:MATIC",
+      "chainId": "867d03a4-e907-436d-a388-693374e78b29:string:80001"
+    }
+  },
+  "signature": {
+    "type": "SHA3MerkleProof",
+    "targetHash": "431a639cd8dece92612df4327d952abf89d53c415dbf0a35f99f898f5d764587",
+    "proof": [],
+    "merkleRoot": "431a639cd8dece92612df4327d952abf89d53c415dbf0a35f99f898f5d764587"
+  },
+  "privacy": {
+    "obfuscatedData": [
+      "bc92efba4a39ae44270023400423a97bcf2a5c716df3ffbe1c35e4ca801d196a",
+      "61fdd499da9cc14cdf5374fcfd526f879dff0a3b11d33f6e44f19acb61d5ddc7",
+      "fac30ff097ff288ce3019db183caec0d8c20ed7780f8da7afe82d85592b0fb66"
+    ]
+  }
+}

@@ -7,10 +7,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/ebl-goerli.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/ebl-mumbai.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.Goerli
+          chainId: ChainId.PolygonMumbai
         }),
         kind: "transferable"
       }
@@ -24,10 +24,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-goerli.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-mumbai.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.Goerli
+          chainId: ChainId.PolygonMumbai
         }),
         kind: "verifiable"
       }
@@ -41,10 +41,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-redacted-goerli.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-redacted-mumbai.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.Goerli
+          chainId: ChainId.PolygonMumbai
         }),
         kind: "verifiable"
       }
@@ -58,10 +58,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/chafta-coo-goerli.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/chafta-coo-mumbai.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.Goerli
+          chainId: ChainId.PolygonMumbai
         }),
         kind: "verifiable"
       }
@@ -75,10 +75,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v3/ebl-goerli.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v3/ebl-mumbai.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.Goerli
+          chainId: ChainId.PolygonMumbai
         }),
         kind: "transferable"
       }
@@ -92,10 +92,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v3/invoice-goerli.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v3/invoice-mumbai.json",
           permittedActions: ["VIEW"],
           redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.Goerli
+          chainId: ChainId.PolygonMumbai
         }),
         kind: "verifiable"
       }
