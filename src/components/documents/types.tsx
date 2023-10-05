@@ -2,6 +2,7 @@ export enum Tag {
   TRADE_TRUST = "TradeTrust",
   OPEN_CERTS = "OpenCerts",
   HEALTH_CERTS = "HealthCerts",
+  NYC_CERTS = "NycCerts",
   LICENCE = "Licence"
 }
 
