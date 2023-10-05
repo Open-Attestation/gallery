@@ -8,7 +8,7 @@ export const documentsOpenCerts: Document[] = [
       {
         uri: uriToAction({
           uri: window.location.origin + "/static/documents/transcript-encrypted.opencert",
-          key: "7829ec09a37ef48d655a2900bae002e29f789a9ed3a256bb942e7e9966d31a4e",
+          key: "691add1930798b63b17c8683a4776bedc16771ea5664337e21a563be0529024f",
           permittedActions: ["STORE"],
           redirect: "https://dev.opencerts.io"
         }),
