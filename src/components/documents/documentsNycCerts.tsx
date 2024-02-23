@@ -32,10 +32,10 @@ export const documentsNyc: Document[] = [
   makeNycDocument({
     title: "OBS BCLS + AED",
     oaFilename: "bcls-aed.oa",
-    imgFilename: "bcls-aed.jpg"
+    imgFilename: "bcls-aed.png"
   }),
   makeNycDocument({
-    title: "OBS Standard First Aid",
+    title: "OBS Standard First Aid with CPR (Hands only) + AED",
     oaFilename: "standard-first-aid.oa",
     imgFilename: "standard-first-aid.png"
   }),
