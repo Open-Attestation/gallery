@@ -22,7 +22,8 @@ export enum ChainId {
   Goerli = 5,
   Polygon = 137,
   PolygonMumbai = 80001,
-  Sepolia = 11155111
+  Sepolia = 11155111,
+  Stability = 101010
 }
 
 export interface Action {
