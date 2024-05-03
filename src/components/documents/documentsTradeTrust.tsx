@@ -7,10 +7,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/ebl-mumbai.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/ebl-stability.json",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.PolygonMumbai
+          redirect: "https://ref.tradetrust.io",
+          chainId: ChainId.Stability
         }),
         kind: "transferable"
       }
@@ -24,10 +24,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-mumbai.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-stability.json",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.PolygonMumbai
+          redirect: "https://ref.tradetrust.io",
+          chainId: ChainId.Stability
         }),
         kind: "verifiable"
       }
@@ -41,10 +41,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-redacted-mumbai.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/invoice-redacted-stability.json",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.PolygonMumbai
+          redirect: "https://ref.tradetrust.io",
+          chainId: ChainId.Stability
         }),
         kind: "verifiable"
       }
@@ -58,10 +58,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v2/chafta-coo-mumbai.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v2/chafta-coo-stability.json",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.PolygonMumbai
+          redirect: "https://ref.tradetrust.io",
+          chainId: ChainId.Stability
         }),
         kind: "verifiable"
       }
@@ -75,10 +75,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v3/ebl-mumbai.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v3/ebl-stability.json",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.PolygonMumbai
+          redirect: "https://ref.tradetrust.io",
+          chainId: ChainId.Stability
         }),
         kind: "transferable"
       }
@@ -92,10 +92,10 @@ export const documentsTradeTrust: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/tradetrust/v3/invoice-mumbai.json",
+          uri: window.location.origin + "/static/documents/tradetrust/v3/invoice-stability.json",
           permittedActions: ["VIEW"],
-          redirect: "https://dev.tradetrust.io",
-          chainId: ChainId.PolygonMumbai
+          redirect: "https://ref.tradetrust.io",
+          chainId: ChainId.Stability
         }),
         kind: "verifiable"
       }
