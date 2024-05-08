@@ -1,0 +1,222 @@
+{
+  "version": "https://schema.openattestation.com/2.0/schema.json",
+  "data": {
+    "id": "a2f92c0a-6785-4f6d-9a78-1fb2387405e8:string:uuid_trace_id",
+    "name": "c280603d-7db3-4fa7-bad6-3f30c7703329:string:VaccinationHealthCert",
+    "validFrom": "99981899-a423-4bda-a7d9-30dd2148631d:string:2023-01-25T03:41:48.075Z",
+    "fhirVersion": "187ff5f8-2d6a-43f4-9259-789b3dfefe24:string:4.0.1",
+    "fhirBundle": {
+      "resourceType": "7ff39666-eeaf-4ddb-b26c-6a83fcf7b1e8:string:Bundle",
+      "type": "e804575a-e61f-4229-8193-6f93b3fd279d:string:collection",
+      "entry": [
+        {
+          "fullUrl": "a7c719b6-1fa5-4b37-ae42-5ed290e6c8f2:string:urn:uuid:60a44a94-ab17-41f8-9f69-aa6c5d88971e",
+          "resourceType": "ec3ff280-1c4f-45da-a506-5e11c6607f87:string:Patient",
+          "extension": [
+            {
+              "url": "efa46070-b0cd-4b2d-96d4-2253bc2c4e17:string:http://hl7.org/fhir/StructureDefinition/patient-nationality",
+              "code": {
+                "text": "9cc4c9ba-b1ed-40b5-b830-409583b5d6b2:string:SG"
+              }
+            }
+          ],
+          "identifier": [
+            {
+              "type": "69173779-5f35-4c7f-8324-27b2fbebadcb:string:PPN",
+              "value": "64115cc6-ae12-44c5-abae-8a073986b378:string:E1111177G"
+            },
+            {
+              "type": {
+                "text": "df8421c3-e673-49ee-b44f-966c377d4809:string:NRIC"
+              },
+              "value": "316776fa-0567-4f67-95c6-89f2968ce86f:string:S****567A"
+            }
+          ],
+          "name": [
+            {
+              "text": "5827ef07-c703-42ef-8c83-2eb758cce85c:string:Tan Chen Chen"
+            }
+          ],
+          "gender": "17ca3e8a-4de7-4d0d-9618-9eadcd008807:string:male",
+          "birthDate": "547ff9fd-094f-481c-a88b-f861c6a10767:string:2000-12-31"
+        },
+        {
+          "fullUrl": "3826a55a-1b0d-47b8-bfa9-8ee444566701:string:urn:uuid:f4ac2e5b-b15e-4147-ab04-0ed809056aca",
+          "resourceType": "0d1be6c8-fcb6-417c-882c-3a917961d0bc:string:Location",
+          "id": "82bb441e-cf4d-4059-a59f-5bd98ca43542:string:HCI000",
+          "name": "e16a5cb8-41de-4b9a-b2c9-f575ce310e00:string:Vaccination site approved by Ministry of Health (MOH), Singapore [HCI000]",
+          "address": {
+            "country": "40a6c3bf-f8d0-4c41-a4f2-e0891ea2a5c9:string:SG"
+          }
+        },
+        {
+          "fullUrl": "da9620b8-7c11-4b6a-85b5-b03e8f655db5:string:urn:uuid:2158d56d-22c5-4690-b403-d5e254f5dc55",
+          "resourceType": "3db6464b-27c4-4fe3-99ff-1fed070dc56a:string:Location",
+          "id": "534dbd85-d2cf-4fb4-a8f1-a16c6417641f:string:HCI000",
+          "name": "eeecb1e7-e055-4f57-8bd5-207785fdd79f:string:Vaccination site approved by Ministry of Health (MOH), Singapore [HCI000]",
+          "address": {
+            "country": "d8776bf4-f5a4-47e3-b920-8156f1ef930e:string:SG"
+          }
+        },
+        {
+          "fullUrl": "e0534963-4caa-4bcc-9bb4-b743006db314:string:urn:uuid:a35c57c3-dd31-4a33-a9ec-83e8bd3bf134",
+          "resourceType": "06f57307-a056-4209-988c-c608a2dbac2c:string:Immunization",
+          "vaccineCode": {
+            "coding": [
+              {
+                "system": "60415e99-fd24-4359-81ec-33729f2bc0fb:string:http://standards.ihis.com.sg",
+                "code": "9b34c810-854a-405a-89d7-85b9f1d81ea7:string:3339641000133109",
+                "display": "2691c52c-cf23-41b6-8cd2-17e636ff7418:string:PFIZER-BIONTECH COVID-19 Vaccine [Tozinameran] Injection"
+              }
+            ]
+          },
+          "lotNumber": "796d66fd-2c77-4a5d-b114-6dcc46a819b0:string:EK0000",
+          "occurrenceDateTime": "836f302d-d70a-4ff4-83b2-e5aae1baaa48:string:2022-01-01",
+          "patient": {
+            "reference": "5b1efac4-bdbc-4eb6-b4c0-3a8a07ba4df7:string:urn:uuid:60a44a94-ab17-41f8-9f69-aa6c5d88971e"
+          },
+          "location": {
+            "reference": "a00058bf-5f39-4c0b-8b23-10af4ad6a00c:string:urn:uuid:f4ac2e5b-b15e-4147-ab04-0ed809056aca"
+          },
+          "performer": [
+            {
+              "actor": {
+                "display": "dbdba197-f3ff-40d4-8577-4789c65ac269:string:Designated vaccinator by MOH-approved vaccination site"
+              }
+            }
+          ]
+        },
+        {
+          "fullUrl": "26e1884a-54c5-40fb-a8c5-64fd8a067fe2:string:urn:uuid:00df593c-ae7a-4cab-afd6-d4b17d8ba5c4",
+          "resourceType": "cc4a987b-3a57-4439-88c0-b9cd3a260c74:string:Immunization",
+          "vaccineCode": {
+            "coding": [
+              {
+                "system": "0380bfde-7164-4ef7-bb27-8e9b45d15786:string:http://standards.ihis.com.sg",
+                "code": "cfe214b4-cb9d-4748-94dc-56ac52173426:string:3339641000133109",
+                "display": "39d547c8-f38e-4b79-87c5-608221147047:string:PFIZER-BIONTECH COVID-19 Vaccine [Tozinameran] Injection"
+              }
+            ]
+          },
+          "lotNumber": "546c08d5-c474-4aa8-ad57-dddfe40408fa:string:EK0001",
+          "occurrenceDateTime": "34e4cac4-f71b-4c15-b398-046447aa3431:string:2022-03-01",
+          "patient": {
+            "reference": "57bc7e96-d75b-41ea-84f1-f93401f5f1d3:string:urn:uuid:60a44a94-ab17-41f8-9f69-aa6c5d88971e"
+          },
+          "location": {
+            "reference": "f0230aab-624f-4c9b-b6b4-b59ff1da5bf2:string:urn:uuid:2158d56d-22c5-4690-b403-d5e254f5dc55"
+          },
+          "performer": [
+            {
+              "actor": {
+                "display": "f79117aa-d27b-4286-a84a-66bd1d87a53c:string:Designated vaccinator by MOH-approved vaccination site"
+              }
+            }
+          ]
+        },
+        {
+          "fullUrl": "13eef2d1-f618-40f5-b7bb-b438c42c08b1:string:urn:uuid:c811d8c2-731b-4371-a70f-d07ba6e7d7e6",
+          "resourceType": "9e517111-7982-470b-9f74-4dc260de4166:string:ImmunizationRecommendation",
+          "recommendation": [
+            {
+              "targetDisease": {
+                "coding": [
+                  {
+                    "system": "c3c2b679-7c77-402b-85f8-3c05139776c2:string:http://snomed.info/sct",
+                    "code": "48bf9472-47c1-429e-930a-3fd785a3533d:string:840539006",
+                    "display": "70649d00-38c3-4e51-8cec-52f85ac59e6c:string:COVID-19"
+                  }
+                ]
+              },
+              "forecastStatus": {
+                "coding": [
+                  {
+                    "system": "68c09e82-9196-4b1e-b70f-97ed80cbdcf1:string:http://snomed.info/sct",
+                    "code": "a002e287-4862-4142-ba15-e8f38f200abd:string:complete",
+                    "display": "f9e5eca8-a368-40a2-9021-b2afebe5de1f:string:Complete"
+                  }
+                ]
+              },
+              "dateCriterion": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "d0259cb8-20a4-4dd4-8671-e5335a6b18e2:string:",
+                        "code": "f3763ffc-924f-4d9d-953c-c283a0010c89:string:effective",
+                        "display": "895cb01d-21f4-416b-bcfb-fc834401ae78:string:Effective"
+                      }
+                    ]
+                  },
+                  "value": "ba2e50e8-b371-4fe5-8f68-9b6f8d3e4aee:string:2022-03-15"
+                }
+              ]
+            }
+          ],
+          "patient": {
+            "reference": "70eab7f9-8190-4ba1-a7a5-1368a1215b53:string:urn:uuid:60a44a94-ab17-41f8-9f69-aa6c5d88971e"
+          }
+        }
+      ]
+    },
+    "issuers": [
+      {
+        "name": "6cf508cf-f0a7-4410-aa83-3661a6834b4b:string:SAMPLE ISSUER (DO NOT VERIFY)",
+        "id": "c0f064f5-5147-49bb-9d55-f10bf427cc3a:string:did:ethr:0xE39479928Cc4EfFE50774488780B9f616bd4B830",
+        "revocation": {
+          "type": "ed2695c2-7916-44e4-b349-2aa6360fe220:string:NONE"
+        },
+        "identityProof": {
+          "type": "e089dc09-3d87-43a5-970c-9da2fa6e8e6e:string:DNS-DID",
+          "location": "934c5c1b-8683-4510-9992-63c903bf1e8f:string:donotverify.testing.verify.gov.sg",
+          "key": "f4d4aebc-f29e-4482-81ee-67d93d3d09e7:string:did:ethr:0xE39479928Cc4EfFE50774488780B9f616bd4B830#controller"
+        }
+      }
+    ],
+    "$template": {
+      "name": "48511fc9-938a-4df5-b562-bd9540022ef8:string:VACCINATION_CERT",
+      "type": "1841ca78-2fcf-4f92-a39a-527208edf45b:string:EMBEDDED_RENDERER",
+      "url": "c175049a-32cd-430d-b6d6-e16bbe43a6fe:string:https://healthcert.renderer.moh.gov.sg/"
+    },
+    "notarisationMetadata": {
+      "reference": "e2c74813-d0dc-4114-9d64-8d353468333b:string:uuid_trace_id",
+      "notarisedOn": "61054ad4-12bd-41fc-a158-497541f68d45:string:2023-01-25T03:41:48.075Z",
+      "passportNumber": "de74b8a7-1e07-4b24-bf60-5ca1ac6b20d0:string:E1111177G",
+      "url": "44038b63-3c10-489e-831b-aca08ec749a2:string:https://www.verify.gov.sg/verify?q=%7B%22type%22%3A%22DOCUMENT%22%2C%22payload%22%3A%7B%22uri%22%3A%22https%3A%2F%2Fapi-vaccine.storage.staging.notarise.io%2Fdocument%2F6f2ee768-d464-4995-92a3-53fe539fd562%22%2C%22permittedActions%22%3A%5B%22VIEW%22%2C%22STORE%22%5D%7D%7D#%7B%22key%22%3A%224c71f9fcc1914fdd3b7a9f4afd3d143649cf9b7911a76be58f1e54329d859612%22%7D",
+      "signedEuHealthCerts": [
+        {
+          "type": "a9432e7c-81ce-4a1b-a18b-85450f6ce0cb:string:VAC",
+          "expiryDateTime": "0da4eb7d-7331-4149-ae97-0ccec76c4a03:string:2024-01-25T03:41:47.739Z",
+          "vaccineCode": "34ac0e25-7db0-4937-a3bc-448c4fa7ccbb:string:3339641000133109",
+          "dose": "3a4cd75c-ac12-4bd7-82bd-e14ec2676d46:number:1",
+          "qr": "5d65c5ba-101f-4ff0-a6e3-66664c72a745:string:HC1:6BFZZ82O9+J29S22Y9 -F0FEQM5A78$.1X%46DUY:8Y35*+4LXE%X9*5I80SF VOCFB6Q1HJRQRJ85Y4M/212JB:A3221- 8:2A5L3WPC72T* GR-26S2YX8.V00$K3+BTBTAMVC9U5NE*BT:PESLAN+8F7Q AOSDA5*LOHFK86N1FC O32S*PR5Z3 9M7$L 894XDE3I.NAVFDS3HHEP:.A-7HE+7E*NOZDDH5+QHD5R$VK/:4-6A:N2D48 A0BRUN4ENAI$D91392 RC51PLH2U9QP94Z416IE35V5Q68S3GD+48U95PLGRM8$DF/%SGM80CI4UPR7EBV0L33:F7QNSNFM%ESS-8R0F%:S*K9*2IO64.4DQK57M5JKG:ZJ1.RGVNS+QO$3B5B%WBE63 E6R5P29GTA4.E1C:5EUH3D79PQTWBOMC/L07SB3A62O2+J37HK0PQ01C24LHJHV58YZBYLLHCNN/OPDHCSG8ZRASD2CWXU4908:H6F/EF8U3E9%N7WPEA9Q4W98ZAAX67Y9D94PNI7S3JC4BFCE+1W SYDQHHE8EBW5PYDVNL8G*D:X6-NBY0IF0V/-M+T1L.L+86+*6B40Y$OB495F5HAGBI7 B02BLAQCF63ZVET%T*$OTMHH0RK:HVN1I20YHT:ODE.0QY9NFQ$D7F+QVDIP75*8UMZDR7NS+9KE28$8NB9E7BH+8RE4VGL$PSYVPHK6IOMNIP3Y1ZBHR:R7+L4GG L3BE0R-8Z4JE72W84T+93R0*LO+U2CEL0YLGB2WRTC-NY4F34RE RXNFZPLU06DRL0K9IIIJ8N+9V8PO%J8WRTAUMVJPACTH/EAB0EKFY/19$9I%QC QF 8.$CN.D:LQUCTO28G*O/5FDWU+7WJPT8VUF/PF8O6QVSID6NCN9WXIRG2L RQ7KMD-J2MLA5K$AOXXF XMU1IPBVCZFFX7/NVHYNDTO/J1/5CL2",
+          "appleCovidCardUrl": "867d6123-cdbb-42e4-9d13-28e792b2475b:string:https://redirect.health.apple.com/EU-DCC/#6BFZZ82O9%2BJ29S22Y9%20-F0FEQM5A78%24.1X%2546DUY%3A8Y35*%2B4LXE%25X9*5I80SF%20VOCFB6Q1HJRQRJ85Y4M%2F212JB%3AA3221-%208%3A2A5L3WPC72T*%20GR-26S2YX8.V00%24K3%2BBTBTAMVC9U5NE*BT%3APESLAN%2B8F7Q%20AOSDA5*LOHFK86N1FC%20O32S*PR5Z3%209M7%24L%20894XDE3I.NAVFDS3HHEP%3A.A-7HE%2B7E*NOZDDH5%2BQHD5R%24VK%2F%3A4-6A%3AN2D48%20A0BRUN4ENAI%24D91392%20RC51PLH2U9QP94Z416IE35V5Q68S3GD%2B48U95PLGRM8%24DF%2F%25SGM80CI4UPR7EBV0L33%3AF7QNSNFM%25ESS-8R0F%25%3AS*K9*2IO64.4DQK57M5JKG%3AZJ1.RGVNS%2BQO%243B5B%25WBE63%20E6R5P29GTA4.E1C%3A5EUH3D79PQTWBOMC%2FL07SB3A62O2%2BJ37HK0PQ01C24LHJHV58YZBYLLHCNN%2FOPDHCSG8ZRASD2CWXU4908%3AH6F%2FEF8U3E9%25N7WPEA9Q4W98ZAAX67Y9D94PNI7S3JC4BFCE%2B1W%20SYDQHHE8EBW5PYDVNL8G*D%3AX6-NBY0IF0V%2F-M%2BT1L.L%2B86%2B*6B40Y%24OB495F5HAGBI7%20B02BLAQCF63ZVET%25T*%24OTMHH0RK%3AHVN1I20YHT%3AODE.0QY9NFQ%24D7F%2BQVDIP75*8UMZDR7NS%2B9KE28%248NB9E7BH%2B8RE4VGL%24PSYVPHK6IOMNIP3Y1ZBHR%3AR7%2BL4GG%20L3BE0R-8Z4JE72W84T%2B93R0*LO%2BU2CEL0YLGB2WRTC-NY4F34RE%20RXNFZPLU06DRL0K9IIIJ8N%2B9V8PO%25J8WRTAUMVJPACTH%2FEAB0EKFY%2F19%249I%25QC%20QF%208.%24CN.D%3ALQUCTO28G*O%2F5FDWU%2B7WJPT8VUF%2FPF8O6QVSID6NCN9WXIRG2L%20RQ7KMD-J2MLA5K%24AOXXF%20XMU1IPBVCZFFX7%2FNVHYNDTO%2FJ1%2F5CL2"
+        },
+        {
+          "type": "09d486ef-86ff-43d5-aac3-f89a4f608708:string:VAC",
+          "expiryDateTime": "210eaed7-b609-4e75-b6ee-d0a6c4574bad:string:2024-01-25T03:41:47.739Z",
+          "vaccineCode": "9f259544-39c3-4e09-b399-1c4b1278ac69:string:3339641000133109",
+          "dose": "97325c6f-76cb-4607-a7e4-301f30958901:number:2",
+          "qr": "aaac4c75-abbf-4410-b115-9f2f5e771b14:string:HC1:6BFZZ8:9QOJ29S26E9G8SFT5A%GCFH3QMP-JN2W1W11$91WRP6CTLPBSRXAB BR:WQ35GB5F/$4DO0D/U26G5/IIRS%BA90C1GS6V7%*BJD8OGT-DMQLL1+4C%E9ZN$YODC69OS$02Z/CP$KWU1G9KCLV0YB16NMETA/VEUH*I2W/U49TNFUO6G$VM*I4:NI0J7XJIBMK9%3$24+EBD%3S17YZSI:DA9AFVAW0NOQ3V*7SMG9NKT10Q11K8JN9F$ZG%F9$U7*:RRQB*$GE%OP.5S5NSMV8 10$O/1R$1KID1SKIOS4/V6+XI*B8XX6BM0327Q10ZFAN5H./K3D2MC1C-U5FC/7DPXB1/K6ICS-07-74 B/PBJJ2JPSI+S%BS9TK18V4RNEKF+OC:+C8YHK70RF8*T2G3EEUHHB3$TQW4COMC/L02SB3A62O2YH37HK0PQE+B$YKHJHV58UV3YLLHCNN/OWAHE2W0RB8SD2CWXU4908:H6K2NF8U3E9%N7WPEA9Q4W98ZAAX67Y9D94PNI7S3JC4BFCE+1W SYDQHHE8EBW5PYDVNL8Z/LOX6C4NP-31ZTQMD+5UIOJEE60+6B40C%PB495F5HAGBI7 B02BLAQCF63ZVET%T*$OTMHH0RK:HVN1I20YHT:ODE.0QY9NFQ$D7F+QUCGXDMWDTQMAQ7NS+9KE28$87B9C7BH+8RE4VGL$PSBM5HK6IOMNIP3Y1ZBHR:R:*L4GG L3BE0R-8I:6SE4 S8D JK31BPIY5KWIKWOMGS881S9LFD8T*YA.$BPBRD.E2-F PLGO5.+8D6RG-IM4T/12FPNA/PKZ4LXJX3JFG1Z9R7IFXWD6.L3.859AF03E7RH%OGNQ/HT8SE1XGR8S:CNCH4J4U44NF*4KBO0Y35*7M-RHJJ32GZ7WWY7E9NEUF+3VLJLVEUX6N675Q9WYRH ZSGORRRB53B-NJ/808:KJ4",
+          "appleCovidCardUrl": "f40a0096-2084-4d23-861d-4c0f94921198:string:https://redirect.health.apple.com/EU-DCC/#6BFZZ8%3A9QOJ29S26E9G8SFT5A%25GCFH3QMP-JN2W1W11%2491WRP6CTLPBSRXAB%20BR%3AWQ35GB5F%2F%244DO0D%2FU26G5%2FIIRS%25BA90C1GS6V7%25*BJD8OGT-DMQLL1%2B4C%25E9ZN%24YODC69OS%2402Z%2FCP%24KWU1G9KCLV0YB16NMETA%2FVEUH*I2W%2FU49TNFUO6G%24VM*I4%3ANI0J7XJIBMK9%253%2424%2BEBD%253S17YZSI%3ADA9AFVAW0NOQ3V*7SMG9NKT10Q11K8JN9F%24ZG%25F9%24U7*%3ARRQB*%24GE%25OP.5S5NSMV8%2010%24O%2F1R%241KID1SKIOS4%2FV6%2BXI*B8XX6BM0327Q10ZFAN5H.%2FK3D2MC1C-U5FC%2F7DPXB1%2FK6ICS-07-74%20B%2FPBJJ2JPSI%2BS%25BS9TK18V4RNEKF%2BOC%3A%2BC8YHK70RF8*T2G3EEUHHB3%24TQW4COMC%2FL02SB3A62O2YH37HK0PQE%2BB%24YKHJHV58UV3YLLHCNN%2FOWAHE2W0RB8SD2CWXU4908%3AH6K2NF8U3E9%25N7WPEA9Q4W98ZAAX67Y9D94PNI7S3JC4BFCE%2B1W%20SYDQHHE8EBW5PYDVNL8Z%2FLOX6C4NP-31ZTQMD%2B5UIOJEE60%2B6B40C%25PB495F5HAGBI7%20B02BLAQCF63ZVET%25T*%24OTMHH0RK%3AHVN1I20YHT%3AODE.0QY9NFQ%24D7F%2BQUCGXDMWDTQMAQ7NS%2B9KE28%2487B9C7BH%2B8RE4VGL%24PSBM5HK6IOMNIP3Y1ZBHR%3AR%3A*L4GG%20L3BE0R-8I%3A6SE4%20S8D%20JK31BPIY5KWIKWOMGS881S9LFD8T*YA.%24BPBRD.E2-F%20PLGO5.%2B8D6RG-IM4T%2F12FPNA%2FPKZ4LXJX3JFG1Z9R7IFXWD6.L3.859AF03E7RH%25OGNQ%2FHT8SE1XGR8S%3ACNCH4J4U44NF*4KBO0Y35*7M-RHJJ32GZ7WWY7E9NEUF%2B3VLJLVEUX6N675Q9WYRH%20ZSGORRRB53B-NJ%2F808%3AKJ4"
+        }
+      ]
+    },
+    "logo": "e5602804-e444-432c-bcba-57094ef19314:string:data:image/png;base64,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"
+  },
+  "signature": {
+    "type": "SHA3MerkleProof",
+    "targetHash": "19f6ef1d6ff8f516f494d474dba63f91164f2c51931d376ae3faeae109ee79c5",
+    "proof": [],
+    "merkleRoot": "19f6ef1d6ff8f516f494d474dba63f91164f2c51931d376ae3faeae109ee79c5"
+  },
+  "proof": [
+    {
+      "type": "OpenAttestationSignature2018",
+      "created": "2024-05-08T07:47:49.127Z",
+      "proofPurpose": "assertionMethod",
+      "verificationMethod": "did:ethr:0xE39479928Cc4EfFE50774488780B9f616bd4B830#controller",
+      "signature": "0x8132ad8dee68a93ec7beaed87e636aac68a7d9261e7a2f2c1428fc7cbb8b3b11151d982165698db8b1f6f035e7cc79a232d4d80dce73f0979e5230c468bb42121b"
+    }
+  ]
+}
