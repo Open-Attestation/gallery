@@ -41,12 +41,12 @@ export const documentsHealthCerts: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri: "https://schemata.openattestation.com/sg/gov/moh/pdt-healthcert/2.0/endorsed-wrapped.json",
+          uri: window.location.origin + "/static/documents/pdt-v2-pcr-healthcert.json",
           permittedActions: ["VIEW"],
           redirect: "https://www.verify.gov.sg/verify"
         }),
         kind: "did",
-        downloadUrl: "https://schemata.openattestation.com/sg/gov/moh/pdt-healthcert/2.0/endorsed-wrapped.json"
+        downloadUrl: window.location.origin + "/static/documents/pdt-v2-pcr-healthcert.json"
       }
     ],
     imageSrc: "/static/img/preview/pdt-pcr-healthcert.png",
@@ -92,14 +92,12 @@ export const documentsHealthCerts: Document[] = [
     documents: [
       {
         uri: uriToAction({
-          uri:
-            "https://schemata.openattestation.com/sg/gov/moh/vaccination-healthcert/1.0/interim-vaccination-healthcert-wrapped.json",
+          uri: window.location.origin + "/static/documents/vac-v1-2-healthcert.json",
           permittedActions: ["VIEW"],
           redirect: "https://www.verify.gov.sg/verify"
         }),
         kind: "did",
-        downloadUrl:
-          "https://schemata.openattestation.com/sg/gov/moh/vaccination-healthcert/1.0/interim-vaccination-healthcert-wrapped.json"
+        downloadUrl: window.location.origin + "/static/documents/vac-v1-2-healthcert.json"
       }
     ],
     imageSrc: "/static/img/preview/vaccination-healthcert.png",
