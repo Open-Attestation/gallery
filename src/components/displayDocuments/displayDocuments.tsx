@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { useParams, useLocation, Routes, Route, Redirect, NavLink } from "react-router-dom";
+import { useParams, useLocation, Routes, Route, Navigate, NavLink } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { pascalCase } from "change-case";
 import { cssContainerWrapper } from "../../constants";
@@ -26,7 +26,7 @@ const VersionFilter: React.FunctionComponent = () => {
   const location = useLocation();
   const { tagId } = useParams<{ tagId: string }>();
 
-  if (pascalCase(tagId) !== Tag.TRADE_TRUST) return null; // as of now, only tradetrust supports some v3 docs
+  if (pascalCase(tagId!) !== Tag.TRADE_TRUST) return null; // as of now, only tradetrust supports some v3 docs
 
   // react router activeClassName does not work on query params, hence:
   const params = new URLSearchParams(location.search.substring(1));
@@ -113,16 +113,14 @@ export const DisplayDocuments: React.FunctionComponent<DisplayDocumentsProps> = 
       <div className="py-16">
         <div className={`${cssContainerWrapper}`}>
           <Routes>
-            <Route path={`/`}>
-              <FilteredDocuments searchValue={searchValue} documents={documents} />
-            </Route>
-            <Route path={`/tag/:tagId`}>
-              <VersionFilter />
-              <FilteredDocuments searchValue={searchValue} documents={documents} />
-            </Route>
-            <Route path="*">
-              <Redirect to="/" />
-            </Route>
+            <Route path={`/`} element={<FilteredDocuments searchValue={searchValue} documents={documents} />} />
+            <Route path={`/tag/:tagId`} element={
+              <div>
+                <VersionFilter />
+                <FilteredDocuments searchValue={searchValue} documents={documents} />
+              </div>
+            }/>
+            <Route path="*" element={<Navigate to="/" replace={true} />} />
           </Routes>
         </div>
       </div>
