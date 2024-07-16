@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { useParams, useLocation, Switch, Route, Redirect, NavLink } from "react-router-dom";
+import { useParams, useLocation, Routes, Route, Redirect, NavLink } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { pascalCase } from "change-case";
 import { cssContainerWrapper } from "../../constants";
@@ -112,8 +112,8 @@ export const DisplayDocuments: React.FunctionComponent<DisplayDocumentsProps> = 
       <MenuBar setSearchValue={setSearchValue} searchValue={searchValue} />
       <div className="py-16">
         <div className={`${cssContainerWrapper}`}>
-          <Switch>
-            <Route exact path={`/`}>
+          <Routes>
+            <Route path={`/`}>
               <FilteredDocuments searchValue={searchValue} documents={documents} />
             </Route>
             <Route path={`/tag/:tagId`}>
@@ -123,7 +123,7 @@ export const DisplayDocuments: React.FunctionComponent<DisplayDocumentsProps> = 
             <Route path="*">
               <Redirect to="/" />
             </Route>
-          </Switch>
+          </Routes>
         </div>
       </div>
     </>

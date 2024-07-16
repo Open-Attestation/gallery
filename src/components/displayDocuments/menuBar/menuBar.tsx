@@ -59,10 +59,8 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({ searchValue, se
       <MenuBarContent className="rounded-lg bg-white py-3">
         <div className="flex flex-wrap px-5 items-center">
           <NavLink
-            activeClassName="font-semibold text-orange bg-orange-200 focus:outline-none"
-            className="w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1"
+            className={({ isActive }) => "font-semibold text-orange bg-orange-200 focus:outline-none" + (isActive ? " w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1" : "")}
             to={`/`}
-            exact
           >
             All
           </NavLink>
@@ -70,8 +68,7 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({ searchValue, se
             return (
               <NavLink
                 key={`nav-item-${index}`}
-                activeClassName="font-semibold text-orange bg-orange-200 focus:outline-none"
-                className="w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1"
+                className={({ isActive }) => "font-semibold text-orange bg-orange-200 focus:outline-none" + (isActive ? " w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1" : "")}
                 to={`${item.to}`}
               >
                 {item.label}

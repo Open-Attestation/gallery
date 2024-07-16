@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/home";
 import { Navbar } from "./components/navbar";
 import { Footer } from "./components/footer";
@@ -9,11 +9,9 @@ export const App: React.FunctionComponent = () => {
     <div className="flex flex-col min-h-screen">
       <Router>
         <Navbar />
-        <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
         <Footer />
       </Router>
     </div>
