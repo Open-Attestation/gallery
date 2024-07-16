@@ -1,7 +1,6 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Router, Route } from "react-router-dom";
-import { createMemoryHistory } from "history";
+import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { Document, Tag } from "../documents/types";
 import { DisplayDocuments } from "../displayDocuments/displayDocuments";
 
@@ -28,26 +27,28 @@ const sampleDownloadableDocuments: Document[] = [
 describe("displayDocuments", () => {
   it("should show Document, before QrCodeButton button is pressed", () => {
     expect.assertions(1);
-    const history = createMemoryHistory();
     render(
-      <Router history={history}>
-        <Route path={`/`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
-      </Router>
+      <MemoryRouter>
+        <Routes>
+          <Route path={`/`}>
+            <DisplayDocuments documents={sampleDocuments} />
+          </Route>
+        </Routes>
+      </MemoryRouter>
     );
     expect(screen.queryByTestId("document-container")).not.toBeNull();
   });
 
   it("should hide QrCodeButton and document, and show QrCode, when QrCodeButton button is pressed", () => {
     expect.assertions(3);
-    const history = createMemoryHistory();
     render(
-      <Router history={history}>
-        <Route path={`/`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
-      </Router>
+      <MemoryRouter>
+        <Routes>
+          <Route path={`/`}>
+            <DisplayDocuments documents={sampleDocuments} />
+          </Route>
+        </Routes>
+      </MemoryRouter>
     );
     fireEvent.click(screen.getByTestId("qr-button"));
     expect(screen.queryByTestId("qr-button")).toBeNull();
@@ -57,13 +58,14 @@ describe("displayDocuments", () => {
 
   it("should display ShowDocumentButton, when hovering over HoverContainer", () => {
     expect.assertions(1);
-    const history = createMemoryHistory();
     render(
-      <Router history={history}>
-        <Route path={`/`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
-      </Router>
+      <MemoryRouter>
+        <Routes>
+          <Route path={`/`}>
+            <DisplayDocuments documents={sampleDocuments} />
+          </Route>
+        </Routes>
+      </MemoryRouter>
     );
     fireEvent.click(screen.getByTestId("qr-button"));
     fireEvent.mouseOver(screen.getByTestId("hover-container"));
@@ -72,13 +74,12 @@ describe("displayDocuments", () => {
 
   it("should call window.open() when download button is pressed", () => {
     expect.assertions(1);
-    const history = createMemoryHistory();
     render(
-      <Router history={history}>
-        <Route path={`/`}>
-          <DisplayDocuments documents={sampleDownloadableDocuments} />
-        </Route>
-      </Router>
+      <MemoryRouter>
+        <Routes>
+          <Route path={`/`} element={<DisplayDocuments documents={sampleDownloadableDocuments} />} />
+        </Routes>
+      </MemoryRouter>
     );
 
     const mockedOpen = jest.fn();
@@ -86,5 +87,18 @@ describe("displayDocuments", () => {
 
     fireEvent.click(screen.getByTestId("download-document-button"));
     expect(mockedOpen).toHaveBeenCalledWith("http://example.com", "_blank");
+  });
+
+  it("debug", () => {
+    expect.assertions(1);
+    render(
+      <MemoryRouter>
+        <Routes>
+          <Route path={`/`} element={<div id="foo">hello</div>} />
+        </Routes>
+      </MemoryRouter>
+    );
+    const element = screen.getByText("hello");
+    expect(element).not.toBeNull();
   });
 });
