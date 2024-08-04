@@ -1,17 +1,6 @@
 import React from "react";
-import styled from "@emotion/styled";
 import { cssContainerWrapper } from "./../constants";
 import ClipArt from "../resources/clip-uploading.png";
-
-const HeaderTextOne = styled.div`
-  line-height: 4.8rem;
-  letter-spacing: -0.02em;
-  color: #2c3549;
-`;
-
-const HeaderTextTwo = styled.div`
-  line-height: 1.8rem;
-`;
 
 interface HeaderPictureProps {
   title: string;
@@ -25,8 +14,8 @@ export const HeaderPicture: React.FunctionComponent<HeaderPictureProps> = ({ tit
       <div className={`${cssContainerWrapper} py-12`}>
         <div className="flex flex-wrap items-center">
           <div className="w-full sm:w-2/3">
-            <HeaderTextOne className="font-semibold text-6xl">{title}</HeaderTextOne>
-            <HeaderTextTwo className="font-light text-2xl mt-4 w-full md:w-9/12 lg:w-8/12">{description}</HeaderTextTwo>
+            <div className="font-semibold text-6xl leading-[4.8rem] tracking-[-0.02em] text-[#2c3549]">{title}</div>
+            <div className="font-light text-2xl mt-4 w-full md:w-9/12 lg:w-8/12 leading-[1.8rem]">{description}</div>
             {children}
           </div>
           <div className="w-full sm:w-1/3">

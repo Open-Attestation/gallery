@@ -1,21 +1,7 @@
 import React, { SetStateAction, Dispatch } from "react";
 import { NavLink } from "react-router-dom";
-import styled from "@emotion/styled";
 import { FiSearch } from "react-icons/fi";
 import { cssContainerWrapper } from "../../../constants";
-
-const MenuBarContainer = styled.nav`
-  transform: translateY(-50%);
-`;
-
-const MenuBarContent = styled.div`
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 8px 24px rgba(0, 0, 0, 0.06);
-`;
-
-const SearchBar = styled.div`
-  border: 1px solid #e2e7eb;
-  box-sizing: border-box;
-`;
 
 interface MenuBarProps {
   searchValue: string;
@@ -55,14 +41,19 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({ searchValue, se
   };
 
   return (
-    <MenuBarContainer className={`${cssContainerWrapper} absolute left-0 right-0`}>
-      <MenuBarContent className="rounded-lg bg-white py-3">
+    <nav className={`${cssContainerWrapper} absolute left-0 right-0 transform -translate-y-1/2`}>
+      {/* Menu bar content */}
+      <div className="rounded-lg bg-white py-3 shadow-[0px_0px_2px_rgba(0,0,0,0.04),0px_2px_6px_rgba(0,0,0,0.04),0px_8px_24px_rgba(0,0,0,0.06)]">
         <div className="flex flex-wrap px-5 items-center">
           <NavLink
-            activeClassName="font-semibold text-orange bg-orange-200 focus:outline-none"
-            className="w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1"
+            className={({ isActive }) =>
+              [
+                "w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1",
+                isActive ? "font-semibold text-orange bg-orange-200 focus:outline-none" : "",
+              ].join(" ")
+            }
             to={`/`}
-            exact
+            end
           >
             All
           </NavLink>
@@ -70,8 +61,12 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({ searchValue, se
             return (
               <NavLink
                 key={`nav-item-${index}`}
-                activeClassName="font-semibold text-orange bg-orange-200 focus:outline-none"
-                className="w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1"
+                className={({ isActive }) =>
+                  [
+                    "w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1",
+                    isActive ? "font-semibold text-orange bg-orange-200 focus:outline-none" : "",
+                  ].join(" ")
+                }
                 to={`${item.to}`}
               >
                 {item.label}
@@ -79,7 +74,8 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({ searchValue, se
             );
           })}
           <div className="w-full md:w-auto md:ml-auto">
-            <SearchBar>
+            {/* Search bar */}
+            <div className="border border-[#e2e7eb] box-border">
               <div className="flex flex-row items-center rounded">
                 <FiSearch className="text-gray-500 m-3" />
                 <form className="w-full mr-2 border-red border-solid" onSubmit={submitFormHandler}>
@@ -93,10 +89,10 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({ searchValue, se
                   />
                 </form>
               </div>
-            </SearchBar>
+            </div>
           </div>
         </div>
-      </MenuBarContent>
-    </MenuBarContainer>
+      </div>
+    </nav>
   );
 };

@@ -1,10 +1,9 @@
-import React from "react";
-import { render, screen, within, fireEvent } from "@testing-library/react";
-import { Router, Route } from "react-router-dom";
-import { createMemoryHistory } from "history";
+import { render, screen, within, fireEvent, cleanup } from "@testing-library/react";
+import { MemoryRouter as Router } from "react-router-dom";
 import { Document, Tag } from "../documents/types";
 import { DisplayDocuments } from "../displayDocuments/displayDocuments";
 import userEvent from "@testing-library/user-event";
+import { afterEach, describe, expect, it } from "vitest";
 
 const sampleDocuments: Document[] = [
   {
@@ -77,14 +76,15 @@ const sampleDocuments: Document[] = [
 ];
 
 describe("displayDocuments", () => {
+  afterEach(() => {
+    cleanup()
+  })
+
   it("should show all v2 documents, when in home route", () => {
     expect.assertions(1);
-    const history = createMemoryHistory();
     render(
-      <Router history={history}>
-        <Route path={`/`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
+      <Router>
+        <DisplayDocuments documents={sampleDocuments} />
       </Router>
     );
     expect(screen.getAllByTestId("display-card")).toHaveLength(8);
@@ -92,13 +92,9 @@ describe("displayDocuments", () => {
 
   it("should show only TradeTrust documents, when in 'trade-trust' route", () => {
     expect.assertions(1);
-    const history = createMemoryHistory();
-    history.push("/tag/trade-trust");
     render(
-      <Router history={history}>
-        <Route path={`/tag/trade-trust`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
+      <Router initialEntries={["/tag/trade-trust"]}>
+        <DisplayDocuments documents={sampleDocuments} />
       </Router>
     );
     expect(screen.getAllByTestId("display-card")).toHaveLength(1);
@@ -106,13 +102,9 @@ describe("displayDocuments", () => {
 
   it("should show OpenCerts documents, when in 'open-certs' route", () => {
     expect.assertions(1);
-    const history = createMemoryHistory();
-    history.push("/tag/open-certs");
     render(
-      <Router history={history}>
-        <Route path={`/tag/open-certs`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
+      <Router initialEntries={["/tag/open-certs"]}>
+        <DisplayDocuments documents={sampleDocuments} />
       </Router>
     );
     expect(screen.getAllByTestId("display-card")).toHaveLength(2);
@@ -120,13 +112,9 @@ describe("displayDocuments", () => {
 
   it("should show OpenCerts documents, when in 'health-certs' route", () => {
     expect.assertions(1);
-    const history = createMemoryHistory();
-    history.push("/tag/health-certs");
     render(
-      <Router history={history}>
-        <Route path={`/tag/health-certs`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
+      <Router initialEntries={["/tag/health-certs"]}>
+        <DisplayDocuments documents={sampleDocuments} />
       </Router>
     );
     expect(screen.getAllByTestId("display-card")).toHaveLength(1);
@@ -134,13 +122,9 @@ describe("displayDocuments", () => {
 
   it("should show NYC documents, when in 'nyc-certs' route", () => {
     expect.assertions(1);
-    const history = createMemoryHistory();
-    history.push("/tag/nyc-certs");
     render(
-      <Router history={history}>
-        <Route path={`/tag/nyc-certs`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
+      <Router initialEntries={["/tag/nyc-certs"]}>
+        <DisplayDocuments documents={sampleDocuments} />
       </Router>
     );
     expect(screen.getAllByTestId("display-card")).toHaveLength(1);
@@ -148,41 +132,31 @@ describe("displayDocuments", () => {
 
   it("should show Licence documents, when in 'licence' route", () => {
     expect.assertions(1);
-    const history = createMemoryHistory();
-    history.push("/tag/licence");
     render(
-      <Router history={history}>
-        <Route path={`/tag/licence`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
+      <Router initialEntries={["/tag/licence"]}>
+        <DisplayDocuments documents={sampleDocuments} />
       </Router>
     );
     expect(screen.getAllByTestId("display-card")).toHaveLength(3);
   });
 
-  it("should show OpenCerts Demo, when 'certs' is typed in searchbar", () => {
+  it("should show OpenCerts Demo, when 'certs' is typed in searchbar", async () => {
     expect.assertions(2);
-    const history = createMemoryHistory();
     render(
-      <Router history={history}>
-        <Route path={`/`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
+      <Router>
+        <DisplayDocuments documents={sampleDocuments} />
       </Router>
     );
-    userEvent.type(screen.getByTestId("search-bar-input"), "certs");
+    await userEvent.type(screen.getByTestId("search-bar-input"), "certs");
     expect(screen.queryAllByTestId("document-name")).toHaveLength(1);
     expect(screen.findByText("OpenCerts Demo")).not.toBeNull();
   });
 
   it("should show not found, when 'asdasd' is typed in searchbar", () => {
     expect.assertions(1);
-    const history = createMemoryHistory();
     render(
-      <Router history={history}>
-        <Route path={`/`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
+      <Router>
+        <DisplayDocuments documents={sampleDocuments} />
       </Router>
     );
     userEvent.type(screen.getByTestId("search-bar-input"), "asdasd");
@@ -191,12 +165,9 @@ describe("displayDocuments", () => {
 
   it("should show filtered card when click on document kind, then click documents filter", () => {
     expect.assertions(1);
-    const history = createMemoryHistory();
     render(
-      <Router history={history}>
-        <Route path={`/`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
+      <Router>
+        <DisplayDocuments documents={sampleDocuments} />
       </Router>
     );
     fireEvent.click(within(screen.getAllByTestId("hover-container")[0]).getByText("did"));
@@ -206,13 +177,9 @@ describe("displayDocuments", () => {
 
   it("should show only TradeTrust v3 document, when in '/tag/trade-trust?version=3' route", () => {
     expect.assertions(1);
-    const history = createMemoryHistory();
-    history.push("/tag/trade-trust?version=3");
     render(
-      <Router history={history}>
-        <Route path={`/`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
+      <Router initialEntries={["/tag/trade-trust?version=3"]}>
+        <DisplayDocuments documents={sampleDocuments} />
       </Router>
     );
     expect(screen.getAllByTestId("display-card")).toHaveLength(1);
@@ -220,12 +187,9 @@ describe("displayDocuments", () => {
 
   it("should filtered between v2 / v3 document for TradeTrust", () => {
     expect.assertions(2);
-    const history = createMemoryHistory();
     render(
-      <Router history={history}>
-        <Route path={`/`}>
-          <DisplayDocuments documents={sampleDocuments} />
-        </Route>
+      <Router>
+        <DisplayDocuments documents={sampleDocuments} />
       </Router>
     );
     fireEvent.click(screen.getByRole("link", { name: "TradeTrust" }));
