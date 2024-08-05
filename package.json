@@ -11,6 +11,7 @@
     "check-types": "tsc --sourceMap false --noEmit",
     "test": "vitest",
     "test:coverage": "npm run test -- --coverage",
+    "deploy": "npm run build",
     "preview": "vite preview"
   },
   "devDependencies": {
