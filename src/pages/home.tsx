@@ -5,7 +5,7 @@ import { documentsAll } from "./../components/documents";
 
 export const Home: React.FunctionComponent = () => {
   return (
-    <main className="flex-1 bg-gray-200">
+    <main className="flex-1 bg-[#edf2f7]">
       <HeaderPicture title="Gallery" description="Explore OpenAttestation documents and create yours today!" />
       <DisplayDocuments documents={documentsAll} />
     </main>
