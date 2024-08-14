@@ -3,6 +3,38 @@ import { uriToAction } from "../documents/utils";
 
 export const documentsOpenCerts: Document[] = [
   {
+    title: "v4 OpenCerts Demo",
+    documents: [
+      {
+        uri: uriToAction({
+          uri: window.location.origin + "/static/documents/embedded-renderer-v4",
+          permittedActions: ["STORE"],
+          redirect: "https://dev.opencerts.io"
+        }),
+        kind: "did"
+      }
+    ],
+    imageSrc: "/static/img/preview/opencerts-demo.jpg",
+    tags: [Tag.OPEN_CERTS],
+    version: "2"
+  },
+  {
+    title: "v4 SVG Demo",
+    documents: [
+      {
+        uri: uriToAction({
+          uri: window.location.origin + "/static/documents/remote-svg-v4", // Can also replace with embedded-svg-v4
+          permittedActions: ["STORE"],
+          redirect: "https://dev.opencerts.io"
+        }),
+        kind: "did"
+      }
+    ],
+    imageSrc: "/static/img/preview/svg-demo.svg",
+    tags: [Tag.OPEN_CERTS],
+    version: "2"
+  },
+  {
     title: "OpenCerts Demo",
     documents: [
       {
