@@ -3,11 +3,11 @@ import { uriToAction } from "../documents/utils";
 
 export const documentsOpenCerts: Document[] = [
   {
-    title: "v4 OpenCerts Demo",
+    title: "OpenCerts Demo (OA v4.0)",
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/embedded-renderer-v4",
+          uri: window.location.origin + "/static/documents/transcript-did-embedded-renderer-v4.json",
           permittedActions: ["STORE"],
           redirect: "https://dev.opencerts.io"
         }),
@@ -16,14 +16,14 @@ export const documentsOpenCerts: Document[] = [
     ],
     imageSrc: "/static/img/preview/opencerts-demo.jpg",
     tags: [Tag.OPEN_CERTS],
-    version: "2"
+    version: "4"
   },
   {
-    title: "v4 SVG Demo",
+    title: "SVG Demo (OA v4.0)",
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/remote-svg-v4", // Can also replace with embedded-svg-v4
+          uri: window.location.origin + "/static/documents/completion-did-embedded-svg-v4.json", // Can also replace with /static/documents/completion-did-remote-svg-v4.json
           permittedActions: ["STORE"],
           redirect: "https://dev.opencerts.io"
         }),
@@ -32,10 +32,10 @@ export const documentsOpenCerts: Document[] = [
     ],
     imageSrc: "/static/img/preview/svg-demo.svg",
     tags: [Tag.OPEN_CERTS],
-    version: "2"
+    version: "4"
   },
   {
-    title: "OpenCerts Demo",
+    title: "OpenCerts Demo (OA v2.0)",
     documents: [
       {
         uri: uriToAction({

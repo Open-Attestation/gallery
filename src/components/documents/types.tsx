@@ -11,7 +11,7 @@ export interface Document {
   documents: { uri: string; kind: "verifiable" | "transferable" | "did"; downloadUrl?: string }[];
   imageSrc: string;
   tags: Tag[];
-  version: "2" | "3";
+  version: "2" | "3" | "4";
 }
 
 export enum ChainId {
