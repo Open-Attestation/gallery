@@ -3,7 +3,7 @@ import { uriToAction } from "../documents/utils";
 
 export const documentsOpenCerts: Document[] = [
   {
-    title: "OpenCerts Demo (OA v4.0)",
+    title: "OpenCerts Demo",
     documents: [
       {
         uri: uriToAction({
@@ -19,11 +19,27 @@ export const documentsOpenCerts: Document[] = [
     version: "4"
   },
   {
-    title: "SVG Demo (OA v4.0)",
+    title: "Embedded SVG Demo",
     documents: [
       {
         uri: uriToAction({
-          uri: window.location.origin + "/static/documents/completion-did-embedded-svg-v4.json", // Can also replace with /static/documents/completion-did-remote-svg-v4.json
+          uri: window.location.origin + "/static/documents/completion-did-embedded-svg-v4.json",
+          permittedActions: ["STORE"],
+          redirect: "https://dev.opencerts.io"
+        }),
+        kind: "did"
+      }
+    ],
+    imageSrc: "/static/img/preview/svg-demo.svg",
+    tags: [Tag.OPEN_CERTS],
+    version: "4"
+  },
+  {
+    title: "Remote SVG Demo",
+    documents: [
+      {
+        uri: uriToAction({
+          uri: window.location.origin + "/static/documents/completion-did-remote-svg-v4.json",
           permittedActions: ["STORE"],
           redirect: "https://dev.opencerts.io"
         }),

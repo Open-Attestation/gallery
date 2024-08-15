@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { useParams, useLocation, Routes, Route, Navigate, NavLink } from "react-router-dom";
+import { useParams, useSearchParams, Routes, Route, Navigate, NavLink } from "react-router-dom";
 import { pascalCase } from "change-case";
 import { cssContainerWrapper } from "../../constants";
 import { useFuzzy } from "react-use-fuzzy";
@@ -22,24 +22,50 @@ const NoDocumentsFound: React.FunctionComponent = () => {
 };
 
 const VersionFilter: React.FunctionComponent = () => {
-  const location = useLocation();
-  const { tagId } = useParams<{ tagId: string }>();
+  const versionToLabel: Record<Document["version"], string> = {
+    "2": "v2.0",
+    "3": "v3.0 (Beta)",
+    "4": "v4.0 (Beta)"
+  };
+  const tagToVersions: Partial<Record<Tag, Array<Document["version"]>>> = {
+    [Tag.TRADE_TRUST]: ["2", "3"],
+    [Tag.OPEN_CERTS]: ["2", "4"]
+  };
 
-  if (pascalCase(tagId ?? "") !== Tag.TRADE_TRUST) return null; // as of now, only tradetrust supports some v3 docs
+  const { tagId = "" } = useParams<{ tagId: string }>();
+  const tagIdPascalCase = pascalCase(tagId);
+
+  // Ensure tagId string is part of Tag enum (ugly but it's the downside of using Enum)
+  let currentTag;
+  if (Object.values(Tag).some((str: string) => str === tagIdPascalCase)) {
+    currentTag = tagIdPascalCase as Tag;
+  } else {
+    currentTag = null;
+  }
+
+  // Only show versions for TradeTrust and OpenCerts
+  if (!currentTag || !Object.keys(tagToVersions).includes(pascalCase(tagId))) return null;
 
   // react router activeClassName does not work on query params, hence:
-  const params = new URLSearchParams(location.search.substring(1));
-  const styledV2 = params.get("version") === "2" ? "text-gray-800 underline" : "text-gray-600";
-  const styledV3 = params.get("version") === "3" ? "text-gray-800 underline" : "text-gray-600";
+  const [searchParams] = useSearchParams();
+  let queryParamVersion = searchParams.get("version") || "2"; // if version query param does not exist, assume 2
 
   return (
-    <div className="container px-8 my-8 lg:mt-0">
-      <NavLink to={`/tag/${tagId}?version=2`} className={`text-gray-600 text-md font-medium mr-8 ${styledV2}`}>
-        V2 Document
-      </NavLink>
-      <NavLink to={`/tag/${tagId}?version=3`} className={`text-gray-600 text-md font-medium ${styledV3}`}>
-        V3 Document (Beta)
-      </NavLink>
+    <div className="container px-8 my-8 flex gap-6 lg:mt-0">
+      {tagToVersions[currentTag]?.map((version, i) => {
+        const isSelectedVersion = version === queryParamVersion;
+        const selectedStyle = (isSelected = false) => (isSelected ? "text-gray-800 underline" : "text-gray-600");
+
+        return (
+          <NavLink
+            key={i}
+            to={`/tag/${tagId}?version=${version}`}
+            className={`text-gray-600 text-md font-medium ${selectedStyle(isSelectedVersion)}`}
+          >
+            {versionToLabel[version]}
+          </NavLink>
+        );
+      })}
     </div>
   );
 };
@@ -48,9 +74,8 @@ const FilteredDocuments: React.FunctionComponent<FilteredDocumentsProps> = ({
   searchValue,
   documents
 }: FilteredDocumentsProps) => {
-  const location = useLocation();
-  const query = new URLSearchParams(location.search);
-  const documentVersion = query.get("version") || "2"; // if not exist in query params, assume is version 2 document
+  const [searchParams] = useSearchParams();
+  const documentVersion = searchParams.get("version") || "2"; // if version query param does not exist, assume 2
   const { tagId } = useParams<{ tagId: string }>();
   const { result, search: fuzzySearch } = useFuzzy<Document>(documents, {
     keys: ["title"]
@@ -77,10 +102,7 @@ const FilteredDocuments: React.FunctionComponent<FilteredDocumentsProps> = ({
     [result, searchValue]
   );
 
-  const documentsFiltered = documents
-    .filter(filterByTag)
-    .filter(filterBySearch)
-    .filter(filterByQuery);
+  const documentsFiltered = documents.filter(filterByTag).filter(filterBySearch).filter(filterByQuery);
 
   useEffect(() => {
     fuzzySearch(searchValue);
@@ -112,12 +134,15 @@ export const DisplayDocuments: React.FunctionComponent<DisplayDocumentsProps> = 
         <div className={`${cssContainerWrapper}`}>
           <Routes>
             <Route index element={<FilteredDocuments searchValue={searchValue} documents={documents} />} />
-            <Route path={`tag/:tagId`} element={
-              <>
-                <VersionFilter />
-                <FilteredDocuments searchValue={searchValue} documents={documents} />
-              </>
-            } />
+            <Route
+              path={`tag/:tagId`}
+              element={
+                <>
+                  <VersionFilter />
+                  <FilteredDocuments searchValue={searchValue} documents={documents} />
+                </>
+              }
+            />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
