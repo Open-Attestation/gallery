@@ -35,6 +35,9 @@ const VersionFilter: React.FunctionComponent = () => {
   const { tagId = "" } = useParams<{ tagId: string }>();
   const tagIdPascalCase = pascalCase(tagId);
 
+  const [searchParams] = useSearchParams();
+  const queryParamVersion = searchParams.get("version") || "2"; // if version query param does not exist, assume 2
+
   // Ensure tagId string is part of Tag enum (ugly but it's the downside of using Enum)
   let currentTag;
   if (Object.values(Tag).some((str: string) => str === tagIdPascalCase)) {
@@ -46,13 +49,10 @@ const VersionFilter: React.FunctionComponent = () => {
   // Only show versions for TradeTrust and OpenCerts
   if (!currentTag || !Object.keys(tagToVersions).includes(pascalCase(tagId))) return null;
 
-  // react router activeClassName does not work on query params, hence:
-  const [searchParams] = useSearchParams();
-  let queryParamVersion = searchParams.get("version") || "2"; // if version query param does not exist, assume 2
-
   return (
     <div className="container px-8 my-8 flex gap-6 lg:mt-0">
       {tagToVersions[currentTag]?.map((version, i) => {
+        // react router activeClassName does not work on query params, hence:
         const isSelectedVersion = version === queryParamVersion;
         const selectedStyle = (isSelected = false) => (isSelected ? "text-gray-800 underline" : "text-gray-600");
 
