@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useParams, useLocation, Routes, Route, Navigate, NavLink } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
 import { pascalCase } from "change-case";
 import { cssContainerWrapper } from "../../constants";
 import { useFuzzy } from "react-use-fuzzy";
@@ -92,7 +91,7 @@ const FilteredDocuments: React.FunctionComponent<FilteredDocumentsProps> = ({
       {documentsFiltered.length === 0 ? (
         <NoDocumentsFound />
       ) : (
-        documentsFiltered.map(document => <DocumentCard {...document} key={`${uuidv4()}`} />)
+        documentsFiltered.map((document, i) => <DocumentCard {...document} key={i} />)
       )}
     </div>
   );
