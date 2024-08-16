@@ -77,8 +77,8 @@ const sampleDocuments: Document[] = [
 
 describe("displayDocuments", () => {
   afterEach(() => {
-    cleanup()
-  })
+    cleanup();
+  });
 
   it("should show all v2 documents, when in home route", () => {
     expect.assertions(1);
@@ -195,7 +195,7 @@ describe("displayDocuments", () => {
     fireEvent.click(screen.getByRole("link", { name: "TradeTrust" }));
     expect(screen.getAllByTestId("display-card")).toHaveLength(1);
 
-    fireEvent.click(screen.getByRole("link", { name: "V3 Document (Beta)" }));
+    fireEvent.click(screen.getByRole("link", { name: "v3.0 (Beta)" }));
     expect(screen.getAllByTestId("display-card")).toHaveLength(1);
   });
 });

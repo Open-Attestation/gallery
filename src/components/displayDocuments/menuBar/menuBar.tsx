@@ -15,7 +15,7 @@ const navItems = [
   },
   {
     label: "OpenCerts",
-    to: "/tag/open-certs"
+    to: "/tag/open-certs?version=2"
   },
   {
     label: "HealthCerts",
@@ -49,7 +49,7 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({ searchValue, se
             className={({ isActive }) =>
               [
                 "w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1",
-                isActive ? "font-semibold text-orange bg-orange-200 focus:outline-none" : "",
+                isActive ? "font-semibold text-orange bg-orange-200 focus:outline-none" : ""
               ].join(" ")
             }
             to={`/`}
@@ -64,7 +64,7 @@ export const MenuBar: React.FunctionComponent<MenuBarProps> = ({ searchValue, se
                 className={({ isActive }) =>
                   [
                     "w-auto px-2 py-1 rounded-md font-normal text-gray-700 text-sm transition-colors duration-300 ease-out hover:bg-orange-200 hover:text-orange mx-1",
-                    isActive ? "font-semibold text-orange bg-orange-200 focus:outline-none" : "",
+                    isActive ? "font-semibold text-orange bg-orange-200 focus:outline-none" : ""
                   ].join(" ")
                 }
                 to={`${item.to}`}
